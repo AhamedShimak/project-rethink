@@ -1,24 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./screens/Home/Home";
+import Lab from "./screens/Lab_and_game/Lab";
+import Lessons from "./screens/Lessons/Lessons";
+import List from "./screens/List/List";
+import Paper from "./screens/Paper/Paper";
+import Layout from "./layout/Layout";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {" "}
+      <Router>
+        {/* A <Switch> looks through its children <Route>s and
+        renders the first one that matches the current URL. */}
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Layout>
+            <Route path="/list/:id">
+              <List />
+            </Route>
+            <Route path="/paper/:id">
+              <Paper />
+            </Route>
+            <Route path="/lab/:id">
+              <Lab />
+            </Route>
+            <Route path="/lesson/:id">
+              <Lessons />
+            </Route>
+          </Layout>
+        </Switch>
+      </Router>
     </div>
   );
 }
