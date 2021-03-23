@@ -1,10 +1,13 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./screens/Home/Home";
-import Lab from "./screens/Lab_and_game/Lab";
-import Lessons from "./screens/Lessons/Lessons";
-import List from "./screens/List/List";
-import Paper from "./screens/Paper/Paper";
+import LabList from "./screens/LabAndGame/LabsList";
+import LabView from "./screens/LabAndGame/LabView";
+import PapersList from "./screens/Paper/PapersList";
+import PaperView from "./screens/Paper/PaperView";
+import LessonsList from "./screens/Lessons/LessonsList";
+import LessonView from "./screens/Lessons/LessonView";
+
 import Layout from "./layout/Layout";
 
 function App() {
@@ -18,20 +21,34 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
+          {/* List items */}
           <Layout>
-            <Route path="/list/:id">
-              <List />
+            <Route path="/papers">
+              <PapersList />
             </Route>
-            <Route path="/paper/:id">
-              <Paper />
+            <Route path="/lessons">
+              <LessonsList />
             </Route>
-            <Route path="/lab/:id">
-              <Lab />
+            <Route path="/labs">
+              <LabList />
             </Route>
-            <Route path="/lesson/:id">
-              <Lessons />
+            <Route path="/games">
+              <LabList />
             </Route>
           </Layout>
+          {/* view single items */}
+          <Route path="/papers/:id">
+            <PaperView />
+          </Route>
+          <Route path="/lessons/:id">
+            <LessonView />
+          </Route>
+          <Route path="/labs/:id">
+            <LabView />
+          </Route>
+          <Route path="/games/:id">
+            <LabView />
+          </Route>
         </Switch>
       </Router>
     </div>
