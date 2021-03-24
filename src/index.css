@@ -1,3 +1,4 @@
+@import './variables.css';
 *,::after,::before {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +7,7 @@
 }
 body {
   margin: 0;
- 
+  font-family: var(--font-secondary);
   
 }
 
@@ -14,8 +15,12 @@ h1,h2,h3,h4,h5,h6 {
   line-height: 1.8rem;
   top: 0.5rem;
   font-weight: 500;
+  font-family: var(--font-primary);
 }
 li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}

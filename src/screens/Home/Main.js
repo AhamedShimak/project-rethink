@@ -21,7 +21,7 @@ const Main = () => {
           </Link>
         </div>
         <h2 className="home__main__heading home__main__heading__desktop ">
-          The science of today is the technology of tomorrow
+          'The science of today is the technology of tomorrow'
         </h2>
         <div
           className={`home__main__input  ${
@@ -49,7 +49,7 @@ const Main = () => {
         </ul>
       </nav>
       <h2 className="home__main__heading">
-        The science of today is the technology of tomorrow
+        'The science of today is the technology of tomorrow'
       </h2>
     </div>
   );

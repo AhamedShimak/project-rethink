@@ -27,7 +27,7 @@ const HomeSection = () => {
         </div>
         <div className="home__content__container__item item-2">
           <div className="home__content__container__item__column column-1">
-            <p className="column-1__heading">LESSONS</p>
+            <h2 className="column-1__heading">LESSONS</h2>
             <p className="column-1__content">
               Lorem ipsum dolor si adipisicing elit. Similique, aspernatur{" "}
             </p>
@@ -42,7 +42,7 @@ const HomeSection = () => {
         </div>
         <div className="home__content__container__item item-3">
           <div className="home__content__container__item__column column-1">
-            <p className="column-1__heading">GAMES</p>
+            <h2 className="column-1__heading">GAMES</h2>
             <p className="column-1__content">
               Lorem ipsum dolor si adipisicing elit. Similique, aspernatur{" "}
             </p>
@@ -57,7 +57,7 @@ const HomeSection = () => {
         </div>
         <div className="home__content__container__item item-4">
           <div className="home__content__container__item__column column-1">
-            <p className="column-1__heading">PAPERS</p>
+            <h2 className="column-1__heading">PAPERS</h2>
             <p className="column-1__content">
               Lorem ipsum dolor si adipisicing elit. Similique, aspernatur{" "}
             </p>
