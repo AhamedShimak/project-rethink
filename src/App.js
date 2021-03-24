@@ -13,7 +13,6 @@ import Layout from "./layout/Layout";
 function App() {
   return (
     <div className="App">
-      {" "}
       <Router>
         {/* A <Switch> looks through its children <Route>s and
         renders the first one that matches the current URL. */}
