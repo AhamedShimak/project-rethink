@@ -1,0 +1,70 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  padding: 6px 0px 0px 8px;
+}
+.header__logo .logo {
+  width: 60px;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.header__searchbar {
+  position: absolute;
+  top: 3px;
+  right: 6px;
+  transform: translate(-1%, 1%);
+  width: 60px;
+  height: 50px;
+}
+.header__searchbar label {
+  position: absolute;
+  right: 3px;
+  width: 35px;
+  height: 35px;
+  line-height: 43px;
+  border-radius: 50%;
+  text-align: center;
+  color: gray;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 0px 0px 1px 2px #193149a1, inset 0px 0px 7px 20px #131d27;
+}
+.header__searchbar label:hover {
+  box-shadow: 0px 0px 1px 2px #193149a1, inset 0px 0px 7px 20px #131d27;
+  transform: scale(1.1);
+}
+.header__searchbar input {
+  width: 98%;
+  height: 73%;
+  background-color: transparent;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  color: gray;
+  box-shadow: 0px 0px 4px 2px #193149a1, inset 0px 0px 7px 20px #131d27;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+#check:checked + .header__searchbar {
+  width: 275px;
+}
+#check:checked + .header__searchbar > input {
+  opacity: 1;
+}
+#check:checked + .header__searchbar > label {
+  box-shadow: none;
+  width: 40px;
+}
+#check:checked + .header__searchbar > label:hover {
+  transform: scale(1);
+}
