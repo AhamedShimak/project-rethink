@@ -7,6 +7,7 @@ import {
   MdVideogameAsset,
   MdTimer,
 } from "react-icons/md";
+import { IoIosArrowBack, IoIosClose } from "react-icons/io";
 import { ImLab } from "react-icons/im";
 
 import "./header.css";
@@ -20,7 +21,7 @@ const Header = () => {
       <nav className="header__nav">
         <div>
           <div className="header__icons header__search__closeIcon">
-            <MdKeyboardBackspace onClick={() => history.push("/")} />
+            <IoIosArrowBack onClick={() => history.push("/")} />
           </div>
         </div>
         <div>
@@ -40,7 +41,7 @@ const Header = () => {
             searchActive ? "header__search__diplay" : ""
           } `}>
           <div className="header__icons header__search__closeIcon">
-            <MdKeyboardBackspace
+            <IoIosClose
               onClick={() => setSearchActive(!searchActive)}
             />
           </div>

@@ -93,8 +93,8 @@ padding-bottom: .2em;
 .lesson__ellipses{
     
     display: flex;
-    margin-left: var(--spacer--md);
-    justify-content: space-evenly;
+    padding-left: 2em;
+    justify-content: space-around;
     align-items: center;
     position: absolute;
     top:calc(-3.5em / 2);
