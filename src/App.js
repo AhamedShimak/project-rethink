@@ -1,4 +1,5 @@
 import "./App.css";
+import React, { useEffect, useContext } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./screens/Home/Home";
 import LabList from "./screens/LabAndGame/LabsList";
@@ -9,10 +10,20 @@ import LessonsList from "./screens/Lessons/LessonsList";
 import LessonView from "./screens/Lessons/LessonView";
 
 import Layout from "./layout/Layout";
+import { GlobalContext } from "./context/context";
 
 function App() {
+  const { advertisements, fetchAdvertisements } = useContext(GlobalContext);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      await fetchAdvertisements();
+    };
+    fetchData();
+  }, []);
   return (
     <div className="App">
+      {console.log(advertisements)}
       <Router>
         {/* A <Switch> looks through its children <Route>s and
         renders the first one that matches the current URL. */}
