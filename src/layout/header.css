@@ -3,6 +3,9 @@
   width: 100%;
   
   position: sticky;
+  top:0;
+  left:0;
+  right: 0;
   background-color: var( --color-white);
   z-index: 100;
   padding: 0;
@@ -114,7 +117,7 @@ li:first-child {
     right: 0;
     justify-content: center;
     align-items: center;
-    background-color: var( --color-light);
+    background-color: var( --color-teal);
     clip-path: circle(0% at 100% 99%);
     transition: all 1s ease-in-out;
   }
@@ -165,6 +168,12 @@ li:first-child {
     position: fixed;
     bottom: 3%;
     right: 3%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: var(--color-secondary);
     padding: var(--spacer--sm);
     border-radius: 50%;
@@ -185,17 +194,17 @@ li:first-child {
     
     transform: rotate(-35deg);
     transform-origin: center;
-    background: var(--color-danger)
+    
   }
   .menu_line-3{
     transform-origin:center;
     
     transform: rotate(35deg);
-    background: var(--color-danger)
+   
   }
   .menu_line-2{
     transform:scale(0) ;
-    background: var(--color-danger)
+    
   }
 }
 

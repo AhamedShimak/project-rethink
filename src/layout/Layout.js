@@ -1,11 +1,12 @@
 import React from "react";
 import Header from "./Header";
 import Ad from "./advertisement/Ad";
+import "./layout.css";
 const Layout = ({ children }) => {
   return (
     <div className="layout">
       <div className="layout__info">
-       {/* <Header />*/}
+        <Header />
         <Ad />
       </div>
 

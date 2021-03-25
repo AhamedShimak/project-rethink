@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import {
   MdKeyboardBackspace,
   MdSearch,
@@ -13,9 +13,16 @@ import "./header.css";
 const Header = () => {
   const [searchActive, setSearchActive] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
+
+  let history = useHistory();
   return (
     <div className="header">
       <nav className="header__nav">
+        <div>
+          <div className="header__icons header__search__closeIcon">
+            <MdKeyboardBackspace onClick={() => history.push("/")} />
+          </div>
+        </div>
         <div>
           <Link to="/">
             <div className="header__logo">

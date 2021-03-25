@@ -8,24 +8,27 @@ import { Carousel } from "react-responsive-carousel";
 
 const Ad = () => {
   return (
-    <Carousel
-      autoPlay="true"
-      interval="2000"
-      infiniteLoop="true"
-      showThumbs={false}>
-      <div>
-        <img src={ad} />
-        <p className="legend">Legend 1</p>
-      </div>
-      <div>
-        <img src={ad2} />
-        <p className="legend">Legend 2</p>
-      </div>
-      <div>
-        <img src={ad3} />
-        <p className="legend">Legend 3</p>
-      </div>
-    </Carousel>
+    <div className="ad">
+      <Carousel
+        autoPlay="true"
+        interval="2000"
+        infiniteLoop="true"
+        showThumbs={false}
+        showIndicators={false}>
+        <div>
+          <img src={ad} />
+          <p className="legend">Legend 1</p>
+        </div>
+        <div>
+          <img src={ad2} />
+          <p className="legend">Legend 2</p>
+        </div>
+        <div>
+          <img src={ad3} />
+          <p className="legend">Legend 3</p>
+        </div>
+      </Carousel>
+    </div>
   );
 };
 

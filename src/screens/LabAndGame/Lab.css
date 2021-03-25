@@ -1,13 +1,15 @@
-
 .lab{
+
     height: 100%;
-    min-height: 70vh;    
+  
+ 
 }
 .lab__text{
-    padding: 3em;
+    padding: 0 1.5em 3em 1.5em;
 
 
     text-align: left;
+    height: 20%;
 }
 .lab__text p{
     padding: 0;
@@ -24,17 +26,18 @@
     /* display: flex;
     flex-direction: column; */
     position: relative;
-    height: 100%;
-}
-.lab__content{
+    height: 80%;
     background-color: #8ED479;
     border-radius: 45px 0 0 0;   
-
+  
+}
+.lab__content{
+   
+    
+ 
     padding: 35px 20px;
     width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+ 
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -66,4 +69,27 @@
 font-size: 2rem;
 color: #8ed479;
 
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 950px) { 
+    .lab{
+        display: flex;
+        margin-top: calc(var(--spacer--lg) + 2rem);
+        flex-direction: row-reverse;
+    }
+   
+    .lab__container{
+        display: flex;
+    }
+    .lab__content{
+        background-color: #8ED479;
+        border-radius:  0  45px 0 0;   
+    
+        
+       
+    
+    }
+    
+   
 }

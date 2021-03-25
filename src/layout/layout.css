@@ -1,0 +1,26 @@
+.layout__info{
+    
+    min-height: 30vh;
+    
+   
+}
+.layout__content{
+    margin-top: -20px;
+    min-height: calc(70vh + 20px);
+    padding: 0;
+   
+
+
+}
+@media (min-width: 950px) {
+    .layout__info{
+        height: 60vh ;
+       
+    } 
+    .layout__content{
+        height:calc(40vh + 20px);
+    
+    
+    }
+  
+}

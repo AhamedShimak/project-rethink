@@ -139,10 +139,13 @@ main
     
     position: sticky;
     z-index: 100;
-  
+    top:0;
+    left:0;
+    right: 0;
     margin: 0;
     overflow-x: hidden;
     margin-bottom: .3em;
+    
  
     
 }
@@ -236,9 +239,18 @@ main
     width: 50px !important;
     height: 25px !important;
     color: white;
+  
+    margin: auto;
 }
 .home__main__heading__desktop{
     display: none;
+}
+.home__main__ul__searchIcon{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 950px) { 

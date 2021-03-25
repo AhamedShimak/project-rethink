@@ -39,12 +39,10 @@ const Main = () => {
 
         <ul>
           <li className="home__main__ul__searchIcon">
-            <Link to="/">
-              <MdSearch
-                className="home__main__icons home__main__ul__searchIcon"
-                onClick={() => setSearchActive(!searchActive)}
-              />
-            </Link>
+            <MdSearch
+              className="home__main__icons "
+              onClick={() => setSearchActive(!searchActive)}
+            />
           </li>
         </ul>
       </nav>
