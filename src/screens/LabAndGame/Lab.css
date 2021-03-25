@@ -32,9 +32,7 @@
   
 }
 .lab__content{
-   
-    
- 
+
     padding: 35px 20px;
     width: 100%;
  
@@ -65,9 +63,9 @@
 }
 
 .lab__ellipses{
-    padding: 0 1% 0 10%;
     display: flex;
-    justify-content: space-around;
+    margin-left: var(--spacer--md);
+    justify-content: space-evenly;
     align-items: center;
     position: absolute;
     top:calc(-3.5em / 2);
@@ -80,15 +78,57 @@
     height: 3em;
     background-color: #FFFFFC;
     border-radius: 50%;
-    text-align: center;
-    vertical-align: middle;
-    padding: .3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   border: 3px solid var(--color-teal);  
+    animation: borderAnim 3s ease-in-out infinite alternate;
+}
+
+@keyframes borderAnim {
+    0%{
+    
+        border-bottom: 3px solid var(--color-white);
+        border-top: 3px solid var(--color-teal);
+        border-right: 3px solid var(--color-teal);
+        border-left: 3px solid var(--color-teal);
+    }
+    25%{
+ 
+        border-left: 3px solid var(--color-white);
+        border-bottom: 3px solid var(--color-teal);
+        border-top: 3px solid var(--color-teal);
+        border-right: 3px solid var(--color-teal);
+
+ 
+    }
+    75%{
+ 
+        border-top: 3px solid var(--color-white);
+        border-left: 3px solid var(--color-teal);
+        border-bottom: 3px solid var(--color-teal);
+    
+        border-right: 3px solid var(--color-teal);
+      
+    }
+    100%{
+ 
+        border-right: 3px solid var(--color-white);
+
+        border-top: 3px solid var(--color-teal);
+        border-left: 3px solid var(--color-teal);
+        border-bottom: 3px solid var(--color-teal);    
+    
+   
+    }
 }
 .lab__ellipses__ellipse span{
-font-size: 2rem;
-color: #8ed479;
+    font-size: 1.6rem;
+    
+    color: var(--color-success);
 
 }
+
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 950px) { 
@@ -101,14 +141,10 @@ color: #8ed479;
     .lab__container{
         display: flex;
     }
-    .lab__content{
-        background-color: #8ED479;
-        border-radius:  0  45px 0 0;   
-    
         
        
     
-    }
+    
     
    
 }

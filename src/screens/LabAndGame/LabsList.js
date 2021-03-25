@@ -17,10 +17,6 @@ const Lab = () => {
       </div>
 
       <div className="lab__container">
-        
-
-      
-
         <div className="lab__ellipses">
           <div className="lab__ellipses__ellipse">
             <span>
@@ -58,24 +54,7 @@ const Lab = () => {
             <p className="lab__content__item__title">string dogy yalu strong</p>
             {/**2 lines maximum */}
           </div>
-          <div className="lab__content__item">
-            <img
-              className="lab__content__item__image"
-              src={gameImg}
-              alt="gameImg"
-            />
-            <p className="lab__content__item__title">string dogy yalu strong</p>
-            {/**2 lines maximum */}
-          </div>
-          <div className="lab__content__item">
-            <img
-              className="lab__content__item__image"
-              src={gameImg}
-              alt="gameImg"
-            />
-            <p className="lab__content__item__title">string dogy yalu strong</p>
-            {/**2 lines maximum */}
-          </div>
+         
         </div>
       </div>
     </div>
