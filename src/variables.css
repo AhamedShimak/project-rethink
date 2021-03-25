@@ -14,6 +14,7 @@
 
     --text-primary:hsl(60, 100%, 99%);
     --text-secondary:hsl(60, 1%, 83%);
+    --text-dark:rgb(49, 49, 49);
 
     /* Fonts */
     --font-primary:'Nunito', sans-serif;
