@@ -16,15 +16,15 @@ const Ad = () => {
         showThumbs={false}
         showIndicators={false}>
         <div>
-          <img src={ad} />
+          <img src={ad} alt='slide1'/>
           <p className="legend">Legend 1</p>
         </div>
         <div>
-          <img src={ad2} />
+          <img src={ad2} alt='slide2'/>
           <p className="legend">Legend 2</p>
         </div>
         <div>
-          <img src={ad3} />
+          <img src={ad3} alt='slide3'/>
           <p className="legend">Legend 3</p>
         </div>
       </Carousel>
