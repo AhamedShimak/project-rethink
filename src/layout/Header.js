@@ -41,7 +41,7 @@ const Header = () => {
             searchActive ? "header__search__diplay" : ""
           } `}>
           <div className="header__icons header__search__closeIcon">
-            <IoIosClose
+            <IoIosArrowBack
               onClick={() => setSearchActive(!searchActive)}
             />
           </div>
