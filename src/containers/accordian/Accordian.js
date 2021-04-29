@@ -12,6 +12,12 @@ import AccordianItem from "../../components/accordian__item/AccordianItem";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
+    "& > *": {
+      margin: "7px 0",
+    },
+    "& > :first-child": {
+      margin: "0 0 0 0",
+    },
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -38,6 +44,22 @@ const Accordian = ({ accordianItems }) => {
           handleChange={handleChange}
           panelName="panel1"
           heading="head1"
+          description="describe"
+          details="details"
+        />
+        <AccordianItem
+          expanded={expanded}
+          handleChange={handleChange}
+          panelName="panel2"
+          heading="head2"
+          description="describe"
+          details="details"
+        />
+        <AccordianItem
+          expanded={expanded}
+          handleChange={handleChange}
+          panelName="panel3"
+          heading="head3"
           description="describe"
           details="details"
         />

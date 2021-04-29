@@ -1,0 +1,9 @@
+.accordian__list__item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.accordian__list__item__icon{
+  font-size: large;
+  margin-right: var(--spacer--sm);
+}

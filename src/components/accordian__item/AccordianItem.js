@@ -5,6 +5,7 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Typography from "@material-ui/core/Typography";
 import { MdExpandMore } from "react-icons/md";
+import AccordianListItem from "../accordian_list_items/AccordianListItem";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,7 +45,11 @@ const AccordianItem = ({
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>{details}</Typography>
+          {/* {details} */}
+          <Typography variant="caption" display="block" gutterBottom>
+            {/* {details} */}
+            <AccordianListItem />
+          </Typography>
         </AccordionDetails>
       </Accordion>
     </div>
