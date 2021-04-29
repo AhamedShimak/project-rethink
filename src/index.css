@@ -5,9 +5,11 @@
   padding: 0;
   
 }
+
 body {
   margin: 0;
   font-family: var(--font-secondary);
+  color:var(--text-primary)
   
 }
 
@@ -16,7 +18,9 @@ h1,h2,h3,h4,h5,h6 {
   top: 0.5rem;
   font-weight: 500;
   font-family: var(--font-primary);
+
 }
+
 li {
   list-style: none;
 }

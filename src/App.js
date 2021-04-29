@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { useEffect, useContext } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { ThemeProvider } from "@material-ui/core/styles";
 import Home from "./screens/Home/Home";
 import LabList from "./screens/LabAndGame/LabsList";
 import LabView from "./screens/LabAndGame/LabView";
@@ -8,7 +9,7 @@ import PapersList from "./screens/Paper/PapersList";
 import PaperView from "./screens/Paper/PaperView";
 import LessonsList from "./screens/Lessons/LessonsList";
 import LessonView from "./screens/Lessons/LessonView";
-
+import MuiTheme from "./theme";
 import Layout from "./layout/Layout";
 import { GlobalContext } from "./context/context";
 
@@ -23,44 +24,45 @@ function App() {
   }, []);
   return (
     <div className="App">
-      {console.log(advertisements)}
-      <Router>
-        {/* A <Switch> looks through its children <Route>s and
+      <ThemeProvider theme={MuiTheme}>
+        <Router>
+          {/* A <Switch> looks through its children <Route>s and
         renders the first one that matches the current URL. */}
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          {/* List items */}
-          <Layout>
-            <Route path="/papers">
-              <PapersList />
+          <Switch>
+            <Route exact path="/">
+              <Home />
             </Route>
-            <Route path="/lessons">
-              <LessonsList />
+            {/* List items */}
+            <Layout>
+              <Route path="/papers">
+                <PapersList />
+              </Route>
+              <Route path="/lessons">
+                <LessonsList />
+              </Route>
+              <Route path="/labs">
+                <LabList />
+              </Route>
+              <Route path="/games">
+                <LabList />
+              </Route>
+            </Layout>
+            {/* view single items */}
+            <Route path="/papers/:id">
+              <PaperView />
             </Route>
-            <Route path="/labs">
-              <LabList />
+            <Route path="/lessons/:id">
+              <LessonView />
             </Route>
-            <Route path="/games">
-              <LabList />
+            <Route path="/labs/:id">
+              <LabView />
             </Route>
-          </Layout>
-          {/* view single items */}
-          <Route path="/papers/:id">
-            <PaperView />
-          </Route>
-          <Route path="/lessons/:id">
-            <LessonView />
-          </Route>
-          <Route path="/labs/:id">
-            <LabView />
-          </Route>
-          <Route path="/games/:id">
-            <LabView />
-          </Route>
-        </Switch>
-      </Router>
+            <Route path="/games/:id">
+              <LabView />
+            </Route>
+          </Switch>
+        </Router>
+      </ThemeProvider>
     </div>
   );
 }

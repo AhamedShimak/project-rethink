@@ -63,6 +63,7 @@ li:first-child {
 
 .header__ul__searchIcon,.header__search__closeIcon {
   display: none;
+  color: var(--color-teal)
   
 }
 
@@ -95,6 +96,7 @@ li:first-child {
  background-color: hsl(0, 0%, 94%);
 
  border: hsl(0, 0%, 78%) solid .1rem;
+ color: var(--color-teal)
 
 }
 

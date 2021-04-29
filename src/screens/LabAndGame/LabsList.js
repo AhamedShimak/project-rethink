@@ -2,10 +2,11 @@ import React from "react";
 import "./Lab.css";
 import gameImg from "../../assets/gameimg.png";
 import { BsGridFill } from "react-icons/bs";
-import { BiAtom,BiDna } from "react-icons/bi";
+import { BiAtom, BiDna } from "react-icons/bi";
 import { IoFlask } from "react-icons/io5";
 import { MdFunctions } from "react-icons/md";
-
+import SubjectElipse from "../../components/subject__elipse/SubjectElipse";
+import ContentItemBox from "../../components/content_item_box/ContentItemBox";
 const Lab = () => {
   return (
     <div className="lab">
@@ -17,69 +18,35 @@ const Lab = () => {
       </div>
 
       <div className="lab__container">
-        
-
-      
-
         <div className="lab__ellipses">
-          <div className="lab__ellipses__ellipse">
-            <span>
-              <BsGridFill />
-            </span>
+          <div>
+            <SubjectElipse icon={<BsGridFill />} title="All" />
           </div>
-          <div className="lab__ellipses__ellipse">
-            <span>
-              <BiAtom />
-            </span>
+
+          <div>
+            <SubjectElipse icon={<BiAtom />} title="P6" />
           </div>
-          <div className="lab__ellipses__ellipse">
-            <span>
-              <IoFlask />
-            </span>
+          <div>
+            <SubjectElipse icon={<IoFlask />} title="Chem" />
           </div>
-          <div className="lab__ellipses__ellipse">
-            <span>
-              <MdFunctions />
-            </span>
+          <div>
+            <SubjectElipse icon={<MdFunctions />} title="Math" />
           </div>
-          <div className="lab__ellipses__ellipse">
-            <span>
-              <BiDna />
-            </span>
+          <div>
+            <SubjectElipse icon={<BiDna />} title="Bio" />
           </div>
         </div>
         <div className="lab__content">
-          <div className="lab__content__item">
-            <img
-              className="lab__content__item__image"
-              src={gameImg}
-              alt="gameImg"
-            />
-            <p className="lab__content__item__title">string dogy yalu strong</p>
-            {/**2 lines maximum */}
-          </div>
-          <div className="lab__content__item">
-            <img
-              className="lab__content__item__image"
-              src={gameImg}
-              alt="gameImg"
-            />
-            <p className="lab__content__item__title">string dogy yalu strong</p>
-            {/**2 lines maximum */}
-          </div>
-          <div className="lab__content__item">
-            <img
-              className="lab__content__item__image"
-              src={gameImg}
-              alt="gameImg"
-            />
-            <p className="lab__content__item__title">string dogy yalu strong</p>
-            {/**2 lines maximum */}
-          </div>
+          <ContentItemBox image={gameImg} title="string dogy yalu strong" />
+          <ContentItemBox image={gameImg} title="string dogy yalu strong" />
+          <ContentItemBox image={gameImg} title="string dogy yalu strong" />
+          <ContentItemBox image={gameImg} title="string dogy yalu strong" />
+          <ContentItemBox image={gameImg} title="string dogy yalu strong" />
+          <ContentItemBox image={gameImg} title="string dogy yalu strong" />
+          <ContentItemBox image={gameImg} title="string dogy yalu strong" />
         </div>
       </div>
     </div>
-  
   );
 };
 

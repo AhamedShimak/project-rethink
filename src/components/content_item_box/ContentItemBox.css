@@ -1,0 +1,22 @@
+
+.content__item__box{
+    padding: 0;
+    width: 44%;
+    max-width: 150px;
+    height: 8em;
+    margin:.1em .5em;
+    border-radius: 1em;
+    margin-bottom: var(--spacer--md);
+}
+.content__item__box__image{
+    width: 100%;
+    height: auto;
+}
+.content__item__box__title{
+    color: var(--text-dark);
+    margin: 0;
+    text-align: center;
+    padding: 0em .5em;
+    font-weight: lighter;
+    line-height: .9em;
+}
