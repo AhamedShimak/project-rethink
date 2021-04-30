@@ -8,6 +8,7 @@ import LabView from "./screens/LabAndGame/LabView";
 import PapersList from "./screens/Paper/PapersList";
 import PaperView from "./screens/Paper/PaperView";
 import LessonsList from "./screens/Lessons/LessonsList";
+import LessonsListVideos from "./screens/LessonListVideos/LessonsListVideos";
 import LessonView from "./screens/Lessons/LessonView";
 import MuiTheme from "./theme";
 import Layout from "./layout/Layout";
@@ -37,8 +38,11 @@ function App() {
               <Route path="/papers">
                 <PapersList />
               </Route>
-              <Route path="/lessons">
+              <Route exact path="/lessons">
                 <LessonsList />
+              </Route>
+              <Route exact path="/lessons/videos">
+                <LessonsListVideos />
               </Route>
               <Route path="/labs">
                 <LabList />

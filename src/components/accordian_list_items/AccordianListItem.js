@@ -6,6 +6,7 @@ import { MdLibraryBooks } from "react-icons/md";
 import Typography from "@material-ui/core/Typography";
 
 import "./AccordiaListItem.css";
+import { useHistory } from "react-router";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
@@ -16,10 +17,12 @@ const useStyles = makeStyles((theme) => ({
 
 export default function AccordianListItem() {
   const classes = useStyles();
-
+  let history = useHistory();
   return (
     <List className={classes.root}>
-      <div className="accordian__list__item">
+      <div
+        className="accordian__list__item"
+        onClick={() => history.push("/lessons/videos")}>
         <div className="accordian__list__item__icon">
           <MdLibraryBooks></MdLibraryBooks>
         </div>

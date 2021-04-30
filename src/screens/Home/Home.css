@@ -55,7 +55,7 @@ section
     border-radius: 2.7rem ;
     margin-bottom: 2em;
     
-    animation: entranceAnim 2s  linear;
+    animation: entranceAnim 1s  ease-in-out;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;
 }
