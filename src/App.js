@@ -13,7 +13,7 @@ import LessonView from "./screens/Lessons/LessonView";
 import MuiTheme from "./theme";
 import Layout from "./layout/Layout";
 import { GlobalContext } from "./context/context";
-
+import Lab from "./screens/Lab/Lab";
 function App() {
   const { advertisements, fetchAdvertisements } = useContext(GlobalContext);
 
@@ -33,6 +33,9 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
+            <Route exact path="/labs/lab">
+              <Lab />
+            </Route>
             {/* List items */}
             <Layout>
               <Route path="/papers">
@@ -44,7 +47,7 @@ function App() {
               <Route exact path="/lessons/videos">
                 <LessonsListVideos />
               </Route>
-              <Route path="/labs">
+              <Route exact path="/labs">
                 <LabList />
               </Route>
               <Route path="/games">
@@ -58,7 +61,7 @@ function App() {
             <Route path="/lessons/:id">
               <LessonView />
             </Route>
-            <Route path="/labs/:id">
+            <Route exact path="/labs/:id">
               <LabView />
             </Route>
             <Route path="/games/:id">

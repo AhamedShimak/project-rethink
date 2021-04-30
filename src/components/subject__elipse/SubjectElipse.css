@@ -16,8 +16,11 @@
     border: 3px solid var(--color-teal);
    
     animation: borderAnim 3s ease-in-out infinite alternate;
+    cursor: pointer;
    
 }
+
+
 
 @keyframes borderAnim {
     0%{
@@ -71,3 +74,23 @@
 
 }
 
+.elipse__active{
+   
+    background: var(--color-teal);
+    border: 3px solid var(--color-white);
+   
+    animation: borderAnim 3s ease-in-out infinite alternate;
+    cursor: pointer;
+   
+}
+.elipse__active > span{
+ 
+    
+    color: var(--color-white) !important;
+
+}
+.elipse__active > h5{
+    
+    color: var(--color-white) !important;
+
+}
