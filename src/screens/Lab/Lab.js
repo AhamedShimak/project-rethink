@@ -1,11 +1,10 @@
 import React from "react";
-import MuiAlert from "@material-ui/lab/Alert";
+
 import { MdKeyboardBackspace } from "react-icons/md";
+import Draggable from "react-draggable";
 import "./Lab.css";
 import { useHistory } from "react-router";
-function Alert(props) {
-  return <MuiAlert elevation={6} variant="filled" {...props} />;
-}
+
 const Lab = () => {
   let history = useHistory();
   return (
@@ -24,6 +23,23 @@ const Lab = () => {
           alt="logo"
           className="logo"
         />
+      </div>
+      <div className="draggable__glossary">
+        <div className="draggable__glossary__hand">
+          <Draggable
+            // axis="x,y"
+            handle=".handle"
+            defaultPosition={{ x: 100, y: 100 }}
+            position={null}
+            grid={[25, 25]}
+            scale={1}>
+            <div
+              style={{ background: "blue", width: "100px", padding: "10px" }}>
+              <div className="handle">Tamil translations draggable</div>
+              <div>This readme is really dragging on...</div>
+            </div>
+          </Draggable>
+        </div>
       </div>
     </div>
   );

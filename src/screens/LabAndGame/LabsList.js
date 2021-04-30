@@ -5,6 +5,7 @@ import { BsGridFill } from "react-icons/bs";
 import { BiAtom, BiDna } from "react-icons/bi";
 import { IoFlask } from "react-icons/io5";
 import { MdFunctions } from "react-icons/md";
+
 import SubjectElipse from "../../components/subject__elipse/SubjectElipse";
 import ContentItemBox from "../../components/content_item_box/ContentItemBox";
 const Lab = () => {
