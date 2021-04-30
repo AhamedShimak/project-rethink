@@ -22,23 +22,12 @@ const ContentItemBox = ({ image, title }) => {
         <img
           src="https://phet.colorado.edu/sims/html/ph-scale/latest/ph-scale-600.png"
           alt="pH Scale"
-          style={{ border: "none" }}
-          width="300"
-          height="200"
+          style={{ border: "none", margin: "0" }}
+          width="200"
+          height="150"
         />
-        <div
-          style={{
-            position: " absolute",
-            width: "200px",
-            height: "80px",
-            left: "50px",
-            top: "60px",
-            backgroundColor: "#FFF",
-            opacity: "0.6",
-            filter: "alpha(opacity = 60)",
-          }}></div>
       </div>
-      <CardContent className="card__content">
+      <CardContent className="card__content" style={{ margin: "0" }}>
         <Typography variant="caption" display="block">
           This impressive paella
           <div className="card__content__icons">
