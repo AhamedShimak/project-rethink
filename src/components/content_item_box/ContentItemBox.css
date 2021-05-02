@@ -1,6 +1,6 @@
 .content__item__box{
     padding: 0;
-    width: 200px;
+    width: 100%;
     /* max-height: 150px, */
   
     border-radius: 1em;
@@ -13,7 +13,8 @@
 
 .card__content  {
     
-    padding-bottom: 10px !important;
+    padding-bottom: 1px !important;
+    background-color: #15204a;
   
 }
 .card__content__icons  {
@@ -32,5 +33,5 @@
     padding:0;
    }
 .icon__btn > *{   
-    color:var(--color-teal);
+    color:var(--color-white);
 }
