@@ -6,8 +6,9 @@ import Tab from "@material-ui/core/Tab";
 //import Select from "@material-ui/core/Select";
 import SwipeableViews from "react-swipeable-views";
 import "./Lessons.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { subjectsSelector } from "../../features/subjects/subjectSlice";
+import { listSubjects } from "../../actions/subjectActions";
 
 const styles = {
   tabs: {
@@ -22,14 +23,23 @@ const styles = {
   indicator: {
     backgroundColor: "#1890ff",
   },
-  
 };
 const Lessons = () => {
   const [index, setIndex] = useState(0);
+  const dispatch = useDispatch();
   const [subjectList, setSubjectList] = useState([]);
   const { subjects, loading, errors } = useSelector(subjectsSelector);
 
-  useEffect(() => {}, [subjects]);
+  useEffect(() => {
+    const fetchData = async () => {
+      if (!subjects || subjects === [] || subjects === null) {
+        listSubjects(dispatch);
+      }
+
+      // listCategories(dispatch);
+    };
+    fetchData();
+  }, []);
   const handleChange = (event, value) => {
     setIndex(value);
   };
@@ -44,21 +54,26 @@ const Lessons = () => {
         <Tab label="C. Maths" />
         <Tab label="Bio" />
       </Tabs>
-
-      <SwipeableViews index={index} onChangeIndex={handleChangeIndex}>
-        <div style={Object.assign({}, styles.slide, styles.slide)}>
-          <Accordian accordianItems={subjects?.subjects[0]} />
-        </div>
-        <div style={Object.assign({}, styles.slide, styles.slide)}>
-          <Accordian accordianItems={subjects?.subjects[1]} />
-        </div>
-        <div style={Object.assign({}, styles.slide, styles.slide)}>
-          <Accordian accordianItems={subjects?.subjects[2]} />
-        </div>
-        <div style={Object.assign({}, styles.slide, styles.slide)}>
-          <Accordian accordianItems="" />
-        </div>
-      </SwipeableViews>
+      {subjects?.subjects ? (
+        <>
+          <SwipeableViews index={index} onChangeIndex={handleChangeIndex}>
+            <div style={Object.assign({}, styles.slide, styles.slide)}>
+              <Accordian accordianItems={subjects?.subjects[0]} />
+            </div>
+            <div style={Object.assign({}, styles.slide, styles.slide)}>
+              <Accordian accordianItems={subjects?.subjects[1]} />
+            </div>
+            <div style={Object.assign({}, styles.slide, styles.slide)}>
+              <Accordian accordianItems={subjects?.subjects[2]} />
+            </div>
+            <div style={Object.assign({}, styles.slide, styles.slide)}>
+              <Accordian accordianItems="" />
+            </div>
+          </SwipeableViews>
+        </>
+      ) : (
+        <p>Loading</p>
+      )}
     </div>
   );
 };
