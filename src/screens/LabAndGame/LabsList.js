@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Lab.css";
 import gameImg from "../../assets/gameimg.png";
-import { BsGridFill } from "react-icons/bs";
+//import { BsGridFill } from "react-icons/bs";
 import { BiAtom, BiDna } from "react-icons/bi";
 import { IoFlask } from "react-icons/io5";
 import { MdFunctions } from "react-icons/md";
@@ -10,9 +10,9 @@ import ContentItemBox from "../../components/content_item_box/ContentItemBox";
 import SwipeableViews from "react-swipeable-views";
 const Lab = () => {
   const [index, setIndex] = useState(0);
-  const handleChange = (value) => {
+  /*const handleChange = (value) => {
     setIndex(value);
-  };
+  };*/
   const handleChangeIndex = (index) => {
     setIndex(index);
   };

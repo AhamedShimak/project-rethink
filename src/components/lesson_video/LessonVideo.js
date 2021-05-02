@@ -12,6 +12,7 @@ import { Avatar } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
+    backgroundColor: "#15204a",
   },
   details: {
     display: "flex",
@@ -59,10 +60,10 @@ export default function MediaControlCard({ current }) {
       />
       <div className={classes.details}>
         <CardContent className={classes.content}>
-          <Typography component="h5" variant="h5">
+          <Typography component="h5" variant="h5" style={{color:"#fffffa"}}>
             Live From Space
           </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
+          <Typography variant="subtitle1" style={{color:"#d4d4d3"}}>
             Mac Miller
           </Typography>
         </CardContent>
@@ -77,11 +78,11 @@ export default function MediaControlCard({ current }) {
             </Avatar>
           </IconButton>
           <div>
-            <IconButton aria-label="previous">
+            <IconButton aria-label="previous" style={{color:"#fffffa"}}>
               {theme.direction === "rtl" ? <MdBookmark /> : <MdShare />}
             </IconButton>
 
-            <IconButton aria-label="next">
+            <IconButton aria-label="next" style={{color:"#fffffa"}}>
               {theme.direction === "rtl" ? <MdShare /> : <MdBookmark />}
             </IconButton>
           </div>

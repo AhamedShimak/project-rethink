@@ -18,17 +18,17 @@ const ContentItemBox = ({ image, title }) => {
     <Card
       className={` content__item__box`}
       onClick={() => history.push("/labs/lab")}>
-      <div style={{ position: "relative", width: "200px", height: " 200px" }}>
+      <div style={{ position: "relative", width: "100%", height: " 148px" }}>
         <img
           src="https://phet.colorado.edu/sims/html/ph-scale/latest/ph-scale-600.png"
           alt="pH Scale"
           style={{ border: "none", margin: "0" }}
-          width="200"
+          width="100%"
           height="150"
         />
       </div>
       <CardContent className="card__content" style={{ margin: "0" }}>
-        <Typography variant="caption" display="block">
+        <Typography variant="caption" display="block" style={{color:"#fffffa"}}>
           This impressive paella
           <div className="card__content__icons">
             <IconButton aria-label="add to bookmark" className="icon__btn">
