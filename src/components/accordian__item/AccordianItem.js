@@ -13,7 +13,8 @@ const useStyles = makeStyles((theme) => ({
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
-    flexBasis: "33.33%",
+    fontWeight: "bolder",
+    flexBasis: "100%",
     flexShrink: 0,
   },
   secondaryHeading: {
@@ -26,8 +27,8 @@ const AccordianItem = ({
   handleChange,
   panelName,
   heading,
-  description,
-  details,
+
+  headings,
 }) => {
   const classes = useStyles();
   return (
@@ -40,15 +41,13 @@ const AccordianItem = ({
           aria-controls="panel1bh-content"
           id="panel1bh-header">
           <Typography className={classes.heading}>{heading}</Typography>
-          <Typography className={classes.secondaryHeading}>
-            {description}
-          </Typography>
         </AccordionSummary>
         <AccordionDetails>
           {/* {details} */}
           <Typography variant="caption" display="block" gutterBottom>
             {/* {details} */}
-            <AccordianListItem />
+
+            <AccordianListItem key={heading._id} headings={headings} />
           </Typography>
         </AccordionDetails>
       </Accordion>

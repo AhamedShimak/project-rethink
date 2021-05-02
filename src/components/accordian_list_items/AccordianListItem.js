@@ -15,53 +15,26 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function AccordianListItem() {
+export default function AccordianListItem({ headings }) {
   const classes = useStyles();
   let history = useHistory();
   return (
     <List className={classes.root}>
-      <div
-        className="accordian__list__item"
-        onClick={() => history.push("/lessons/videos")}>
-        <div className="accordian__list__item__icon">
-          <MdLibraryBooks></MdLibraryBooks>
+      {headings?.map((heading) => (
+        <div
+          key={heading._id}
+          className="accordian__list__item"
+          onClick={() => history.push(`/lessons/${heading._id}`)}>
+          <div className="accordian__list__item__icon">
+            <MdLibraryBooks></MdLibraryBooks>
+          </div>
+          <div className="accordian__list__item__title">
+            <Typography variant="caption" display="block" gutterBottom>
+              {heading.name}
+            </Typography>
+          </div>
         </div>
-        <div className="accordian__list__item__title">
-          <Typography variant="caption" display="block" gutterBottom>
-            Sub unit1
-          </Typography>
-        </div>
-      </div>
-      <div className="accordian__list__item">
-        <div className="accordian__list__item__icon">
-          <MdLibraryBooks></MdLibraryBooks>
-        </div>
-        <div className="accordian__list__item__title">
-          <Typography variant="caption" display="block" gutterBottom>
-            Sub unit2
-          </Typography>
-        </div>
-      </div>
-      <div className="accordian__list__item">
-        <div className="accordian__list__item__icon">
-          <MdLibraryBooks></MdLibraryBooks>
-        </div>
-        <div className="accordian__list__item__title">
-          <Typography variant="caption" display="block" gutterBottom>
-            Sub unit3
-          </Typography>
-        </div>
-      </div>
-      <div className="accordian__list__item">
-        <div className="accordian__list__item__icon">
-          <MdLibraryBooks></MdLibraryBooks>
-        </div>
-        <div className="accordian__list__item__title">
-          <Typography variant="caption" display="block" gutterBottom>
-            Sub unit4
-          </Typography>
-        </div>
-      </div>
+      ))}
     </List>
   );
 }

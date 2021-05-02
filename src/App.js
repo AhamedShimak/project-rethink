@@ -2,6 +2,8 @@ import "./App.css";
 import React, { useEffect, useContext } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/core/styles";
+import { useDispatch } from "react-redux";
+
 import Home from "./screens/Home/Home";
 import LabList from "./screens/LabAndGame/LabsList";
 import LabView from "./screens/LabAndGame/LabView";
@@ -12,17 +14,23 @@ import LessonsListVideos from "./screens/LessonListVideos/LessonsListVideos";
 import LessonView from "./screens/Lessons/LessonView";
 import MuiTheme from "./theme";
 import Layout from "./layout/Layout";
-import { GlobalContext } from "./context/context";
+// import { GlobalContext } from "./context/context";
 import Lab from "./screens/Lab/Lab";
-function App() {
-  const { advertisements, fetchAdvertisements } = useContext(GlobalContext);
 
+// import Starter from "./starter/starter";
+import { listSubjects } from "./actions/subjectActions";
+import { listCategories } from "./actions/categoryActions";
+function App() {
+  // const { advertisements, fetchAdvertisements } = useContext(GlobalContext);
+  const dispatch = useDispatch();
   useEffect(() => {
     const fetchData = async () => {
-      await fetchAdvertisements();
+      listSubjects(dispatch);
+      listCategories(dispatch);
     };
     fetchData();
   }, []);
+  //
   return (
     <div className="App">
       <ThemeProvider theme={MuiTheme}>
@@ -44,7 +52,7 @@ function App() {
               <Route exact path="/lessons">
                 <LessonsList />
               </Route>
-              <Route exact path="/lessons/videos">
+              <Route path="/lessons/:id">
                 <LessonsListVideos />
               </Route>
               <Route exact path="/labs">
@@ -58,9 +66,7 @@ function App() {
             <Route path="/papers/:id">
               <PaperView />
             </Route>
-            <Route path="/lessons/:id">
-              <LessonView />
-            </Route>
+
             <Route exact path="/labs/:id">
               <LabView />
             </Route>

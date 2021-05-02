@@ -39,30 +39,16 @@ const Accordian = ({ accordianItems }) => {
   return (
     <div className="lessons">
       <div className={classes.root}>
-        <AccordianItem
-          expanded={expanded}
-          handleChange={handleChange}
-          panelName="panel1"
-          heading="head1"
-          description="describe"
-          details="details"
-        />
-        <AccordianItem
-          expanded={expanded}
-          handleChange={handleChange}
-          panelName="panel2"
-          heading="head2"
-          description="describe"
-          details="details"
-        />
-        <AccordianItem
-          expanded={expanded}
-          handleChange={handleChange}
-          panelName="panel3"
-          heading="head3"
-          description="describe"
-          details="details"
-        />
+        {accordianItems?.units?.map((unit) => (
+          <AccordianItem
+            expanded={expanded}
+            handleChange={handleChange}
+            panelName={unit._id}
+            heading={unit.name}
+            key={unit._id}
+            headings={unit.headings}
+          />
+        ))}
       </div>
     </div>
   );
