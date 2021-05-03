@@ -48,27 +48,25 @@ const Lessons = () => {
   };
   return (
     <div className="lessons">
-      <Tabs value={index} fullWidth onChange={handleChange} style={styles.tabs}>
-        <Tab label="Physics" />
-        <Tab label="Chemistry" />
-        <Tab label="C. Maths" />
-        <Tab label="Bio" />
+      <Tabs
+        value={index}
+        fullWidth
+        onChange={handleChange}
+        style={styles.tabs}
+        variant="scrollable"
+        scrollButtons="on">
+        {subjects?.subjects?.map((sub) => (
+          <Tab label={sub.name.toUpperCase()} />
+        ))}
       </Tabs>
       {subjects?.subjects ? (
         <>
           <SwipeableViews index={index} onChangeIndex={handleChangeIndex}>
-            <div style={Object.assign({}, styles.slide, styles.slide)}>
-              <Accordian accordianItems={subjects?.subjects[0]} />
-            </div>
-            <div style={Object.assign({}, styles.slide, styles.slide)}>
-              <Accordian accordianItems={subjects?.subjects[1]} />
-            </div>
-            <div style={Object.assign({}, styles.slide, styles.slide)}>
-              <Accordian accordianItems={subjects?.subjects[2]} />
-            </div>
-            <div style={Object.assign({}, styles.slide, styles.slide)}>
-              <Accordian accordianItems="" />
-            </div>
+            {subjects?.subjects?.map((sub) => (
+              <div style={Object.assign({}, styles.slide, styles.slide)}>
+                <Accordian accordianItems={sub} />
+              </div>
+            ))}
           </SwipeableViews>
         </>
       ) : (

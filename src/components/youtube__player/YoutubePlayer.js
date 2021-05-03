@@ -1,14 +1,10 @@
 import React from "react";
 import ReactPlayer from "react-player";
 import "./YoutubePlayer.css";
-const YoutubePlayer = () => {
+const YoutubePlayer = ({ url }) => {
   return (
     <div className="youtubePlayer">
-      <ReactPlayer
-        width="100%"
-        controls
-        url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-      />
+      <ReactPlayer width="100%" controls url={url} />
     </div>
   );
 };

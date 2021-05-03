@@ -1,19 +1,25 @@
 import axios from "axios";
 import { laptonApi } from "../api/api";
 import {
-  getSubjects,
-  getSubjectsFailure,
-  getSubjectsSuccess,
-} from "../features/subjects/subjectSlice";
-export async function listSubjects(dispatch) {
-  dispatch(getSubjects());
+  getLessons,
+  getLessonsFailure,
+  getLessonsSuccess,
+  getCurrentLesson,
+  getCurrentLessonFailure,
+  getCurrentLessonSuccess,
+} from "../features/lessons/lessonSlice";
+export async function listLessons(dispatch, id) {
+  dispatch(getLessons());
+
   try {
-    const { data } = await axios.get(`${laptonApi}/api/subjects`);
-    console.log(data.subjects);
-    dispatch(getSubjectsSuccess(data));
+    const { data } = await axios.get(
+      `${laptonApi}/api/resources/lessons/${id}`
+    );
+
+    dispatch(getLessonsSuccess(data));
   } catch (error) {
     console.log(error);
-    dispatch(getSubjectsFailure(error));
+    dispatch(getLessonsFailure(error));
   }
 }
 

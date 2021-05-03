@@ -47,24 +47,34 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MediaControlCard({ current }) {
+export default function LessonListVideo({
+  current,
+  description,
+  duration,
+  image,
+  name,
+  resourceUrl,
+  unit,
+  author,
+}) {
   const classes = useStyles();
   const theme = useTheme();
 
   return (
     <Card className={classes.root}>
+      {console.log()}
       <CardMedia
         className={classes.cover}
-        image="https://source.unsplash.com/random"
+        image={image || "https://source.unsplash.com/random"}
         title="Live from space album cover"
       />
       <div className={classes.details}>
         <CardContent className={classes.content}>
-          <Typography component="h5" variant="h5" style={{color:"#fffffa"}}>
-            Live From Space
+          <Typography component="h5" variant="h5" style={{ color: "#fffffa" }}>
+            {name}
           </Typography>
-          <Typography variant="subtitle1" style={{color:"#d4d4d3"}}>
-            Mac Miller
+          <Typography variant="subtitle1" style={{ color: "#d4d4d3" }}>
+            {author}
           </Typography>
         </CardContent>
         <div className={classes.controls}>
@@ -78,11 +88,11 @@ export default function MediaControlCard({ current }) {
             </Avatar>
           </IconButton>
           <div>
-            <IconButton aria-label="previous" style={{color:"#fffffa"}}>
+            <IconButton aria-label="previous" style={{ color: "#fffffa" }}>
               {theme.direction === "rtl" ? <MdBookmark /> : <MdShare />}
             </IconButton>
 
-            <IconButton aria-label="next" style={{color:"#fffffa"}}>
+            <IconButton aria-label="next" style={{ color: "#fffffa" }}>
               {theme.direction === "rtl" ? <MdShare /> : <MdBookmark />}
             </IconButton>
           </div>
