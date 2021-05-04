@@ -1,16 +1,19 @@
 .lessonsListVideos{
-    padding:var(--spacer--md) var(--spacer--sm);
+    /* padding:var(--spacer--md) ; */
     display: flex;
     flex-direction:column;
     
     justify-content:space-evenly;
-    position: relative;
+    position: sticky;
+    position: -webkit-sticky;
+    top: var(--header-height);
+    
     
 }
 .lessonsListVideos__player{
     width:100%;
     position: sticky;
-    top: 0;
+    top:calc( var(--header-height) + var(--spacer--sm));
     z-index: 9999;
 }
 .lessonsListVideos__list{
@@ -22,7 +25,8 @@
 }
 .lessonsListVideos__list{
     width:100%;
-    height:400px;
+    min-height:500px;
+    /* height: calc(100vh - var(--header-height)); */
     overflow-y:scroll;
     
 }
@@ -52,13 +56,21 @@
         flex-direction:row;
         /* flex-wrap: wrap; */
         justify-content:space-evenly;
+        /* border: solid 1px red; */
     }
     .lessonsListVideos__player{
-        width:50%;
+        width:0%;
+        /* background-color: blanchedalmond; */
     }
     .lessonsListVideos__list{
-        width:45%;
+        width:100%;
         margin-top: 0;
+    }
+    .desktop__playing__player{
+        width: 48%  !important;
+    }
+    .desktop__playing__list{
+        width: 50%  !important;
     }
    
 }

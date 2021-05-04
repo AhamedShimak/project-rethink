@@ -1,5 +1,8 @@
-.lessons{
-    height:100%;
-    padding: var(--spacer--lg) var(--spacer--sm);
+.lessons__slide{
+    height:50% !important;
+
+    margin: 0;
+    padding: 0
+ 
    
 }

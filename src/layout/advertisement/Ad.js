@@ -21,7 +21,7 @@ const styles = {
     color: "#fff",
   },
   slide1: {
-    backgroundColor: "#FEA900",
+    backgroundColor: "#445",
   },
   slide2: {
     backgroundColor: "#B3DC4A",
@@ -30,7 +30,7 @@ const styles = {
     backgroundColor: "#6AC0FF",
   },
 };
-const Ad = () => {
+const Ad = ({ desktop }) => {
   const [index, setIndex] = useState(0);
 
   const handleChangeIndex = (index) => {
@@ -39,21 +39,41 @@ const Ad = () => {
   return (
     <div className="ad">
       <div style={styles.root}>
-        <AutoPlaySwipeableViews
-          interval={2000}
-          index={index}
-          onChangeIndex={handleChangeIndex}>
-          <div style={Object.assign({}, styles.slide, styles.slide1)}>
-            <img className="ad_img" src={ad} alt="slide1" />
-          </div>
-          <div style={Object.assign({}, styles.slide, styles.slide2)}>
-            <img className="ad_img" src={ad2} alt="slide2" />
-          </div>
-          <div style={Object.assign({}, styles.slide, styles.slide3)}>
-            <img className="ad_img" src={ad3} alt="slide3" />
-          </div>
-        </AutoPlaySwipeableViews>
-        <Pagination dots={3} index={index} onChangeIndex={handleChangeIndex} />
+        {!desktop ? (
+          <>
+            <AutoPlaySwipeableViews
+              interval={2000}
+              index={index}
+              onChangeIndex={handleChangeIndex}>
+              <div style={Object.assign({}, styles.slide, styles.slide1)}>
+                <img className="ad_img" src={ad} alt="slide1" />
+              </div>
+              <div style={Object.assign({}, styles.slide, styles.slide2)}>
+                <img className="ad_img" src={ad2} alt="slide2" />
+              </div>
+              <div style={Object.assign({}, styles.slide, styles.slide3)}>
+                <img className="ad_img" src={ad3} alt="slide3" />
+              </div>
+            </AutoPlaySwipeableViews>
+            <Pagination
+              dots={3}
+              index={index}
+              onChangeIndex={handleChangeIndex}
+            />
+          </>
+        ) : (
+          <>
+            <div style={Object.assign({}, styles.slide, styles.slide1)}>
+              <img className="ad_img" src={ad} alt="slide1" />
+            </div>
+            <div style={Object.assign({}, styles.slide, styles.slide2)}>
+              <img className="ad_img" src={ad2} alt="slide2" />
+            </div>
+            <div style={Object.assign({}, styles.slide, styles.slide3)}>
+              <img className="ad_img" src={ad3} alt="slide3" />
+            </div>
+          </>
+        )}
       </div>
       {/* <Carousel
         autoPlay="true"

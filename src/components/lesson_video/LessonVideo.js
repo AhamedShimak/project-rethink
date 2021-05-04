@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cover: {
     width: 151,
+    // height: "50px",
   },
   controls: {
     display: "flex",
@@ -70,11 +71,14 @@ export default function LessonListVideo({
       />
       <div className={classes.details}>
         <CardContent className={classes.content}>
-          <Typography component="h5" variant="h5" style={{ color: "#fffffa" }}>
+          <Typography
+            component="h6"
+            variant="h6"
+            style={{ color: "#fffffa", fontSize: "1rem" }}>
             {name}
           </Typography>
-          <Typography variant="subtitle1" style={{ color: "#d4d4d3" }}>
-            {author}
+          <Typography variant="subtitle2" style={{ color: "#d4d4d3" }}>
+            Author: {author}
           </Typography>
         </CardContent>
         <div className={classes.controls}>

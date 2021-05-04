@@ -60,15 +60,13 @@ const Lessons = () => {
         ))}
       </Tabs>
       {subjects?.subjects ? (
-        <>
-          <SwipeableViews index={index} onChangeIndex={handleChangeIndex}>
-            {subjects?.subjects?.map((sub) => (
-              <div style={Object.assign({}, styles.slide, styles.slide)}>
-                <Accordian accordianItems={sub} />
-              </div>
-            ))}
-          </SwipeableViews>
-        </>
+        <SwipeableViews index={index} onChangeIndex={handleChangeIndex}>
+          {subjects?.subjects?.map((sub) => (
+            <div className="lessons__slide">
+              <Accordian accordianItems={sub} />
+            </div>
+          ))}
+        </SwipeableViews>
       ) : (
         <p>Loading</p>
       )}

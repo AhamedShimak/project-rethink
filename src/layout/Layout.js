@@ -7,10 +7,17 @@ const Layout = ({ children }) => {
     <div className="layout">
       <div className="layout__info">
         <Header />
-        <Ad />
+        <div className="layout__info__ad--mobile">
+          <Ad />
+        </div>
       </div>
 
-      <section className="layout__content">{children}</section>
+      <section className="layout__content">
+        <div className="layout__info__ad--desktop">
+          <Ad desktop={true} />
+        </div>
+        <div className="layout__content__content">{children}</div>
+      </section>
     </div>
   );
 };

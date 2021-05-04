@@ -27,12 +27,18 @@ const LessonsListVideos = ({ match }) => {
   }, [id]);
   return (
     <div className="lessonsListVideos">
-      {console.log(lessons.products)}
+      {/* {console.log(lessons.products)} */}
 
-      <div className="lessonsListVideos__player">
+      <div
+        className={`lessonsListVideos__player ${
+          currentVideo ? "desktop__playing__player" : ""
+        }`}>
         {currentVideo && <YoutubePlayer url={currentVideo.url} />}
       </div>
-      <div className="lessonsListVideos__list">
+      <div
+        className={`lessonsListVideos__list ${
+          currentVideo ? "desktop__playing__list" : ""
+        }`}>
         {lessons?.products?.map((lesson) => (
           <div
             className="lessonsListVideos__video"
