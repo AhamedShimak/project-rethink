@@ -27,7 +27,7 @@ const Header = () => {
           <Link to="/">
             <div className="header__logo">
               <img
-                src={process.env.PUBLIC_URL + "/assets/logo.png"}
+                src={process.env.PUBLIC_URL + "/assets/logo.svg"}
                 alt="logo"
                 className="logo"
               />

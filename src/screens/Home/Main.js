@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { MdKeyboardBackspace, MdSearch } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { ReactSVG } from "react-svg";
 import "./Home.css";
 
 const Main = () => {
@@ -12,8 +13,9 @@ const Main = () => {
         <div>
           <Link to="/">
             <div className="home__main__logo">
+              {/* <ReactSVG src="svg.svg" /> */}
               <img
-                src={process.env.PUBLIC_URL + "/assets/logo.png"}
+                src={process.env.PUBLIC_URL + "/assets/logo.svg"}
                 alt="logo"
                 className="logo"
               />
