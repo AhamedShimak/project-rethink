@@ -6,8 +6,6 @@ import "./ad.css";
 import ad from "../../assets/ad.jpg";
 import ad2 from "../../assets/ad2.jpg";
 import ad3 from "../../assets/ad3.jpg";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
