@@ -6,7 +6,7 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Typography from "@material-ui/core/Typography";
 import { MdExpandMore } from "react-icons/md";
 import AccordianListItem from "../accordian_list_items/AccordianListItem";
-
+import "./AccordianItem.css";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",

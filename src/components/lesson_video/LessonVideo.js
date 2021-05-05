@@ -9,6 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import { MdPlayArrow, MdShare, MdBookmark, MdPause } from "react-icons/md";
 import { Avatar } from "@material-ui/core";
 
+import "./LessonVideo.css";
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -33,8 +34,11 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
 
     width: "100%",
+    maxWidth: "380px",
     paddingLeft: theme.spacing(1),
     paddingBottom: theme.spacing(1),
+    marginTop: 0,
+    padding: "0 !important",
   },
   playIcon: {
     height: 38,
@@ -67,19 +71,45 @@ export default function LessonListVideo({
       <CardMedia
         className={classes.cover}
         image={image || "https://source.unsplash.com/random"}
-        title="Live from space album cover"
+        title={name}
       />
       <div className={classes.details}>
         <CardContent className={classes.content}>
           <Typography
             component="h6"
             variant="h6"
-            style={{ color: "#fffffa", fontSize: "1rem" }}>
+            style={{
+              color: "#fffffa",
+              fontSize: ".9rem",
+              lineHeight: "0.95rem",
+              marginBottom: "5px",
+            }}>
             {name}
           </Typography>
-          <Typography variant="subtitle2" style={{ color: "#d4d4d3" }}>
-            Author: {author}
-          </Typography>
+          <div className="video__duration">
+            <Typography
+              variant="caption"
+              style={{
+                color: "#d4d4d388",
+                fontSize: ".8rem",
+                lineHeight: "0.85rem",
+                marginBottom: "5px",
+                padding: "0",
+              }}>
+              Author: {author}
+            </Typography>
+            <Typography
+              variant="caption"
+              style={{
+                color: "#d4d4d388",
+                fontSize: ".8rem",
+                lineHeight: "0.85rem",
+                marginBottom: "5px",
+                padding: "0",
+              }}>
+              {duration}
+            </Typography>
+          </div>
         </CardContent>
         <div className={classes.controls}>
           <IconButton aria-label="play/pause">

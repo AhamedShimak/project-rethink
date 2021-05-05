@@ -2,6 +2,12 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding:0 var(--spacer--sm);
+}
+.accordian__list__item:hover{
+  background: var( --text-secondary) !important;
+  border-radius: 2em;
+
 }
 .accordian__list__item__icon{
   font-size: large;

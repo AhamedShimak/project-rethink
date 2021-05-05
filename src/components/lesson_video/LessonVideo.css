@@ -1,0 +1,9 @@
+.video__duration{
+  
+    display:flex;
+    justify-content:space-between;
+    padding:0;
+    max-width:350px;
+    margin-bottom:0 !important;
+
+}

@@ -74,23 +74,29 @@ const Ad = ({ desktop }) => {
         ) : (
           <>
             <div style={Object.assign({}, styles.slide, styles.slide1)}>
-              <img className="ad_img" src={ad} alt="slide1" />
+              <img
+                src={ad}
+                alt="slide1"
+                style={{ display: "block !important", width: "100%" }}
+              />
             </div>
             <div style={Object.assign({}, styles.slide, styles.slide2)}>
-              <img className="ad_img" src={ad2} alt="slide2" />
+              <img
+                src={ad2}
+                alt="slide1"
+                style={{ display: "block !important", width: "100%" }}
+              />
             </div>
             <div style={Object.assign({}, styles.slide, styles.slide3)}>
-              <img className="ad_img" src={ad3} alt="slide3" />
+              <img
+                src={ad3}
+                alt="slide1"
+                style={{ display: "block !important", width: "100%" }}
+              />
             </div>
           </>
         )}
       </div>
-      <Carousel
-        autoPlay="true"
-        interval="2000"
-        infiniteLoop="true"
-        showThumbs={false}
-        showIndicators={false}></Carousel>
     </div>
   );
 };
