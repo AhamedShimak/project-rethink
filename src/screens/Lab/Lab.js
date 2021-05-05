@@ -11,7 +11,7 @@ const Lab = () => {
     <div>
       <div className="lab__iframe">
         <iframe
-          src="https://phet.colorado.edu/sims/html/ph-scale/latest/ph-scale_en.html"
+          src="https://phet.colorado.edu/sims/html/energy-skate-park/latest/energy-skate-park_en.html"
           scrolling="no"
           allowfullscreen></iframe>
       </div>
@@ -19,7 +19,7 @@ const Lab = () => {
         <MdKeyboardBackspace onClick={() => history.goBack()} />
 
         <img
-          src={process.env.PUBLIC_URL + "/assets/logo.png"}
+          src={process.env.PUBLIC_URL + "/assets/logo.svg"}
           alt="logo"
           className="logo"
         />

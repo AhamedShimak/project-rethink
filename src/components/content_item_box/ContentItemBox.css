@@ -1,11 +1,13 @@
 .content__item__box{
-    padding: 0;
+    padding: 0 !important;
     width: 100%;
     /* max-height: 150px, */
   
     border-radius: 1em;
     margin-bottom: var(--spacer--md);
-   
+    cursor:pointer;
+    background-color: #15204a !important;
+  
   
    
    
@@ -13,25 +15,28 @@
 
 .card__content  {
     
-    padding-bottom: 1px !important;
-    background-color: #15204a;
-  
+    padding:var(--spacer--sm) var(--spacer--md) 0 var(--spacer--md) !important;
+    margin: 0 !important;
+    height: 100% !important
 }
 .card__content__icons  {
     
-    display: flex;
-    justify-content: flex-end;
+    
     padding-top: 0;
     /* margin-top: -20px; */
+    /* border: solid 1px green; */
+    padding:0  !important
 
 }
 
 .icon__btn{
 
-    height: 2em;
-    width: 2em;
+    height: 1.7em;
+    width: 1.7em;
+ 
     padding:0;
    }
 .icon__btn > *{   
     color:var(--color-white);
+    
 }
