@@ -5,17 +5,6 @@
   padding: 0;
 }
 
-.home {
-  background-image: url("./Back_drop .svg");
-  background-color: #b2bee0b4;
-  height: 100vh;
-}
-
-.home .test {
-  background-color: #080f16cb;
-  height: 100vh;
-}
-
 .home__main__container .home__main {
   height: 60px;
   display: -webkit-box;

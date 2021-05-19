@@ -9,14 +9,14 @@ const Home = () => {
 
     <div className="home">
 
-      <div className="test ">
-        <main className="home__main__container">
-          <Main />
-        </main>
-        <section className="home__selection__container">
-          <HomeSection />
-        </section>
-      </div>
+
+      <main className="home__main__container">
+        <Main />
+      </main>
+      <section className="home__selection__container">
+        <HomeSection />
+      </section>
+
 
 
     </div>
