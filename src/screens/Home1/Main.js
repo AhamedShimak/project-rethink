@@ -12,9 +12,7 @@ import "./Home.css";
 
 const Main = () => {
   const [searchActive, setSearchActive] = useState(false);
-  useEffect(() => {
-    console.log("hmm");
-  }, [searchActive]);
+
   return (
     <div className="home__main">
       <div className="home__logo">
