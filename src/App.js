@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { useDispatch } from "react-redux";
 
-import Home from "./screens/Home/Home";
+import Home from "./screens/Home1/Home";
 import LabList from "./screens/LabAndGame/LabsList";
 import LabView from "./screens/LabAndGame/LabView";
 import PapersList from "./screens/Paper/PapersList";

@@ -22,13 +22,10 @@ const Main = () => {
             </div>
           </Link>
         </div>
-        <h2 className="home__main__heading home__main__heading__desktop ">
-          'The science of today is the technology of tomorrow'
-        </h2>
+
         <div
-          className={`home__main__input  ${
-            searchActive ? "home__main__search__diplay" : ""
-          } `}>
+          className={`home__main__input  ${searchActive ? "home__main__search__diplay" : ""
+            } `}>
           <div className="home__main__icons home__main__search__closeIcon">
             <MdKeyboardBackspace
               onClick={() => setSearchActive(!searchActive)}
@@ -48,9 +45,7 @@ const Main = () => {
           </li>
         </ul>
       </nav>
-      <h2 className="home__main__heading">
-        'The science of today is the technology of tomorrow'
-      </h2>
+
     </div>
   );
 };
