@@ -11,6 +11,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
   },
+  back:{
+    color: "hsl(60deg 100% 99%)",
+    backgroundColor: "rgb(49, 49, 49)",
+  },
   heading: {
     fontSize: theme.typography.pxToRem(15),
     fontWeight: "bolder",
@@ -21,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: theme.typography.pxToRem(15),
     color: theme.palette.text.secondary,
   },
+
 }));
 const AccordianItem = ({
   expanded,
@@ -33,18 +38,18 @@ const AccordianItem = ({
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Accordion
+      <Accordion className={classes.back}
         expanded={expanded === panelName}
         onChange={handleChange(panelName)}>
-        <AccordionSummary
-          expandIcon={<MdExpandMore />}
+        <AccordionSummary 
+          expandIcon={<MdExpandMore color="white"/>}
           aria-controls="panel1bh-content"
           id="panel1bh-header">
           <Typography className={classes.heading}>{heading}</Typography>
         </AccordionSummary>
         <AccordionDetails>
           {/* {details} */}
-          <Typography variant="caption" display="block" gutterBottom>
+          <Typography  variant="caption" display="block" gutterBottom>
             {/* {details} */}
 
             <AccordianListItem key={heading._id} headings={headings} />
