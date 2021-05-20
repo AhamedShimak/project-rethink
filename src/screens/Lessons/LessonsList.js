@@ -27,7 +27,7 @@ const styles = {
 const Lessons = () => {
   const [index, setIndex] = useState(0);
   const dispatch = useDispatch();
-  const [subjectList, setSubjectList] = useState([]);
+  //const [subjectList, setSubjectList] = useState([]);
   const { subjects, loading, errors } = useSelector(subjectsSelector);
 
   useEffect(() => {
