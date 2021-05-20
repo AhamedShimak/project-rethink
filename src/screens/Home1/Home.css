@@ -62,7 +62,7 @@
   position: relative;
   background-color: #ffffff;
   left: 100%;
-  opacity: 0%;
+  opacity: 0;
   border-radius: 20px;
   -webkit-box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0), 0px 4px 5px -1px rgba(0, 0, 0, 0), 0px 4px 5px 1px #00000034;
           box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0), 0px 4px 5px -1px rgba(0, 0, 0, 0), 0px 4px 5px 1px #00000034;
@@ -79,7 +79,7 @@
 .home__main__container .home__main .home__search__container .home__search__display {
   position: relative;
   left: 0%;
-  opacity: 100%;
+  opacity: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
