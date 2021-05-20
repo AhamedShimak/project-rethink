@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   },
   back:{
     color: "hsl(60deg 100% 99%)",
-    backgroundColor: "rgb(49, 49, 49)",
+    backgroundColor: "cadetblue",
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),

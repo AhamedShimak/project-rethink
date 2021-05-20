@@ -26,7 +26,7 @@ const ContentItemBox = ({ image, title }) => {
             justifyContent: "space-between",
             alignItems: "center",
           }}>
-          <div onClick={() => history.push("/labs/lab")}>Test</div>
+          <p className="content__item__box_p" onClick={() => history.push("/labs/lab")}>Test</p>
 
           <div className="card__content__icons">
             <IconButton aria-label="add to bookmark" className="icon__btn">

@@ -1,23 +1,30 @@
 .content__item__box{
     padding: 0 !important;
     width: 100%;
-    /* max-height: 150px, */
-  
-    border-radius: 1em;
-    margin-bottom: var(--spacer--md);
+    margin-bottom:0.3em;
     cursor:pointer;
-    background-color: #15204a !important;
-  
-  
-   
-   
 }
 
 .card__content  {
     
-    padding:var(--spacer--sm) var(--spacer--md) 0 var(--spacer--md) !important;
+  
     margin: 0 !important;
-    height: 100% !important
+   
+    background-color: #15204a !important;
+    padding-left: 0.5em;
+    position: relative;
+    border-radius: 0 0.25em  0.25em 0;
+
+}
+.card__content::before{
+    content: "";
+    display: block;
+    width: 0.4em;
+    height: 100%;
+   background-color: hsl(60, 100%, 99%);
+    position: absolute;
+    top: 0;
+    left: -0.4em;
 }
 .card__content__icons  {
     
@@ -25,16 +32,23 @@
     padding-top: 0;
     /* margin-top: -20px; */
     /* border: solid 1px green; */
-    padding:0  !important
+    padding:0  !important;
+    display: flex;
 
+
+}
+.content__item__box_p{
+    line-height: 1.1rem;
+    padding: 0.15rem 0;
 }
 
 .icon__btn{
 
-    height: 1.7em;
-    width: 1.7em;
- 
-    padding:0;
+    height: 1em;
+    width: 1.3em;
+    padding: 0px !important;
+    /* padding: 0; */
+    font-size: 1rem !important;
    }
 .icon__btn > *{   
     color:var(--color-white);

@@ -13,7 +13,11 @@ const useStyles = makeStyles((theme) => ({
 
     backgroundColor: "transparent",
     cursor: "pointer",
+  
   },
+  
+  
+
 }));
 
 export default function AccordianListItem({ headings }) {
