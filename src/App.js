@@ -33,6 +33,7 @@ function App() {
   //
   return (
     <div className="App">
+
       <ThemeProvider theme={MuiTheme}>
         <Router>
           {/* A <Switch> looks through its children <Route>s and
@@ -76,6 +77,9 @@ function App() {
           </Switch>
         </Router>
       </ThemeProvider>
+
+
+
     </div>
   );
 }
