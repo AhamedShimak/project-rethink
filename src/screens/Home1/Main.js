@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 
 import {
-  MdFace,
   MdKeyboardBackspace,
   MdSearch,
   MdSettings,
 } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { ReactSVG } from "react-svg";
+//import { ReactSVG } from "react-svg";
 import "./Home.css";
 
 const Main = () => {
