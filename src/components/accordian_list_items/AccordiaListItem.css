@@ -5,7 +5,7 @@
   padding:0 var(--spacer--sm);
 }
 .accordian__list__item:hover{
-  background: var( --text-secondary) !important;
+  background: var( --text-dark) !important;
   border-radius: 2em;
 
 }
