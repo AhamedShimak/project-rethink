@@ -40,5 +40,24 @@
                 <span>Please go online to connect with lepton.</span>
             </h2>
         </div>
+
+        <script>
+            async function checkNetwork(){
+                try{
+                const res = await fetch(".")
+                if(res.status >= 200 && re.status <500) {
+                    
+                    return
+                }
+            }catch(e){}
+            }
+           
+            window.addEventListener('online',()=>{
+                window.location.reload()
+            })
+
+            window.setTimeout(checkNetwork,2500);
+        </script>
     </body>
+    
 </html>
