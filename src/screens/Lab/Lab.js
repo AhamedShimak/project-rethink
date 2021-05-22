@@ -22,6 +22,7 @@ const Lab = () => {
           src={process.env.PUBLIC_URL + "/assets/logo.svg"}
           alt="logo"
           className="logo"
+          height="50px"
         />
       </div>
       <div className="draggable__glossary">
