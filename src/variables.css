@@ -1,7 +1,8 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&family=Nunito&display=swap');
 :root {
     --color-primary:hsl(210, 32%, 12%);
-    --color-secondary:hsl(191, 89%, 19%);
+    --color-secondary:rgb(5, 76, 92);
     --color-teal:hsl(181, 100%, 24%);
     --color-info:hsl(205, 98%, 64%);
     --color-warning:hsl(34, 100%, 59%);
