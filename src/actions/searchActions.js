@@ -10,17 +10,16 @@ import {
   setKeyword,
 } from "../features/search/searchSlice";
 export async function listResults(dispatch, keyword) {
-  console.log("heere");
   dispatch(getResults());
   try {
     const { data } = await axios.get(
       `${laptonApi}/api/resources/search?keyword=${keyword}`
     );
-    console.log(data);
-    // dispatch(getSubjectsSuccess(data));
+
+    dispatch(getResultsSuccess(data));
   } catch (error) {
     console.log(error);
-    // dispatch(getSubjectsFailure(error));
+    dispatch(getResultsFailure(error));
   }
 }
 export async function setSearch(dispatch, keyword) {

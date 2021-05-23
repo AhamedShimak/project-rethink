@@ -18,7 +18,7 @@ export const resultsSlice = createSlice({
       state.loading = false;
       state.errors = false;
     },
-    getLessonsFailure: (state, { payload }) => {
+    getResultsFailure: (state, { payload }) => {
       state.loading = false;
       state.errors = payload;
     },

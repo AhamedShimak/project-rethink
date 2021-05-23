@@ -9,17 +9,36 @@ const SearchResults = () => {
   let history = useHistory();
 
   const dispatch = useDispatch();
-  const searchWord = useSelector((state) => state.searchResults.searchWord);
-  console.log(searchWord);
+  const { searchWord, loading, errors, results } = useSelector(
+    (state) => state.searchResults
+  );
+
   useEffect(() => {
     const fetchData = async () => {
       listResults(dispatch, searchWord);
     };
-
-    fetchData();
+    if (searchWord !== "" && searchWord !== undefined) {
+      fetchData();
+    }
   }, [searchWord, dispatch]);
 
-  return <div>Search Results{searchWord && searchWord}</div>;
+  return (
+    <div className="search__results">
+      <h3>Search Results</h3>
+      {loading && <h5>Searching ....</h5>}
+      <ul>
+        {results?.products?.map((result) => (
+          <li key={result._id}>
+            Name: {result.name} {", "}
+            Category:{result.category.name}
+            {","}
+            Subject: {result.subject.name}
+            {" , "} Heading: {result.heading.name}{" "}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default SearchResults;
