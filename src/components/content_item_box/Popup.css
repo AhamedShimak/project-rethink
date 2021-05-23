@@ -1,0 +1,14 @@
+.popup{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+}
+.popup_content{
+    padding: 0.5em;
+}
+.copy_button{
+    background: #e5e4e4 !important;
+    padding: 13px !important;
+    font-size: 2.4em !important;
+}

@@ -262,46 +262,5 @@
 
 }
 
-@-webkit-keyframes floating {
-  0% {
-    -webkit-transform: translateX(-5px);
-            transform: translateX(-5px);
-  }
-  50% {
-    -webkit-transform: translateX(15px);
-            transform: translateX(15px);
-  }
-  100% {
-    -webkit-transform: translateX(-5px);
-            transform: translateX(-5px);
-  }
-}
-
-@keyframes floating {
-  0% {
-    -webkit-transform: translateX(-5px);
-            transform: translateX(-5px);
-  }
-  50% {
-    -webkit-transform: translateX(15px);
-            transform: translateX(15px);
-  }
-  100% {
-    -webkit-transform: translateX(-5px);
-            transform: translateX(-5px);
-  }
-}
-
-@-webkit-keyframes first_start {
-  0% {
-    -webkit-transform: translateY(500px);
-            transform: translateY(500px);
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-}
-
 
 /*# sourceMappingURL=Home.css.map */
