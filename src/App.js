@@ -52,9 +52,7 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path="/labs/lab">
-              <Lab />
-            </Route>
+
             {/* List items */}
             <Layout>
               <Route path="/papers">
@@ -65,6 +63,9 @@ function App() {
               </Route>
               <Route path="/lessons/:id">
                 <LessonsListVideos />
+              </Route>
+              <Route exact path="/labs/lab/:id">
+                <Lab />
               </Route>
               <Route exact path="/labs">
                 <LabList />
@@ -81,9 +82,6 @@ function App() {
               <PaperView />
             </Route>
 
-            <Route exact path="/labs/:id">
-              <LabView />
-            </Route>
             <Route path="/games/:id">
               <LabView />
             </Route>

@@ -11,7 +11,6 @@ import {
 
 export async function listLabs(dispatch) {
   dispatch(getLabs());
-  console.log("q");
 
   try {
     const { data } = await axios.get(`${laptonApi}/api/resources/labs`);

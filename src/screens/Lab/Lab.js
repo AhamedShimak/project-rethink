@@ -1,20 +1,54 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { MdKeyboardBackspace } from "react-icons/md";
 import Draggable from "react-draggable";
 import "./Lab.css";
-import { useHistory } from "react-router";
+import { useHistory, useParams } from "react-router";
+import { useDispatch, useSelector } from "react-redux";
+import { labsSelector } from "../../features/labs/labsSlice";
+import { subjectsSelector } from "../../features/subjects/subjectSlice";
+import { listLabs } from "../../actions/labsActions";
+import { listSubjects } from "../../actions/subjectActions";
 
 const Lab = () => {
   let history = useHistory();
+  const dispatch = useDispatch();
+  const [currentLab, setCurrentLab] = useState(null);
+  const { id } = useParams();
+  const { labs, loading, errors } = useSelector(labsSelector);
+  const {
+    subjects,
+    loading: loadingSub,
+    errors: errorSub,
+  } = useSelector(subjectsSelector);
+  useEffect(() => {
+    const fetchData = async () => {
+      // if (!labs || labs === [] || labs === null) {
+      listLabs(dispatch);
+      // }
+    };
+    const fetchSubjectData = async () => {
+      if (!subjects || subjects === [] || subjects === null) {
+        listSubjects(dispatch);
+      }
+      // listCategories(dispatch);
+    };
+    fetchSubjectData();
+    fetchData();
+
+    setCurrentLab(labs?.products?.filter((lab) => lab._id === id)[0]);
+  }, []);
+
   return (
     <div>
       <div className="lab__iframe">
         <iframe
-          src="https://phet.colorado.edu/sims/html/energy-skate-park/latest/energy-skate-park_en.html"
+          src={currentLab?.resourceUrl}
+          title={currentLab?._id}
           scrolling="no"
           allowfullscreen></iframe>
       </div>
+
       <div className="lab__header">
         <MdKeyboardBackspace onClick={() => history.goBack()} />
 
