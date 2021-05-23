@@ -8,6 +8,7 @@ import {
   getCurrentLessonFailure,
   getCurrentLessonSuccess,
 } from "../features/lessons/lessonSlice";
+
 export async function listLessons(dispatch, id) {
   dispatch(getLessons());
 
@@ -17,6 +18,8 @@ export async function listLessons(dispatch, id) {
     );
 
     dispatch(getLessonsSuccess(data));
+
+    // TODO: store in local storage
   } catch (error) {
     console.log(error);
     dispatch(getLessonsFailure(error));

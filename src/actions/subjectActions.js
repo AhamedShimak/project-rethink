@@ -5,12 +5,27 @@ import {
   getSubjectsFailure,
   getSubjectsSuccess,
 } from "../features/subjects/subjectSlice";
+
+import {
+  checkIfDataExistsLocalStorage,
+  APP_DATA_SUBJECTS,
+  setDataLocalStorage,
+  getDataLocalStorage,
+} from "./../localStorage/index";
+
 export async function listSubjects(dispatch) {
   dispatch(getSubjects());
   try {
-    const { data } = await axios.get(`${laptonApi}/api/subjects`);
-    console.log(data.subjects);
-    dispatch(getSubjectsSuccess(data));
+    if (checkIfDataExistsLocalStorage(APP_DATA_SUBJECTS)) {
+      const data = getDataLocalStorage(APP_DATA_SUBJECTS);
+      console.log("DATA from storage: ", data);
+      dispatch(getSubjectsSuccess(data));
+    } else {
+      const { data } = await axios.get(`${laptonApi}/api/subjects`);
+      dispatch(getSubjectsSuccess(data));
+      setDataLocalStorage(APP_DATA_SUBJECTS, data);
+      console.log("DATA from backend: ", data);
+    }
   } catch (error) {
     console.log(error);
     dispatch(getSubjectsFailure(error));

@@ -21,15 +21,25 @@ import Lab from "./screens/Lab/Lab";
 // import Starter from "./starter/starter";
 import { listSubjects } from "./actions/subjectActions";
 import { listCategories } from "./actions/categoryActions";
+import { checkLocalStorageVersion } from "./localStorage/index";
+
 function App() {
-  // const { advertisements, fetchAdvertisements } = useContext(GlobalContext);
   const dispatch = useDispatch();
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchStaticData = async () => {
+      //only this should be stored in local storage
       listSubjects(dispatch);
       listCategories(dispatch);
     };
-    fetchData();
+    const fetchDynamicData = () => {
+      // fetch ads
+    };
+
+    //TODO: Need to remove data from local storage if versions are not equal
+    //TODO: Need to fetch dynamic data
+    checkLocalStorageVersion();
+    fetchDynamicData();
+    fetchStaticData();
   }, []);
   //
   return (
