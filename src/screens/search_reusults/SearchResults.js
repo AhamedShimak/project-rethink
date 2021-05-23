@@ -24,18 +24,20 @@ const SearchResults = () => {
 
   return (
     <div className="search__results">
-      <h3>Search Results</h3>
+      <h3>Search Results for: {searchWord}</h3>
       {loading && <h5>Searching ....</h5>}
       <ul>
-        {results?.products?.map((result) => (
-          <li key={result._id}>
-            Name: {result.name} {", "}
-            Category:{result.category.name}
-            {","}
-            Subject: {result.subject.name}
-            {" , "} Heading: {result.heading.name}{" "}
-          </li>
-        ))}
+        {!loading &&
+          results?.products?.map((result) => (
+            <li key={result._id}>
+              Name: {result.name} {", "}
+              Category:{result.category.name}
+              {","}
+              Subject: {result.subject.name}
+              {" , "} Heading: {result.heading.name} <br></br>
+              <br></br>
+            </li>
+          ))}
       </ul>
     </div>
   );

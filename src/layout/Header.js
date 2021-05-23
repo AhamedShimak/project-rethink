@@ -26,7 +26,7 @@ const Header = () => {
     if (keyword) {
       setSearch(dispatch, keyword);
       history.push(`/search/?keyword=${keyword}`);
-      setKeyword("");
+      // setKeyword("");
     } else {
       history.push(history.push(history.location.pathname));
     }
