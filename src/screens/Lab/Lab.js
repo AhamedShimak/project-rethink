@@ -23,7 +23,7 @@ const Lab = () => {
   } = useSelector(subjectsSelector);
   useEffect(() => {
     const fetchData = async () => {
-      // if (!labs || labs === [] || labs === null) {
+      // if (labs === [] || labs === null) {
       listLabs(dispatch);
       // }
     };
@@ -35,12 +35,15 @@ const Lab = () => {
     };
     fetchSubjectData();
     fetchData();
-
     setCurrentLab(labs?.products?.filter((lab) => lab._id === id)[0]);
   }, []);
+  useEffect(() => {
+    setCurrentLab(labs?.products?.filter((lab) => lab._id === id)[0]);
+  }, [labs]);
 
   return (
     <div>
+      {console.log(currentLab)}
       <div className="lab__iframe">
         <iframe
           src={currentLab?.resourceUrl}

@@ -20,6 +20,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 //import { Divider } from "@material-ui/core";
 import { useHistory } from "react-router";
 import Popup from "./Popup";
+import { clientApi } from "../../api/api";
 
 const ContentItemBox = ({ name, title, resourceUrl, id }) => {
   //share button
@@ -73,14 +74,13 @@ const ContentItemBox = ({ name, title, resourceUrl, id }) => {
           onClose={handleClose}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description">
-          <DialogTitle id="alert-dialog-title">
-            {"Share This Platform"}
-          </DialogTitle>
+          <DialogTitle id="alert-dialog-title">{`share: ${name}`}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-              If you like this share amoung others
+              Share with others
             </DialogContentText>
-            <Popup />
+
+            <Popup url={`${clientApi}/labs/lab/${id}`} />
           </DialogContent>
         </Dialog>
       </div>

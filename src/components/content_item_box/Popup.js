@@ -1,18 +1,19 @@
-import { React, useState } from 'react';
-import { FacebookIcon, WhatsappIcon, TelegramIcon } from 'react-share';
-import IconButton from '@material-ui/core/IconButton';
-import { MdContentCopy } from 'react-icons/md';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { React, useState } from "react";
+import { FacebookIcon, WhatsappIcon, TelegramIcon } from "react-share";
+import IconButton from "@material-ui/core/IconButton";
+import { MdContentCopy } from "react-icons/md";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 import {
   FacebookShareButton,
   WhatsappShareButton,
   TelegramShareButton,
-} from 'react-share';
-import './Popup.css';
-export default function Popup() {
-  const shareURl = 'https://laptontest.tk/';
-  const title = 'share now';
+} from "react-share";
+import "./Popup.css";
+export default function Popup({ url }) {
+  const shareURl = url;
+  console.log(url);
+  const title = "share now 🔥";
   return (
     <div className="popup">
       <div className="popup_content">

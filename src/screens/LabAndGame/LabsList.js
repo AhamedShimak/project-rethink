@@ -33,9 +33,9 @@ const Lab = () => {
   } = useSelector(subjectsSelector);
   useEffect(() => {
     const fetchData = async () => {
-      // if (!labs || labs === [] || labs === null) {
-      listLabs(dispatch);
-      // }
+      if (!labs || labs === [] || labs === null) {
+        listLabs(dispatch);
+      }
     };
     const fetchSubjectData = async () => {
       if (!subjects || subjects === [] || subjects === null) {
