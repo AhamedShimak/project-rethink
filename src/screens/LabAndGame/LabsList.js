@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Lab.css";
 import gameImg from "../../assets/gameimg.png";
 //import { BsGridFill } from "react-icons/bs";
@@ -8,16 +8,34 @@ import { MdFunctions } from "react-icons/md";
 import SubjectElipse from "../../components/subject__elipse/SubjectElipse";
 import ContentItemBox from "../../components/content_item_box/ContentItemBox";
 import SwipeableViews from "react-swipeable-views";
+
+import { useDispatch, useSelector } from "react-redux";
+import { labsSelector } from "../../features/labs/labsSlice";
+import { listLabs } from "../../actions/labsActions";
 const Lab = () => {
   const [index, setIndex] = useState(0);
+  const dispatch = useDispatch();
   /*const handleChange = (value) => {
     setIndex(value);
   };*/
+  const { labs, loading, errors } = useSelector(labsSelector);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      // if (!labs || labs === [] || labs === null) {
+      listLabs(dispatch);
+      // }
+
+      // listCategories(dispatch);
+    };
+    fetchData();
+  }, []);
   const handleChangeIndex = (index) => {
     setIndex(index);
   };
   return (
     <div className="lab">
+      {console.log("Labs:", labs)}
       <div className="lab__text">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing ipsum dolor sit
