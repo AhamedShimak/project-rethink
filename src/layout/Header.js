@@ -10,11 +10,27 @@ import {
 import { ImLab } from "react-icons/im";
 
 import "./header.css";
+import { useDispatch } from "react-redux";
+
+import { setSearch } from "../actions/searchActions";
 const Header = () => {
   const [searchActive, setSearchActive] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
+  const [keyword, setKeyword] = useState("");
 
   let history = useHistory();
+  const dispatch = useDispatch();
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    if (keyword) {
+      setSearch(dispatch, keyword);
+      history.push(`/search/?keyword=${keyword}`);
+      // setKeyword("");
+    } else {
+      history.push(history.push(history.location.pathname));
+    }
+  };
   return (
     <div className="header">
       <nav className="header__nav">
@@ -45,8 +61,15 @@ const Header = () => {
             />
           </div>
 
-          <input placeholder="Search"></input>
-          <MdSearch className=" header__icons header__input__icon" />
+          <input
+            placeholder="Search"
+            value={keyword}
+            onChange={(e) => setKeyword(e.target.value)}
+            onKeyPress={(e) => e.key === "Enter" && submitHandler(e)}></input>
+          <MdSearch
+            className=" header__icons header__input__icon"
+            onClick={submitHandler}
+          />
         </div>
 
         <ul>

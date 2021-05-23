@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { useDispatch } from "react-redux";
@@ -11,6 +11,7 @@ import PapersList from "./screens/Paper/PapersList";
 import PaperView from "./screens/Paper/PaperView";
 import LessonsList from "./screens/Lessons/LessonsList";
 import LessonsListVideos from "./screens/LessonListVideos/LessonsListVideos";
+import SearchResluts from "./screens/search_reusults/SearchResults";
 //import LessonView from "./screens/Lessons/LessonView";
 import MuiTheme from "./theme";
 import Layout from "./layout/Layout";
@@ -60,6 +61,9 @@ function App() {
               </Route>
               <Route path="/games">
                 <LabList />
+              </Route>
+              <Route path="/search">
+                <SearchResluts />
               </Route>
             </Layout>
             {/* view single items */}
