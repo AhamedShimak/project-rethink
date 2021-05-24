@@ -31,36 +31,7 @@ const HomeSection = () => {
             />
           </div>
         </div> */}
-        <div className="home__content__container__subServices home__content__container__item item-3">
-          <div>
-            <SubjectElipse
-              icon={<BsFillPeopleFill />}
-              title="Seminars"
-              bottomHeading={true}
-            />
-          </div>
-          <div>
-            <SubjectElipse
-              icon={<GiTeacher />}
-              title="Find tutor"
-              bottomHeading={true}
-            />
-          </div>
-          <div>
-            <SubjectElipse
-              icon={<GiNewspaper />}
-              title="Online Exams"
-              bottomHeading={true}
-            />
-          </div>
-          <div>
-            <SubjectElipse
-              icon={<GiCelebrationFire />}
-              title="Motivation"
-              bottomHeading={true}
-            />
-          </div>
-        </div>
+
         <div
           className="home__content__container__item item-1"
           onClick={() => history.push("/labs")}>
@@ -113,7 +84,36 @@ const HomeSection = () => {
             />
           </div>
         </div>
-
+        <div className="home__content__container__subServices home__content__container__item item-3">
+          <div>
+            <SubjectElipse
+              icon={<BsFillPeopleFill />}
+              title="Seminars"
+              bottomHeading={true}
+            />
+          </div>
+          <div>
+            <SubjectElipse
+              icon={<GiTeacher />}
+              title="Find tutor"
+              bottomHeading={true}
+            />
+          </div>
+          <div>
+            <SubjectElipse
+              icon={<GiNewspaper />}
+              title="Online Exams"
+              bottomHeading={true}
+            />
+          </div>
+          <div>
+            <SubjectElipse
+              icon={<GiCelebrationFire />}
+              title="Motivation"
+              bottomHeading={true}
+            />
+          </div>
+        </div>
         <h3>Coming soon..</h3>
         <div className="home__content__container__soon">
           <div>
