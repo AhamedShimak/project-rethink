@@ -39,50 +39,60 @@ const ContentItemBox = ({ name, title, resourceUrl, id }) => {
   return (
     <div className={` content__item__box`}>
       <div className="card__content" style={{ margin: "0" }}>
-        <Typography
-          variant="caption"
-          display="block"
-          style={{
-            color: "#fffffa",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}>
-          <p
-            className="content__item__box_p"
-            onClick={() => {
-              history.push(`/labs/lab/${id}`);
+        <div className="card__content__image">
+          <img
+            src="https://phet.colorado.edu/sims/html/ph-scale/latest/ph-scale-600.png"
+            alt="pH Scale"
+            style={{ border: "none", width: "100%" }}
+          />
+        </div>
+        <div className="card__content__desc">
+          <Typography
+            variant="caption"
+            display="block"
+            className="content__item__box_text"
+            style={{
+              color: "#fffffa",
+              // display: "flex",
+              // justifyContent: "space-between",
+              // alignItems: "center",
             }}>
-            {name}
-          </p>
+            <p
+              className="content__item__box_p"
+              onClick={() => {
+                history.push(`/labs/lab/${id}`);
+              }}>
+              {name}
+            </p>
 
-          <div className="card__content__icons">
-            <IconButton aria-label="add to bookmark" className="icon__btn">
-              <MdBookmark />
-            </IconButton>
+            <div className="card__content__icons">
+              <IconButton aria-label="add to bookmark" className="icon__btn">
+                <MdBookmark />
+              </IconButton>
 
-            <IconButton
-              aria-label="share"
-              className="icon__btn"
-              onClick={handleClickOpen}>
-              <MdShare />
-            </IconButton>
-          </div>
-        </Typography>
-        <Dialog
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="alert-dialog-title"
-          aria-describedby="alert-dialog-description">
-          <DialogTitle id="alert-dialog-title">{`share: ${name}`}</DialogTitle>
-          <DialogContent>
-            <DialogContentText id="alert-dialog-description">
-              Share with others
-            </DialogContentText>
+              <IconButton
+                aria-label="share"
+                className="icon__btn"
+                onClick={handleClickOpen}>
+                <MdShare />
+              </IconButton>
+            </div>
+          </Typography>
+          <Dialog
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="alert-dialog-title"
+            aria-describedby="alert-dialog-description">
+            <DialogTitle id="alert-dialog-title">{`share: ${name}`}</DialogTitle>
+            <DialogContent>
+              <DialogContentText id="alert-dialog-description">
+                Share with others
+              </DialogContentText>
 
-            <Popup url={`${clientApi}/labs/lab/${id}`} />
-          </DialogContent>
-        </Dialog>
+              <Popup url={`${clientApi}/labs/lab/${id}`} />
+            </DialogContent>
+          </Dialog>
+        </div>
       </div>
     </div>
   );
