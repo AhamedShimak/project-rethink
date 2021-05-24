@@ -15,8 +15,23 @@ const HomeSection = () => {
     <>
       <div className="home__content__container">
         {/*  <img src={process.env.PUBLIC_URL + '/assets/homeback.svg'} alt="container" className="container"/>*/}
-        <h3>Our services</h3>
-        <div className="home__content__container__subServices">
+
+        {/* <div
+          className="home__content__container__item item-3"
+          onClick={() => history.push("/games")}>
+          <div className="home__content__container__item__column column-1">
+            <h2 className="column-1__heading">GAMES</h2>
+            <p className="column-1__content">Coming soon </p>
+          </div>
+          <div className="home__content__container__item__column column-2">
+            <img
+              className="column-2__image column-2__image-3"
+              src={games}
+              alt="games"
+            />
+          </div>
+        </div> */}
+        <div className="home__content__container__subServices home__content__container__item item-3">
           <div>
             <SubjectElipse
               icon={<BsFillPeopleFill />}
@@ -98,21 +113,7 @@ const HomeSection = () => {
             />
           </div>
         </div>
-        {/* <div
-          className="home__content__container__item item-3"
-          onClick={() => history.push("/games")}>
-          <div className="home__content__container__item__column column-1">
-            <h2 className="column-1__heading">GAMES</h2>
-            <p className="column-1__content">Coming soon </p>
-          </div>
-          <div className="home__content__container__item__column column-2">
-            <img
-              className="column-2__image column-2__image-3"
-              src={games}
-              alt="games"
-            />
-          </div>
-        </div> */}
+
         <h3>Coming soon..</h3>
         <div className="home__content__container__soon">
           <div>

@@ -271,7 +271,7 @@ h3{
 .home__content__container__subServices,.home__content__container__soon{
   display:flex;
   align-items: center;
-  justify-content:space-between;
+  justify-content:space-evenly;
   padding:var(--spacer--sm) 40px;
 }
 .home__content__container__soon{
