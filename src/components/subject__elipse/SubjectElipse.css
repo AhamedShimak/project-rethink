@@ -1,4 +1,11 @@
 
+.subject__ellipse__container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    
+}
 
 .subject__ellipse{
     width: 3.5em;
@@ -14,7 +21,7 @@
     align-items: center;
     background: var(--color-white);
     border: 3px solid var(--color-teal);
-   
+    position: relative;
     animation: borderAnim 3s ease-in-out infinite alternate;
     cursor: pointer;
    
@@ -71,6 +78,16 @@
   
     line-height: .7rem;
     color: var(--color-teal) !important;
+
+}
+.subject__ellipse > .heading__bottom{
+    font-size: .7rem;
+    margin:0;
+  
+    line-height: .7rem;
+   
+    color:var(--color-white) !important;
+    /* color: var(--color-white) !important; */
 
 }
 

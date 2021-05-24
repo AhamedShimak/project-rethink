@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+h3{
+  margin-bottom: var(--spacer--sm);
+}
+
 .home__main__container .home__main {
   height: 60px;
   display: -webkit-box;
@@ -262,5 +266,23 @@
 
 }
 
+
+.home__content__container__subServices,.home__content__container__soon{
+  display:flex;
+  align-items: center;
+  justify-content:space-between;
+}
+.home__content__container__soon{
+  
+
+  justify-content:flex-start;
+  
+}
+.home__content__container__soon > div{
+  
+  margin-right: 20px;
+  justify-content:flex-start;
+
+}
 
 /*# sourceMappingURL=Home.css.map */
