@@ -30,6 +30,32 @@ const data = {
       title: "தொடரிகளின் வகைகள் 2",
       url: "https://www.youtube.com/embed/OyHOOjZAw4I",
     },
+    {
+      type: "VIDEO",
+      // content: "<h1>தொடர் அறிமுகம்</h1>",
+      title: "தொடர்கள் SIGMA",
+      url: "https://www.youtube.com/embed/pM67wyaB8tg",
+    },
+    {
+      type: "VIDEO",
+      // content: "<h1>தொடர் அறிமுகம்</h1>",
+      title: "தொடர்கள் ஒருங்குதல்",
+      url: "https://www.youtube.com/embed/a8GjctgM8q4",
+    },
+    {
+      type: "VIDEO",
+      // content: "<h1>தொடர் அறிமுகம்</h1>",
+      title: "தொடர்கள் summary",
+
+      url: "https://www.youtube.com/embed/ZLPco2g7SHo",
+    },
+    {
+      type: "VIDEO",
+      // content: "<h1>தொடர் அறிமுகம்</h1>",
+      title: "அனைத்து கேள்விகளும் பார்வையில்",
+
+      url: "https://www.youtube.com/embed/Q1bZejNHALM",
+    },
   ],
 };
 export default data;
