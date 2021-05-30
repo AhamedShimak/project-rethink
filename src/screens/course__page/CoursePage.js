@@ -23,6 +23,7 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 
 import Data from "./data";
 import YoutubePlayer from "../../components/youtube__player/YoutubePlayer";
+import { Link } from "react-router-dom";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -49,6 +50,19 @@ const useStyles = makeStyles((theme) => ({
   },
   // necessary for content to be below app bar
   toolbar: theme.mixins.toolbar,
+  toolbarDesign: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+
+    width: "100%",
+  },
+  toolbar__left: {
+    flex: "1",
+    display: "flex",
+    justifyContent: "flex-start",
+    alignItems: "center",
+  },
   drawerPaper: {
     width: drawerWidth,
   },
@@ -119,17 +133,32 @@ function CoursePage(props) {
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            className={classes.menuButton}>
-            <MdMenu />
-          </IconButton>
-          <Typography variant="h6" noWrap>
-            {Data.about.name}
-          </Typography>
+          <div className={classes.toolbarDesign}>
+            <div className={classes.toolbar__left}>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                className={classes.menuButton}>
+                <MdMenu />
+              </IconButton>
+              <Typography variant="h6" noWrap>
+                {Data.about.name}
+              </Typography>
+            </div>
+            <div>
+              <Link to="/">
+                <div className="header__logo">
+                  <img
+                    src={process.env.PUBLIC_URL + "/assets/logo.svg"}
+                    alt="logo"
+                    className="logo"
+                  />
+                </div>
+              </Link>
+            </div>
+          </div>
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">
@@ -167,7 +196,7 @@ function CoursePage(props) {
           style={{ color: "white" }}
           dangerouslySetInnerHTML={{ __html: content?.title }}></div>
         <br />
-        {contentDisplay(content)}
+        {content && contentDisplay(content)}
         <br />
         <div
           style={{ color: "white" }}
