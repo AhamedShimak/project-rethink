@@ -8,6 +8,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import SeriesImage from "./Series.png";
+import { useHistory } from "react-router";
 const useStyles = makeStyles({
   root: {
     maxWidth: 200,
@@ -19,7 +20,7 @@ const useStyles = makeStyles({
 
 export default function CourseCard() {
   const classes = useStyles();
-
+  let history = useHistory();
   return (
     <Card className={classes.root}>
       <CardActionArea>
@@ -42,7 +43,10 @@ export default function CourseCard() {
         <Button size="small" color="primary">
           Share
         </Button>
-        <Button size="small" color="primary">
+        <Button
+          size="small"
+          color="primary"
+          onClick={() => history.push("/courses/1")}>
           Learn Now
         </Button>
       </CardActions>

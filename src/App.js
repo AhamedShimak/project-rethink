@@ -55,7 +55,7 @@ function App() {
             </Route>
 
             {/* List items */}
-            <Route exact path="/courses/1">
+            <Route exact path="/courses/:id">
               <CoursePage />
             </Route>
             <Layout>
