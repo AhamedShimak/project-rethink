@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { listResults } from "../../actions/searchActions";
+import { IoCheckmarkDoneCircle } from "react-icons/io5";
 // import { searchSelector } from "../../app/store";
 
 import "./searchResluts.css";
@@ -30,12 +31,23 @@ const SearchResults = () => {
         {!loading &&
           results?.products?.map((result) => (
             <li key={result._id}>
-              Name: {result.name} {", "}
-              Category:{result.category.name}
-              {","}
-              Subject: {result.subject.name}
-              {" , "} Heading: {result.heading.name} <br></br>
-              <br></br>
+              <IoCheckmarkDoneCircle style={{ height: "30px" }} />
+              {result?.name}
+              {result?.category.name && (
+                <span className="chip chip__category">
+                  {result?.category.name}
+                </span>
+              )}
+              {result?.subject?.name && (
+                <span className="chip chip__subject">
+                  {result?.subject?.name}
+                </span>
+              )}
+              {result?.heading?.name && (
+                <span className="chip chip__heading">
+                  {result?.heading?.name}
+                </span>
+              )}
             </li>
           ))}
       </ul>

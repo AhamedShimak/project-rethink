@@ -1,0 +1,38 @@
+li *{
+ 
+    display: inline-block;
+    margin-bottom: 0.2em !important;
+
+
+}
+li {
+    margin-bottom: 1em!important;
+}
+ul {
+    line-height:100%;
+    margin-bottom:0;
+
+
+    
+   
+}
+.chip{
+    font-size: .7em !important;
+   
+    display: inline-block;
+    padding:.1em .5em;
+    border-radius: .5em;
+   
+    margin:0 .5em;
+ 
+}
+
+.chip__category{
+    background:var(--color-warning)
+}
+.chip__subject{
+    background:var(--color-success)
+}
+.chip__heading{
+    background:var(--color-info)
+}
