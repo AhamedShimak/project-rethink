@@ -56,6 +56,12 @@ const data = {
 
       url: "https://www.youtube.com/embed/Q1bZejNHALM",
     },
+    {
+      type: "Final",
+      title: "Thanks for watching the videos",
+      content:
+        "<h1>You have successfully completed the revision of Series</h1><br/><p>Please share this course with others</p>",
+    },
   ],
 };
 export default data;
