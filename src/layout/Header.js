@@ -36,7 +36,7 @@ const Header = () => {
       <nav className="header__nav">
         <div>
           <div className="header__icons header__search__closeIcon">
-            <MdKeyboardBackspace onClick={() => history.push("/")} />
+            <MdKeyboardBackspace onClick={() => history.goBack()} />
           </div>
         </div>
         <div>

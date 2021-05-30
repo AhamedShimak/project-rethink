@@ -7,8 +7,8 @@ import { useDispatch } from "react-redux";
 import Home from "./screens/Home1/Home";
 import LabList from "./screens/LabAndGame/LabsList";
 import LabView from "./screens/LabAndGame/LabView";
-import PapersList from "./screens/Paper/PapersList";
-import PaperView from "./screens/Paper/PaperView";
+import CourseList from "./screens/Course/CourseList";
+import PaperView from "./screens/Course/PaperView";
 import LessonsList from "./screens/Lessons/LessonsList";
 import LessonsListVideos from "./screens/LessonListVideos/LessonsListVideos";
 import SearchResluts from "./screens/search_reusults/SearchResults";
@@ -55,8 +55,8 @@ function App() {
 
             {/* List items */}
             <Layout>
-              <Route path="/papers">
-                <PapersList />
+              <Route path="/courses">
+                <CourseList />
               </Route>
               <Route exact path="/lessons">
                 <LessonsList />

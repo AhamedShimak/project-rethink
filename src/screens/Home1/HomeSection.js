@@ -66,7 +66,7 @@ const HomeSection = () => {
         </div>
         <div
           className="home__content__container__item item-4"
-          onClick={() => history.push("/papers")}>
+          onClick={() => history.push("/courses")}>
           <div className="home__content__container__item__column column-1">
             <h2 className="column-1__heading">Free Courses</h2>
             <p className="column-1__content">
@@ -77,7 +77,7 @@ const HomeSection = () => {
             <img
               className="column-2__image column-2__image-4"
               src={papers}
-              alt="papers"
+              alt="free courses"
             />
           </div>
         </div>
