@@ -25,7 +25,9 @@ const SearchResults = () => {
 
   return (
     <div className="search__results">
-      <h3>Search Results for: {searchWord}</h3>
+      <h3>
+        {results?.products?.length} Results for: {searchWord}
+      </h3>
       {loading && <h5>Searching ....</h5>}
       <ul>
         {!loading &&
@@ -47,6 +49,9 @@ const SearchResults = () => {
                 <span className="chip chip__heading">
                   {result?.heading?.name}
                 </span>
+              )}
+              {result?.author && (
+                <span className="chip chip__author">{result?.author}</span>
               )}
             </li>
           ))}

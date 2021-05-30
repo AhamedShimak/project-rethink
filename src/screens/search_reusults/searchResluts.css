@@ -36,3 +36,6 @@ ul {
 .chip__heading{
     background:var(--color-info)
 }
+.chip__author{
+    border:var(--color-danger) 1px solid;
+}

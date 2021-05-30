@@ -22,6 +22,7 @@ import Lab from "./screens/Lab/Lab";
 import { listSubjects } from "./actions/subjectActions";
 import { listCategories } from "./actions/categoryActions";
 import { checkLocalStorageVersion } from "./localStorage/index";
+import CoursePage from "./screens/course__page/CoursePage";
 
 function App() {
   const dispatch = useDispatch();
@@ -54,10 +55,14 @@ function App() {
             </Route>
 
             {/* List items */}
+            <Route exact path="/courses/1">
+              <CoursePage />
+            </Route>
             <Layout>
-              <Route path="/courses">
+              <Route exact path="/courses">
                 <CourseList />
               </Route>
+
               <Route exact path="/lessons">
                 <LessonsList />
               </Route>
