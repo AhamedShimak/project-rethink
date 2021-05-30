@@ -15,7 +15,6 @@ const HomeSection = () => {
     <>
       <div className="home__content__container">
         {/*  <img src={process.env.PUBLIC_URL + '/assets/homeback.svg'} alt="container" className="container"/>*/}
-
         {/* <div
           className="home__content__container__item item-3"
           onClick={() => history.push("/games")}>
@@ -31,7 +30,6 @@ const HomeSection = () => {
             />
           </div>
         </div> */}
-
         <div
           className="home__content__container__item item-1"
           onClick={() => history.push("/labs")}>
@@ -66,7 +64,6 @@ const HomeSection = () => {
             />
           </div>
         </div>
-
         <div
           className="home__content__container__item item-4"
           onClick={() => history.push("/papers")}>
@@ -84,7 +81,7 @@ const HomeSection = () => {
             />
           </div>
         </div>
-        <div className="home__content__container__subServices home__content__container__item item-3">
+        {/* <div className="home__content__container__subServices home__content__container__item item-3">
           <div>
             <SubjectElipse
               icon={<BsFillPeopleFill />}
@@ -113,8 +110,8 @@ const HomeSection = () => {
               bottomHeading={true}
             />
           </div>
-        </div>
-        <h3>Coming soon..</h3>
+        </div> */}
+        {/* <h3>Coming soon..</h3>
         <div className="home__content__container__soon">
           <div>
             <SubjectElipse
@@ -132,7 +129,7 @@ const HomeSection = () => {
           </div>
           {/* <div>Find tutor</div>
           <div>Motivation</div> */}
-        </div>
+        {/* </div> */}
       </div>
     </>
   );
