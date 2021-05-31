@@ -24,8 +24,6 @@
   position: relative;
   height: 80%;
   background-color: #7d99972d;
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
   border-radius: 20px;
   max-width: calc( 950px * 0.6);
 }
