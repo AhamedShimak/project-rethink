@@ -39,11 +39,24 @@ const ContentItemBox = ({ name, title, resourceUrl, id }) => {
   return (
     <div className={` content__item__box`}>
       <div className="card__content" style={{ margin: "0" }}>
+        <div className="card__head">
+          <p
+            className="content__item__box_p"
+            onClick={() => {
+              history.push(`/labs/lab/${id}`);
+            }}>
+            {name}
+          </p>
+        </div>
+
         <div className="card__content__image">
           <img
             src="https://phet.colorado.edu/sims/html/ph-scale/latest/ph-scale-600.png"
             alt="pH Scale"
             style={{ border: "none", width: "100%" }}
+            onClick={() => {
+              history.push(`/labs/lab/${id}`);
+            }}
           />
         </div>
         <div className="card__content__desc">
@@ -57,13 +70,7 @@ const ContentItemBox = ({ name, title, resourceUrl, id }) => {
               // justifyContent: "space-between",
               // alignItems: "center",
             }}>
-            <p
-              className="content__item__box_p"
-              onClick={() => {
-                history.push(`/labs/lab/${id}`);
-              }}>
-              {name}
-            </p>
+
 
             <div className="card__content__icons">
               <IconButton aria-label="add to bookmark" className="icon__btn">
