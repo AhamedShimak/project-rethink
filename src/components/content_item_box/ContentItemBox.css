@@ -1,31 +1,72 @@
 .content__item__box{
     padding: 0 !important;
-    width: 40%;
-    margin-bottom:0.3em;
+    display: flex;
+    justify-content: center;
+    margin-bottom:15px;
     cursor:pointer;
-    flex-basis: 100%;
+    flex-basis: 50%;
+   
 
 }
 
 .card__content  {
     
-  
-    margin: 0 !important;
-   
-    background-color: #15204a !important;
-    padding-left: 0.5em;
-    position: relative;
-    border-radius: 0 0.25em  0.25em 0;
-    display: flex;
-    justify-content:flex-start;
-    align-items: flex-start;
-    /* flex-direction:column; */
-   
-    width: 100%;
     
+    margin: 0  !important;
+   
+    background-color: #e4e4e43f !important;
+    box-shadow: 0px 4px 5px -1px rgba(0,0,0,0), 0px 4px 5px -1px rgba(0,0,0,0), 0px 4px 5px 1px #0000002a;
+    box-shadow: 0px 4px 5px -1px rgba(0,0,0,0), 0px 4px 5px -1px rgba(0,0,0,0), 0px 4px 5px 1px #0000002a;
 
+
+
+    padding:0 ;
+    position: relative;
+    border-radius: 8px;
+    display: flex;
+    
+    flex-direction:column; 
+    overflow: hidden;
+    width: 95%;
+    
 }
-.card__content::before{
+
+.card__head{
+    padding: 0 10px;
+     height: 50px;
+    display:flex ;
+    align-items: center;
+
+    background-color: rgba(51, 51, 51, 0.582);
+    
+}
+.content__item__box_p{
+    font-size: 15px;
+    font-weight: 500;
+    color: #e6e6e6;
+    
+}
+.card__content__image{
+    
+        
+        width: 100%;
+    }
+
+.card__content__desc{
+        
+    padding: 0 10px;
+        
+        display: flex;
+        position: relative;
+        
+        padding: 10px 0 10px 0;
+        width:100%;
+        background-color: rgba(51, 51, 51, 0.158);
+     
+      
+    
+    }
+/*.card__content::before{
     content: "";
     display: block;
     width: 0.4em;
@@ -34,7 +75,7 @@
     position: absolute;
     top: 0;
     left: -0.4em;
-}
+}*/
 .card__content__icons  {
     
     
@@ -43,35 +84,8 @@
     /* border: solid 1px green; */
     padding:0  !important;
     display: flex;
+    flex-direction: row-reverse;
 
-
-}
-.content__item__box_p{
-    line-height: 1.1rem;
-    padding: 0.15rem 0;
-}
-
-.icon__btn{
-
-    height: 1em;
-    width: 1.3em;
-    padding: 0px !important;
-    /* padding: 0; */
-    font-size: 1rem !important;
-   }
-.icon__btn > *{   
-    color:var(--color-white);
-    
-}
-.card__content__image{
-  
-    width: 40%;
-}
-.card__content__desc{
-    width:60%;
-
- 
-  
 
 }
 .content__item__box_text{
@@ -84,4 +98,20 @@
  
  
  
+}
+
+
+.icon__btn{
+
+    height: 1em;
+    width: 1.3em;
+    padding: 0px !important;
+    
+    /* padding: 0; */
+    font-size: 1rem !important;
+   }
+.icon__btn > *{   
+    color:var(--color-white);
+    
+    
 }
