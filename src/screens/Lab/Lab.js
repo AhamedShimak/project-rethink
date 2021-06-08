@@ -9,7 +9,7 @@ import { labsSelector } from "../../features/labs/labsSlice";
 import { subjectsSelector } from "../../features/subjects/subjectSlice";
 import { listLabs } from "../../actions/labsActions";
 import { listSubjects } from "../../actions/subjectActions";
-
+import LabWaiting from "../../components/lab__waiting/LabWaiting";
 const Lab = () => {
   let history = useHistory();
   const dispatch = useDispatch();
@@ -41,9 +41,28 @@ const Lab = () => {
     setCurrentLab(labs?.products?.filter((lab) => lab._id === id)[0]);
   }, [labs]);
 
+  if (loading) {
+    return (
+      <div
+        style={{
+          width: "100%",
+          height: "100vh",
+          backgroundColor: "white",
+          position: "fixed",
+          left: "0",
+          right: "0",
+          top: "0",
+          bottom: "0",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}>
+        <LabWaiting />
+      </div>
+    );
+  }
   return (
     <div>
-      {console.log(currentLab)}
       <div className="lab__iframe">
         <iframe
           src={currentLab?.resourceUrl}
@@ -62,23 +81,7 @@ const Lab = () => {
           height="50px"
         />
       </div>
-      <div className="draggable__glossary">
-        <div className="draggable__glossary__hand">
-          <Draggable
-            // axis="x,y"
-            handle=".handle"
-            defaultPosition={{ x: 100, y: 100 }}
-            position={null}
-            grid={[25, 25]}
-            scale={1}>
-            <div
-              style={{ background: "blue", width: "100px", padding: "10px" }}>
-              <div className="handle">Tamil translations draggable</div>
-              <div>This readme is really dragging on...</div>
-            </div>
-          </Draggable>
-        </div>
-      </div>
+      <div className="draggable__glossary"></div>
     </div>
   );
 };

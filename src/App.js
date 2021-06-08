@@ -58,6 +58,9 @@ function App() {
             <Route exact path="/courses/:id">
               <CoursePage />
             </Route>
+            <Route exact path="/labs/lab/:id">
+              <Lab />
+            </Route>
             <Layout>
               <Route exact path="/courses">
                 <CourseList />
@@ -69,9 +72,7 @@ function App() {
               <Route path="/lessons/:id">
                 <LessonsListVideos />
               </Route>
-              <Route exact path="/labs/lab/:id">
-                <Lab />
-              </Route>
+
               <Route exact path="/labs">
                 <LabList />
               </Route>

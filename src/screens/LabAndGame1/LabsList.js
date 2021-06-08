@@ -14,6 +14,7 @@ import { labsSelector } from "../../features/labs/labsSlice";
 import { listLabs } from "../../actions/labsActions";
 import { listSubjects } from "../../actions/subjectActions";
 import { subjectsSelector } from "../../features/subjects/subjectSlice";
+import LabWaiting from "../../components/lab__waiting/LabWaiting";
 const Lab = () => {
   const [index, setIndex] = useState(0);
   const dispatch = useDispatch();
@@ -103,24 +104,28 @@ const Lab = () => {
             <SubjectElipse icon={<BiDna />} title="Bio" active={index === 3} />
           </div>
         </div>
-        <SwipeableViews index={index} onChangeIndex={handleChangeIndex}>
-          <div>
-            <div className="lab__content">
-              {physicsLabs?.map((lab) => (
-                <ContentItemBox
-                  name={lab.name}
-                  title={lab.name}
-                  resourceUrl={lab.resourceUrl}
-                  key={lab._id}
-                  id={lab._id}
-                />
-              ))}
-            </div>
-          </div>
-          <div>
-            <div className="lab__content">
-              {chemLabs?.map((lab) => (
-                <>
+        {loading || loadingSub ? (
+          {/* <div
+            style={{
+              width: "100%",
+              height: "100vh",
+              backgroundColor: "white",
+              position: "fixed",
+              left: "0",
+              right: "0",
+              top: "0",
+              bottom: "0",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}> */}
+            <LabWaiting />
+          {/* </div> */}
+        ) : (
+          <SwipeableViews index={index} onChangeIndex={handleChangeIndex}>
+            <div>
+              <div className="lab__content">
+                {physicsLabs?.map((lab) => (
                   <ContentItemBox
                     name={lab.name}
                     title={lab.name}
@@ -128,37 +133,52 @@ const Lab = () => {
                     key={lab._id}
                     id={lab._id}
                   />
-                </>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="lab__content">
-              {mathLab?.map((lab) => (
-                <ContentItemBox
-                  name={lab.name}
-                  title={lab.name}
-                  resourceUrl={lab.resourceUrl}
-                  key={lab._id}
-                  id={lab._id}
-                />
-              ))}
+            <div>
+              <div className="lab__content">
+                {chemLabs?.map((lab) => (
+                  <>
+                    <ContentItemBox
+                      name={lab.name}
+                      title={lab.name}
+                      resourceUrl={lab.resourceUrl}
+                      key={lab._id}
+                      id={lab._id}
+                    />
+                  </>
+                ))}
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="lab__content">
-              {bioLabs?.map((lab) => (
-                <ContentItemBox
-                  name={lab.name}
-                  title={lab.name}
-                  resourceUrl={lab.resourceUrl}
-                  key={lab._id}
-                  id={lab._id}
-                />
-              ))}
+            <div>
+              <div className="lab__content">
+                {mathLab?.map((lab) => (
+                  <ContentItemBox
+                    name={lab.name}
+                    title={lab.name}
+                    resourceUrl={lab.resourceUrl}
+                    key={lab._id}
+                    id={lab._id}
+                  />
+                ))}
+              </div>
             </div>
-          </div>
-        </SwipeableViews>
+            <div>
+              <div className="lab__content">
+                {bioLabs?.map((lab) => (
+                  <ContentItemBox
+                    name={lab.name}
+                    title={lab.name}
+                    resourceUrl={lab.resourceUrl}
+                    key={lab._id}
+                    id={lab._id}
+                  />
+                ))}
+              </div>
+            </div>
+          </SwipeableViews>
+        )}
       </div>
     </div>
   );
