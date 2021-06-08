@@ -1,6 +1,6 @@
 import React from "react";
 
-const LabWaiting = () => {
+const LabWaiting = ({ logoOff }) => {
   return (
     <div>
       <svg id="wrap" width="300" height="300">
@@ -184,13 +184,15 @@ const LabWaiting = () => {
           </path>
         </svg>
       </svg>
-      <img
-        src={process.env.PUBLIC_URL + "/assets/logo.svg"}
-        alt="logo"
-        className="logo"
-        width="300"
-        height="300"
-      />
+      {!logoOff && (
+        <img
+          src={process.env.PUBLIC_URL + "/assets/logo.svg"}
+          alt="logo"
+          className="logo"
+          width="300"
+          height="300"
+        />
+      )}
     </div>
   );
 };

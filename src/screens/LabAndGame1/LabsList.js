@@ -104,42 +104,15 @@ const Lab = () => {
             <SubjectElipse icon={<BiDna />} title="Bio" active={index === 3} />
           </div>
         </div>
-        {loading || loadingSub ? (
-          {/* <div
-            style={{
-              width: "100%",
-              height: "100vh",
-              backgroundColor: "white",
-              position: "fixed",
-              left: "0",
-              right: "0",
-              top: "0",
-              bottom: "0",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}> */}
-            <LabWaiting />
-          {/* </div> */}
-        ) : (
-          <SwipeableViews index={index} onChangeIndex={handleChangeIndex}>
-            <div>
-              <div className="lab__content">
-                {physicsLabs?.map((lab) => (
-                  <ContentItemBox
-                    name={lab.name}
-                    title={lab.name}
-                    resourceUrl={lab.resourceUrl}
-                    key={lab._id}
-                    id={lab._id}
-                  />
-                ))}
-              </div>
-            </div>
-            <div>
-              <div className="lab__content">
-                {chemLabs?.map((lab) => (
-                  <>
+
+        <SwipeableViews index={index} onChangeIndex={handleChangeIndex}>
+          <div>
+            <div className="lab__content">
+              {loading ? (
+                <LabWaiting />
+              ) : (
+                <>
+                  {physicsLabs?.map((lab) => (
                     <ContentItemBox
                       name={lab.name}
                       title={lab.name}
@@ -147,13 +120,15 @@ const Lab = () => {
                       key={lab._id}
                       id={lab._id}
                     />
-                  </>
-                ))}
-              </div>
+                  ))}
+                </>
+              )}
             </div>
-            <div>
-              <div className="lab__content">
-                {mathLab?.map((lab) => (
+          </div>
+          <div>
+            <div className="lab__content">
+              {chemLabs?.map((lab) => (
+                <>
                   <ContentItemBox
                     name={lab.name}
                     title={lab.name}
@@ -161,24 +136,37 @@ const Lab = () => {
                     key={lab._id}
                     id={lab._id}
                   />
-                ))}
-              </div>
+                </>
+              ))}
             </div>
-            <div>
-              <div className="lab__content">
-                {bioLabs?.map((lab) => (
-                  <ContentItemBox
-                    name={lab.name}
-                    title={lab.name}
-                    resourceUrl={lab.resourceUrl}
-                    key={lab._id}
-                    id={lab._id}
-                  />
-                ))}
-              </div>
+          </div>
+          <div>
+            <div className="lab__content">
+              {mathLab?.map((lab) => (
+                <ContentItemBox
+                  name={lab.name}
+                  title={lab.name}
+                  resourceUrl={lab.resourceUrl}
+                  key={lab._id}
+                  id={lab._id}
+                />
+              ))}
             </div>
-          </SwipeableViews>
-        )}
+          </div>
+          <div>
+            <div className="lab__content">
+              {bioLabs?.map((lab) => (
+                <ContentItemBox
+                  name={lab.name}
+                  title={lab.name}
+                  resourceUrl={lab.resourceUrl}
+                  key={lab._id}
+                  id={lab._id}
+                />
+              ))}
+            </div>
+          </div>
+        </SwipeableViews>
       </div>
     </div>
   );

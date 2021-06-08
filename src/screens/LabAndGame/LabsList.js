@@ -14,6 +14,7 @@ import { labsSelector } from "../../features/labs/labsSlice";
 import { listLabs } from "../../actions/labsActions";
 import { listSubjects } from "../../actions/subjectActions";
 import { subjectsSelector } from "../../features/subjects/subjectSlice";
+import LabWaiting from "../../components/lab__waiting/LabWaiting";
 const Lab = () => {
   const [index, setIndex] = useState(0);
   const dispatch = useDispatch();
@@ -106,56 +107,88 @@ const Lab = () => {
         <SwipeableViews index={index} onChangeIndex={handleChangeIndex}>
           <div>
             <div className="lab__content">
-              {physicsLabs?.map((lab) => (
-                <ContentItemBox
-                  name={lab.name}
-                  title={lab.name}
-                  resourceUrl={lab.resourceUrl}
-                  key={lab._id}
-                  id={lab._id}
-                />
-              ))}
-            </div>
-          </div>
-          <div>
-            <div className="lab__content">
-              {chemLabs?.map((lab) => (
+              {loading ? (
+                <div className="loading">
+                  <LabWaiting logoOff={true} />
+                </div>
+              ) : (
                 <>
-                  <ContentItemBox
-                    name={lab.name}
-                    title={lab.name}
-                    resourceUrl={lab.resourceUrl}
-                    key={lab._id}
-                    id={lab._id}
-                  />
+                  {physicsLabs?.map((lab) => (
+                    <ContentItemBox
+                      name={lab.name}
+                      title={lab.name}
+                      resourceUrl={lab.resourceUrl}
+                      key={lab._id}
+                      id={lab._id}
+                    />
+                  ))}
                 </>
-              ))}
+              )}
             </div>
           </div>
           <div>
             <div className="lab__content">
-              {mathLab?.map((lab) => (
-                <ContentItemBox
-                  name={lab.name}
-                  title={lab.name}
-                  resourceUrl={lab.resourceUrl}
-                  key={lab._id}
-                  id={lab._id}
-                />
-              ))}
+              {loading ? (
+                <div className="loading">
+                  <LabWaiting logoOff={true} />
+                </div>
+              ) : (
+                <>
+                  {chemLabs?.map((lab) => (
+                    <>
+                      <ContentItemBox
+                        name={lab.name}
+                        title={lab.name}
+                        resourceUrl={lab.resourceUrl}
+                        key={lab._id}
+                        id={lab._id}
+                      />
+                    </>
+                  ))}
+                </>
+              )}
             </div>
           </div>
           <div>
             <div className="lab__content">
-              {bioLabs?.map((lab) => (
-                <ContentItemBox
-                  name={lab.name}
-                  title={lab.name}
-                  resourceUrl={lab.resourceUrl}
-                  key={lab._id}
-                  id={lab._id}
-                />
-              ))}
+              {loading ? (
+                <div className="loading">
+                  <LabWaiting logoOff={true} />
+                </div>
+              ) : (
+                <>
+                  {mathLab?.map((lab) => (
+                    <ContentItemBox
+                      name={lab.name}
+                      title={lab.name}
+                      resourceUrl={lab.resourceUrl}
+                      key={lab._id}
+                      id={lab._id}
+                    />
+                  ))}
+                </>
+              )}
+            </div>
+          </div>
+          <div>
+            <div className="lab__content">
+              {loading ? (
+                <div className="loading">
+                  <LabWaiting logoOff={true} />
+                </div>
+              ) : (
+                <>
+                  {bioLabs?.map((lab) => (
+                    <ContentItemBox
+                      name={lab.name}
+                      title={lab.name}
+                      resourceUrl={lab.resourceUrl}
+                      key={lab._id}
+                      id={lab._id}
+                    />
+                  ))}
+                </>
+              )}
             </div>
           </div>
         </SwipeableViews>
