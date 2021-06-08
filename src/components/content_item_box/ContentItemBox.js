@@ -70,12 +70,17 @@ const ContentItemBox = ({ name, title, resourceUrl, id }) => {
               // justifyContent: "space-between",
               // alignItems: "center",
             }}>
-
-
             <div className="card__content__icons">
-              <IconButton aria-label="add to bookmark" className="icon__btn">
+              <Button size="small" variant="contained" color="primary">
+                Tamil
+              </Button>
+              <Button size="small" variant="contained" color="secondary">
+                English
+              </Button>
+
+              {/* <IconButton aria-label="add to bookmark" className="icon__btn">
                 <MdBookmark />
-              </IconButton>
+              </IconButton> */}
 
               <IconButton
                 aria-label="share"
