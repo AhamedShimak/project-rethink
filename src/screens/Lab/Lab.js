@@ -10,11 +10,14 @@ import { subjectsSelector } from "../../features/subjects/subjectSlice";
 import { listLabs } from "../../actions/labsActions";
 import { listSubjects } from "../../actions/subjectActions";
 import LabWaiting from "../../components/lab__waiting/LabWaiting";
+import { Button } from "@material-ui/core";
 const Lab = () => {
   let history = useHistory();
   const dispatch = useDispatch();
   const [currentLab, setCurrentLab] = useState(null);
   const { id } = useParams();
+  const lang = window.location.search?.split("=")[1] === "ta";
+
   const { labs, loading, errors } = useSelector(labsSelector);
   const {
     subjects,
@@ -35,10 +38,10 @@ const Lab = () => {
     };
     fetchSubjectData();
     fetchData();
-    setCurrentLab(labs?.products?.filter((lab) => lab._id === id)[0]);
+    setCurrentLab(labs?.labs?.filter((lab) => lab._id === id)[0]);
   }, []);
   useEffect(() => {
-    setCurrentLab(labs?.products?.filter((lab) => lab._id === id)[0]);
+    setCurrentLab(labs?.labs?.filter((lab) => lab._id === id)[0]);
   }, [labs]);
 
   if (loading) {
@@ -64,22 +67,50 @@ const Lab = () => {
   return (
     <div>
       <div className="lab__iframe">
+        {lang ? console.log(currentLab) : console.log(currentLab)}
         <iframe
-          src={currentLab?.resourceUrl}
+          src={lang ? currentLab?.tamilUrl : currentLab?.englishUrl}
           title={currentLab?._id}
           scrolling="no"
           allowfullscreen></iframe>
       </div>
 
       <div className="lab__header">
-        <MdKeyboardBackspace onClick={() => history.goBack()} />
+        <MdKeyboardBackspace onClick={() => history.push("/labs")} />
+        <div>
+          <img
+            src={process.env.PUBLIC_URL + "/assets/logo.svg"}
+            alt="logo"
+            className="logo"
+            height="30px"
+            style={{ marginRight: "10px" }}
+          />
+          {currentLab?.tamilUrl && (
+            <>
+              <Button
+                onClick={() => {
+                  history.push(`/labs/lab/${id}?lng=ta`);
+                }}
+                size="small"
+                variant="contained"
+                color={lang ? "primary" : "secondary"}>
+                {" "}
+                Tamil
+              </Button>
 
-        <img
-          src={process.env.PUBLIC_URL + "/assets/logo.svg"}
-          alt="logo"
-          className="logo"
-          height="50px"
-        />
+              <Button
+                onClick={() => {
+                  history.push(`/labs/lab/${id}`);
+                }}
+                size="small"
+                variant="contained"
+                color={lang ? "secondary" : "primary"}>
+                {" "}
+                English
+              </Button>
+            </>
+          )}
+        </div>
       </div>
       <div className="draggable__glossary"></div>
     </div>

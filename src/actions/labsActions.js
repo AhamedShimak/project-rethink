@@ -13,8 +13,7 @@ export async function listLabs(dispatch) {
   dispatch(getLabs());
 
   try {
-    const { data } = await axios.get(`${laptonApi}/api/resources/labs`);
-
+    const { data } = await axios.get(`${laptonApi}/api/labs`);
     dispatch(getLabsSuccess(data));
 
     // TODO: store in local storage

@@ -12,7 +12,8 @@
   margin: 0;
   overflow-x: hidden;
 
-  height:var(--header-height)
+  height:var(--header-height);
+  overflow-y: hidden;
 
   
   

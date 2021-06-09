@@ -22,7 +22,14 @@ import { useHistory } from "react-router";
 import Popup from "./Popup";
 import { clientApi } from "../../api/api";
 
-const ContentItemBox = ({ name, title, resourceUrl, id }) => {
+const ContentItemBox = ({
+  name,
+  title,
+  englishUrl,
+  tamilUrl,
+  imageUrl,
+  id,
+}) => {
   //share button
 
   const [open, setOpen] = React.useState(false);
@@ -51,9 +58,9 @@ const ContentItemBox = ({ name, title, resourceUrl, id }) => {
 
         <div className="card__content__image">
           <img
-            src="https://phet.colorado.edu/sims/html/ph-scale/latest/ph-scale-600.png"
+            src={imageUrl}
             alt="pH Scale"
-            style={{ border: "none", width: "100%" }}
+            style={{ border: "none", borderRadius: "20px", width: "100%" }}
             onClick={() => {
               history.push(`/labs/lab/${id}`);
             }}
@@ -71,12 +78,30 @@ const ContentItemBox = ({ name, title, resourceUrl, id }) => {
               // alignItems: "center",
             }}>
             <div className="card__content__icons">
-              <Button size="small" variant="contained" color="primary">
-                Tamil
-              </Button>
-              <Button size="small" variant="contained" color="secondary">
-                English
-              </Button>
+              {tamilUrl && (
+                <Button
+                  onClick={() => {
+                    history.push(`/labs/lab/${id}?lng=ta`);
+                  }}
+                  size="small"
+                  variant="contained"
+                  color="primary">
+                  {" "}
+                  Tamil
+                </Button>
+              )}
+              {englishUrl && (
+                <Button
+                  onClick={() => {
+                    history.push(`/labs/lab/${id}`);
+                  }}
+                  size="small"
+                  variant="contained"
+                  color="secondary">
+                  {" "}
+                  English
+                </Button>
+              )}
 
               {/* <IconButton aria-label="add to bookmark" className="icon__btn">
                 <MdBookmark />

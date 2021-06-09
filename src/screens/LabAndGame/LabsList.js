@@ -50,24 +50,16 @@ const Lab = () => {
 
   useEffect(() => {
     setMathLab(
-      labs?.products?.filter(
-        (lab) => lab.subject === "608e32294f468a0015bc67cf"
-      )
+      labs?.labs?.filter((lab) => lab.subject === "608e32294f468a0015bc67cf")
     );
     setChemLabs(
-      labs?.products?.filter(
-        (lab) => lab.subject === "608e5d234f468a0015bc6859"
-      )
+      labs?.labs?.filter((lab) => lab.subject === "608e5d234f468a0015bc6859")
     );
     setBioLabs(
-      labs?.products?.filter(
-        (lab) => lab.subject === "608e42504f468a0015bc67e4"
-      )
+      labs?.labs?.filter((lab) => lab.subject === "608e42504f468a0015bc67e4")
     );
     setPhysicsLabs(
-      labs?.products?.filter(
-        (lab) => lab.subject === "608e54604f468a0015bc6837"
-      )
+      labs?.labs?.filter((lab) => lab.subject === "608e54604f468a0015bc6837")
     );
   }, [labs]);
 
@@ -117,7 +109,9 @@ const Lab = () => {
                     <ContentItemBox
                       name={lab.name}
                       title={lab.name}
-                      resourceUrl={lab.resourceUrl}
+                      englishUrl={lab.englishUrl}
+                      tamilUrl={lab.tamilUrl}
+                      imageUrl={lab.imageUrl}
                       key={lab._id}
                       id={lab._id}
                     />
@@ -139,7 +133,9 @@ const Lab = () => {
                       <ContentItemBox
                         name={lab.name}
                         title={lab.name}
-                        resourceUrl={lab.resourceUrl}
+                        englishUrl={lab.englishUrl}
+                        tamilUrl={lab.tamilUrl}
+                        imageUrl={lab.imageUrl}
                         key={lab._id}
                         id={lab._id}
                       />
@@ -161,7 +157,9 @@ const Lab = () => {
                     <ContentItemBox
                       name={lab.name}
                       title={lab.name}
-                      resourceUrl={lab.resourceUrl}
+                      englishUrl={lab.englishUrl}
+                      tamilUrl={lab.tamilUrl}
+                      imageUrl={lab.imageUrl}
                       key={lab._id}
                       id={lab._id}
                     />
@@ -182,7 +180,9 @@ const Lab = () => {
                     <ContentItemBox
                       name={lab.name}
                       title={lab.name}
-                      resourceUrl={lab.resourceUrl}
+                      englishUrl={lab.englishUrl}
+                      tamilUrl={lab.tamilUrl}
+                      imageUrl={lab.imageUrl}
                       key={lab._id}
                       id={lab._id}
                     />

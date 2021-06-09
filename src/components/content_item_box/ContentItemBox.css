@@ -50,6 +50,8 @@
     
         
         width: 100%;
+        padding:0 10px;
+        height:162px
     }
 
 .card__content__desc{
