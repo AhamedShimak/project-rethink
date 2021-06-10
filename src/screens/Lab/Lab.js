@@ -76,8 +76,12 @@ const Lab = () => {
       </div>
 
       <div className="lab__header">
-        <MdKeyboardBackspace onClick={() => history.push("/labs")} />
-        <div>
+        <div onClick={() => history.push("/labs")} className="lab__back">
+          <MdKeyboardBackspace />
+          Back
+        </div>
+
+        <div className="label__logo__container">
           <img
             src={process.env.PUBLIC_URL + "/assets/logo.svg"}
             alt="logo"
@@ -112,7 +116,7 @@ const Lab = () => {
           )}
         </div>
       </div>
-      <div className="draggable__glossary"></div>
+      {/* <div className="draggable__glossary"></div> */}
     </div>
   );
 };

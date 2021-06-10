@@ -18,25 +18,37 @@
 }
 
 .lab__header{
-    width: 100%;
+    width: 400px;
     
     position: fixed;
 
 
-    left:0;
-    right:0;
-    top:0;
+    right:10px;
+
+    bottom:10px;
     z-index:9995;
     padding:var(--spacer--md);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height:40px;
+    background:black;
     
    
 }
 .lab__header > *{
     font-size: var(--spacer--lg);
-    color:yellowgreen
+    color:yellowgreen;
+    cursor: pointer;
+}
+.lab__back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--color-teal);
+    font-size:30px;
+    padding:0 10px;
+    border-radius: 10px;
 }
 /*  */
 .draggable__glossary{
@@ -56,4 +68,137 @@
     cursor:grab;
     /* z-index:9999; */
     display: block;
+}
+
+@media screen and (orientation: portrait) {
+  #toolbar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) { 
+    .lab__header{
+        width: 300px;
+        
+        position: fixed;
+    
+    
+        right:2px;
+    
+        bottom:0px;
+        z-index:9995;
+        padding:var(--spacer--md);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height:30px;
+        padding-bottom: 40px;
+        background:black;
+        
+       
+    }
+    .lab__back{
+        display:none;
+    }
+    
+    
+   
+}
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 950px) { 
+    .lab__header{
+        width: 100px;
+        
+        position: fixed;
+    
+    
+        right:2px;
+    
+        bottom:0px;
+        z-index:9995;
+        padding:var(--spacer--md);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height:100px;
+        padding-bottom: 40px;
+        background:black;
+        
+       
+    }
+    .lab__back{
+        display:none;
+    }
+    .label__logo__container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+   
+}
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 950px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .lab__header{
+        width: 250px;
+        
+        position: fixed;
+    
+    
+        right:2px;
+    
+        bottom:0px;
+        z-index:9995;
+        padding:var(--spacer--md);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height:40px;
+        background:black;
+        
+       
+    }
+    .lab__back{
+        display:none;
+    }
+    .label__logo__container{
+        display: flex;
+        flex-direction: row;
+    }
+    
+}
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 320px) { 
+    .lab__header{
+        width: 80px;
+        
+        position: fixed;
+    
+    
+        right:2px;
+    
+        bottom:0px;
+        z-index:9995;
+        padding:var(--spacer--md) 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height:100px;
+        padding-bottom: 40px;
+        background:black;
+        
+       
+    }
+    .lab__back{
+        display:none;
+    }
+    .label__logo__container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+   
 }
