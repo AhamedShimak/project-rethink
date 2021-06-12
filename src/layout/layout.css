@@ -1,6 +1,7 @@
 .layout{
     
-   position:relative;   
+   position:relative;  
+   
 }
 .layout__content{
     /* margin-top: -20px; */
@@ -12,6 +13,7 @@
     position: relative;
     margin-top: var(--spacer--md);
     padding: 0;
+    padding-bottom: 40px; 
   
 
 }

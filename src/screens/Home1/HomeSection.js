@@ -36,7 +36,7 @@ const HomeSection = () => {
           <div className="home__content__container__item__column column-1">
             <h2 className="column-1__heading">LABS</h2>
             <p className="column-1__content">
-              Learn with interactive simulations{" "}
+              உயர் தொழில்நுட்பத்தில் வடிவமைக்கப்பட்ட Labs{" "}
             </p>
           </div>
           <div className="home__content__container__item__column column-2">
@@ -53,7 +53,7 @@ const HomeSection = () => {
           <div className="home__content__container__item__column column-1">
             <h2 className="column-1__heading">LESSONS</h2>
             <p className="column-1__content">
-              Lorem ipsum dolor si adipisicing elit. Similique, aspernatur{" "}
+              ஒழுங்கு படுத்தப்பட்ட free YouTube video🐱‍🚀 கள்{" "}
             </p>
           </div>
           <div className="home__content__container__item__column column-2">
@@ -68,10 +68,8 @@ const HomeSection = () => {
           className="home__content__container__item item-4"
           onClick={() => history.push("/courses")}>
           <div className="home__content__container__item__column column-1">
-            <h2 className="column-1__heading">Free Courses</h2>
-            <p className="column-1__content">
-              Free courses by expert teachers and institutes{" "}
-            </p>
+            <h2 className="column-1__heading">FREE COURSES</h2>
+            <p className="column-1__content">இலவச பாட விளக்கங்கள் </p>
           </div>
           <div className="home__content__container__item__column column-2">
             <img

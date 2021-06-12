@@ -22,7 +22,7 @@ export default function CourseCard() {
   const classes = useStyles();
   let history = useHistory();
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} onClick={() => history.push("/courses/1")}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -31,18 +31,17 @@ export default function CourseCard() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Series
+            Series || தொடர்கள்
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lorem ipsum dolor lorem Lorem ipsum dolor lorem Lorem ipsum dolor
-            lorem Lorem ipsum dolor
+          <Typography gutterBottom variant="p" component="small">
+            😎By: M.U Mus'ab (University of Moratuwa, Faculty of Engineering)
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        {/* <Button size="small" color="primary">
           Share
-        </Button>
+        </Button> */}
         <Button
           size="small"
           color="primary"

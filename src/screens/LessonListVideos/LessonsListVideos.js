@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 import { listLessons } from "../../actions/lessonsActions";
 import LessonVideos from "../../components/lesson_video/LessonVideo";
@@ -28,38 +29,50 @@ const LessonsListVideos = ({ match }) => {
   return (
     <div className="lessonsListVideos">
       {/* {console.log(lessons.products)} */}
-
-      <div
-        className={`lessonsListVideos__player ${
-          currentVideo ? "desktop__playing__player" : ""
-        }`}>
-        {currentVideo && <YoutubePlayer url={currentVideo.url} />}
-      </div>
-      <div
-        className={`lessonsListVideos__list ${
-          currentVideo ? "desktop__playing__list" : ""
-        }`}>
-        {lessons?.products?.map((lesson) => (
+      {loading ? (
+        <div
+          style={{
+            width: "100%",
+            height: "300px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}>
+          <CircularProgress color="secondary" />
+        </div>
+      ) : (
+        <>
           <div
-            className="lessonsListVideos__video"
-            key={lesson._id}
-            onClick={() =>
-              setCurrentVideo({ id: lesson._id, url: lesson.resourceUrl })
-            }>
-            <LessonVideos
-              description={lesson.description}
-              duration={lesson.duration}
-              image={lesson.image}
-              name={lesson.name}
-              resourceUrl={lesson.resourceUrl}
-              current={currentVideo.id === lesson._id}
-              unit={lesson.unit}
-              author={lesson.author}
-            />
+            className={`lessonsListVideos__player ${
+              currentVideo ? "desktop__playing__player" : ""
+            }`}>
+            {currentVideo && <YoutubePlayer url={currentVideo.url} />}
           </div>
-        ))}
+          <div
+            className={`lessonsListVideos__list ${
+              currentVideo ? "desktop__playing__list" : ""
+            }`}>
+            {lessons?.products?.map((lesson) => (
+              <div
+                className="lessonsListVideos__video"
+                key={lesson._id}
+                onClick={() =>
+                  setCurrentVideo({ id: lesson._id, url: lesson.resourceUrl })
+                }>
+                <LessonVideos
+                  description={lesson.description}
+                  duration={lesson.duration}
+                  image={lesson.image}
+                  name={lesson.name}
+                  resourceUrl={lesson.resourceUrl}
+                  current={currentVideo.id === lesson._id}
+                  unit={lesson.unit}
+                  author={lesson.author}
+                />
+              </div>
+            ))}
 
-        {/* <div className="lessonsListVideos__video">
+            {/* <div className="lessonsListVideos__video">
           <LessonVideos current={true} />
         </div>
         <div className="lessonsListVideos__video">
@@ -68,7 +81,9 @@ const LessonsListVideos = ({ match }) => {
         <div className="lessonsListVideos__video">
           <LessonVideos />
         </div> */}
-      </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };

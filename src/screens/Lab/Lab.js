@@ -75,7 +75,7 @@ const Lab = () => {
           allowfullscreen></iframe>
       </div>
       <div className="lab__header">
-        <div onClick={() => history.push("/labs")} className="lab__back">
+        <div onClick={() => history.goBack()} className="lab__back">
           <BackButton />
         </div>
 

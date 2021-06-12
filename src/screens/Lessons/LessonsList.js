@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Accordian from "../../containers/accordian/Accordian";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
+import CircularProgress from "@material-ui/core/CircularProgress";
 //import MenuItem from "@material-ui/core/MenuItem";
 //import Select from "@material-ui/core/Select";
 import SwipeableViews from "react-swipeable-views";
@@ -9,6 +10,7 @@ import "./Lessons.css";
 import { useDispatch, useSelector } from "react-redux";
 import { subjectsSelector } from "../../features/subjects/subjectSlice";
 import { listSubjects } from "../../actions/subjectActions";
+import ComingSoon from "../../components/coming_soon/ComingSoon";
 
 const styles = {
   tabs: {
@@ -61,14 +63,27 @@ const Lessons = () => {
       </Tabs>
       {subjects?.subjects ? (
         <SwipeableViews index={index} onChangeIndex={handleChangeIndex}>
-          {subjects?.subjects?.map((sub) => (
-            <div className="lessons__slide">
-              <Accordian accordianItems={sub} />
-            </div>
-          ))}
+          {/* {subjects?.subjects?.map((sub) => ( */}
+          <div className="lessons__slide">
+            <Accordian accordianItems={subjects?.subjects[0]} />
+          </div>
+          <div className="lessons__slide">
+            <ComingSoon />
+          </div>
+          <div className="lessons__slide">
+            <ComingSoon />
+          </div>
+          <div className="lessons__slide">
+            <ComingSoon />
+          </div>
+
+          {/* ))} */}
         </SwipeableViews>
       ) : (
-        <p>Loading</p>
+        <CircularProgress
+          color="secondary"
+          style={{ position: "absolute", left: "50%", top: "50px" }}
+        />
       )}
     </div>
   );

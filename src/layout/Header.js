@@ -76,28 +76,23 @@ const Header = () => {
 
         <ul>
           <div className={`header__menu ${menuActive && "header__menu__open"}`}>
-            <li>
+            <li onClick={() => setMenuActive(false)}>
               <Link to="/labs">
                 <ImLab />
                 Labs
               </Link>
             </li>
-            <li>
-              <Link to="/papers">
-                <MdTimer />
-                Exams
-              </Link>
-            </li>
-            <li>
+
+            <li onClick={() => setMenuActive(false)}>
               <Link to="/lessons">
                 <MdSubject />
                 Lessons
               </Link>
             </li>
-            <li>
-              <Link to="/games">
-                <MdVideogameAsset />
-                Games
+            <li onClick={() => setMenuActive(false)}>
+              <Link to="/courses">
+                <MdTimer />
+                Free Courses
               </Link>
             </li>
           </div>

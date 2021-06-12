@@ -142,7 +142,7 @@ function CoursePage(props) {
                 edge="start"
                 onClick={handleDrawerToggle}
                 className={classes.menuButton}>
-                <MdMenu />
+                📋 👈 ||
               </IconButton>
               <Typography variant="h6" noWrap>
                 {Data.about.name}
