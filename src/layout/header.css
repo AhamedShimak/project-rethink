@@ -67,7 +67,7 @@ li:first-child {
 }
 
 .header__ul__searchIcon,.header__search__closeIcon {
-  display: none;
+  /* display: none; */
   color: var(--color-teal)
   
 }

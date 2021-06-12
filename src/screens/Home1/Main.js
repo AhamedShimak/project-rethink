@@ -1,10 +1,6 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 
-import {
-  MdKeyboardBackspace,
-  MdSearch,
-  MdSettings,
-} from "react-icons/md";
+import { MdKeyboardBackspace, MdSearch, MdSettings } from "react-icons/md";
 import { Link } from "react-router-dom";
 //import { ReactSVG } from "react-svg";
 import "./Home.css";
@@ -29,30 +25,30 @@ const Main = () => {
 
       <div className="navigation_items">
         <div className="home__search__container">
-          <div
+          {/* <div
             className={`home__search  ${
               searchActive ? "home__search__display" : ""
             } `}>
-            <div className="home__icons home__search__back">
+            {/* <div className="home__icons home__search__back">
               <MdKeyboardBackspace
                 onClick={() => setSearchActive(!searchActive)}
               />
-            </div>
+            </div> */}
 
-            <input placeholder="Search"></input>
-            <MdSearch className=" home__icons home__searchin__icon" />
-          </div>
+          {/* <input placeholder="Search"></input>
+            <MdSearch className=" home__icons home__searchin__icon" /> */}
+          {/* </div> */}
 
-          <div className="home__search__button">
+          {/* <div className="home__search__button">
             <MdSearch
               className="home__search__button_icon "
               onClick={() => setSearchActive(!searchActive)}
             />
-          </div>
+          </div> */}
         </div>
-        <div className="navigation_button">
+        {/* <div className="navigation_button">
           <MdSettings className="navigation__icon " />
-        </div>
+        </div> */}
       </div>
     </div>
   );

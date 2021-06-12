@@ -11,7 +11,7 @@ import { ImLab } from "react-icons/im";
 
 import "./header.css";
 import { useDispatch } from "react-redux";
-
+import BackButton from "../components/buttons/back_button/BackButton";
 import { setSearch } from "../actions/searchActions";
 const Header = () => {
   const [searchActive, setSearchActive] = useState(false);
@@ -35,8 +35,10 @@ const Header = () => {
     <div className="header">
       <nav className="header__nav">
         <div>
-          <div className="header__icons header__search__closeIcon">
-            <MdKeyboardBackspace onClick={() => history.goBack()} />
+          <div
+            className="header__icons header__search__closeIcon"
+            onClick={() => history.goBack()}>
+            <BackButton />
           </div>
         </div>
         <div>
@@ -51,7 +53,7 @@ const Header = () => {
           </Link>
         </div>
 
-        <div
+        {/* <div
           className={`header__input  ${
             searchActive ? "header__search__diplay" : ""
           } `}>
@@ -70,7 +72,7 @@ const Header = () => {
             className=" header__icons header__input__icon"
             onClick={submitHandler}
           />
-        </div>
+        </div> */}
 
         <ul>
           <div className={`header__menu ${menuActive && "header__menu__open"}`}>
@@ -100,13 +102,13 @@ const Header = () => {
             </li>
           </div>
 
-          <li className="header__ul__searchIcon">
+          {/* <li className="header__ul__searchIcon">
             <MdSearch
               className="header__ul__searchIcon"
               style={{ margin: "auto" }}
               onClick={() => setSearchActive(!searchActive)}
             />
-          </li>
+          </li> */}
         </ul>
       </nav>
       {/* menu for mobile devices */}
