@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { FcRotateToLandscape } from "react-icons/fc";
 
-import { MdKeyboardBackspace } from "react-icons/md";
-import Draggable from "react-draggable";
 import "./Lab.css";
 import { useHistory, useParams } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
@@ -11,6 +10,7 @@ import { listLabs } from "../../actions/labsActions";
 import { listSubjects } from "../../actions/subjectActions";
 import LabWaiting from "../../components/lab__waiting/LabWaiting";
 import { Button } from "@material-ui/core";
+import BackButton from "../../components/buttons/back_button/BackButton";
 const Lab = () => {
   let history = useHistory();
   const dispatch = useDispatch();
@@ -74,48 +74,50 @@ const Lab = () => {
           scrolling="no"
           allowfullscreen></iframe>
       </div>
-
       <div className="lab__header">
         <div onClick={() => history.push("/labs")} className="lab__back">
-          <MdKeyboardBackspace />
-          Back
+          <BackButton />
         </div>
 
-        <div className="label__logo__container">
-          <img
-            src={process.env.PUBLIC_URL + "/assets/logo.svg"}
-            alt="logo"
-            className="logo"
-            height="30px"
-            style={{ marginRight: "10px" }}
-          />
-          {currentLab?.tamilUrl && (
-            <>
-              <Button
-                onClick={() => {
-                  history.push(`/labs/lab/${id}?lng=ta`);
-                }}
-                size="small"
-                variant="contained"
-                color={lang ? "primary" : "secondary"}>
-                {" "}
-                Tamil
-              </Button>
+        <img
+          src={process.env.PUBLIC_URL + "/assets/logo.svg"}
+          alt="logo"
+          className="logo"
+          height="30px"
+          style={{ marginRight: "10px" }}
+        />
+        {currentLab?.tamilUrl && (
+          <div className="lang__btns">
+            <Button
+              onClick={() => {
+                history.push(`/labs/lab/${id}?lng=ta`);
+              }}
+              size="small"
+              variant="contained"
+              color={lang ? "primary" : "secondary"}>
+              {" "}
+              Tamil
+            </Button>
 
-              <Button
-                onClick={() => {
-                  history.push(`/labs/lab/${id}`);
-                }}
-                size="small"
-                variant="contained"
-                color={lang ? "secondary" : "primary"}>
-                {" "}
-                English
-              </Button>
-            </>
-          )}
-        </div>
+            <Button
+              onClick={() => {
+                history.push(`/labs/lab/${id}`);
+              }}
+              size="small"
+              variant="contained"
+              color={lang ? "secondary" : "primary"}>
+              {" "}
+              English
+            </Button>
+          </div>
+        )}
       </div>
+
+      <h5 className="toolbar">
+        {" "}
+        <FcRotateToLandscape style={{ fontSize: "30px" }} /> Please rotate your
+        device for better experience
+      </h5>
       {/* <div className="draggable__glossary"></div> */}
     </div>
   );
