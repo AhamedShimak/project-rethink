@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-import { FaFacebook, FaLinkedin,FaTwitterSquare, FaGithubSquare } from "react-icons/fa";
+import { FaFacebook, FaLinkedin,FaTelegram ,FaWhatsapp,FaInstagram} from "react-icons/fa";
 
 function Footer() {
     return (
@@ -11,9 +11,13 @@ function Footer() {
 			<div className="footer-right">
 
 				<a href="#"><FaFacebook/></a>
-				<a href="#"><FaLinkedin/></a>
-				<a href="#"><FaTwitterSquare/></a>
-				<a href="#"><FaGithubSquare/></a>
+				<a href="#"><FaTelegram/></a>
+				<a href="#"><FaWhatsapp/></a>
+				<a href="#"><FaInstagram/></a>
+
+
+			
+			
 
 			</div>
 
