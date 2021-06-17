@@ -80,6 +80,7 @@ const ContentItemBox = ({
             <div className="card__content__icons">
               {tamilUrl && (
                 <Button
+                  className="lang__btn"
                   onClick={() => {
                     history.push(`/labs/lab/${id}?lng=ta`);
                   }}
@@ -92,6 +93,7 @@ const ContentItemBox = ({
               )}
               {englishUrl && (
                 <Button
+                  className="lang__btn"
                   onClick={() => {
                     history.push(`/labs/lab/${id}`);
                   }}

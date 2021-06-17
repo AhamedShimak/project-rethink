@@ -5,6 +5,12 @@
   padding: 0;
 }
 
+.logo {
+  margin: 0;
+  padding: 0px;
+  width: 80px;
+}
+
 .home__main__container .home__main {
   height: 60px;
   display: -webkit-box;
@@ -21,12 +27,6 @@
 
 .home__main__container .home__main .home__logo {
   margin-left: 10px;
-}
-
-.home__main__container .home__main .home__logo .logo {
-  margin: 0;
-  padding: 10px;
-  width: 100px;
 }
 
 .home__main__container .home__main .navigation_items {
