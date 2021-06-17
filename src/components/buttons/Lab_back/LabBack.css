@@ -1,0 +1,16 @@
+.icon_container{
+    
+
+    display: flex;
+    align-items: center;
+    
+
+}
+
+.navigation__ico{
+
+    color:  #AE5155;
+    height: 15px;
+    width: 12px;
+
+}

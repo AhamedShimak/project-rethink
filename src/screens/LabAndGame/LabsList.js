@@ -69,7 +69,7 @@ const Lab = () => {
   return (
     <div className="lab">
       <div className="lab__text">
-        <p>உயர் தொழில்நுட்பத்தில் வடிவமைக்கப்பட்ட Labs🎉🎉✨</p>
+        <p>உயர் தொழில்நுட்பத்தில் வடிவமைக்கப்பட்ட LABS</p>
       </div>
       <div className="lab__container">
         <div className="lab__ellipses">
@@ -153,6 +153,7 @@ const Lab = () => {
                 <>
                   {mathLab?.map((lab) => (
                     <ContentItemBox
+
                       name={lab.name}
                       title={lab.name}
                       englishUrl={lab.englishUrl}

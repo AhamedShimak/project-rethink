@@ -21,36 +21,92 @@
 
     
     position: fixed;
+    top: 4px;
+    left: 4px;
 
 
-    left:0px;
-
-    top:120px;
+   opacity: 0.9;
     z-index:9995;
     padding:0;
     display: flex;
 
     align-items: center;
    
-    
-    
-   
+      
 }
+
+
+.lep_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   background-color:#1C1C1C;
+   border-radius: 4px;
+   overflow: hidden;
+  
+   
+    
+}
+.logoAndBack{
+    background-color: #EEEEEE;
+    padding: 0px 5px ;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    width: 80px;
+    justify-content: space-between;
+
+}
+.lab__back{
+   
+      z-index:9999;
+ 
+}
+
+.logo_lab{
+    height: 24px;
+   
+
+}
+
+.lang__btns{
+    
+    display:flex; 
+    flex-direction: column;
+    width: fit-content;
+    margin-top: 10px;
+    
+  
+}
+.lang_container{
+    height: 15px;
+    padding: 0;
+}
+
+.lang__btns > *{
+    margin: 4px !important;
+    height: 18px !important;
+    
+    padding:0px !important;
+    font-size:8px !important;
+    
+
+}
+.camera__icon{
+    color: #AC3737;
+    margin: 6px;
+}
+
+
+
+
 .lab__header > *{
     font-size: var(--spacer--lg);
     color:yellowgreen;
     cursor: pointer;
 }
-.lab__header > img{
-    transform: rotate(-90deg);
-}
-.lab__back{
-    position: fixed;
-    top:5px;
-    left:2px;
-      z-index:9999;
- 
-}
+
+
 /*  */
 .draggable__glossary{
    
@@ -90,16 +146,11 @@
     display:inline-block;
   }
 }
-.lang__btns{
-    position: fixed;
-    top: 50px;
-    left: 0px;
-    display:flex;
-    flex-direction: column;
-  
-}
-.lang__btns > *{
+
+
+/*.lang__btns > *{
     padding:.2em !important;
     font-size:10px !important;
   
-}
+}*/
+
