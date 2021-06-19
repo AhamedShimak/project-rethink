@@ -18,7 +18,7 @@ export async function listLabs(dispatch) {
 
     // TODO: store in local storage
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     dispatch(getLabsFailure(error));
   }
 }

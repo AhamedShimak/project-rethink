@@ -67,7 +67,7 @@ export default function LessonListVideo({
 
   return (
     <Card className={classes.root}>
-      {console.log()}
+      {/* {console.log()} */}
       <CardMedia
         className={classes.cover}
         image={image || "https://source.unsplash.com/random"}

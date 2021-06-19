@@ -21,7 +21,7 @@ export async function listLessons(dispatch, id) {
 
     // TODO: store in local storage
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     dispatch(getLessonsFailure(error));
   }
 }

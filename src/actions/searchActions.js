@@ -18,7 +18,7 @@ export async function listResults(dispatch, keyword) {
 
     dispatch(getResultsSuccess(data));
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     dispatch(getResultsFailure(error));
   }
 }

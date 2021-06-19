@@ -18,16 +18,16 @@ export async function listSubjects(dispatch) {
   try {
     if (checkIfDataExistsLocalStorage(APP_DATA_SUBJECTS)) {
       const data = getDataLocalStorage(APP_DATA_SUBJECTS);
-      console.log("DATA from storage: ", data);
+      // console.log("DATA from storage: ", data);
       dispatch(getSubjectsSuccess(data));
     } else {
       const { data } = await axios.get(`${laptonApi}/api/subjects`);
       dispatch(getSubjectsSuccess(data));
       setDataLocalStorage(APP_DATA_SUBJECTS, data);
-      console.log("DATA from backend: ", data);
+      // console.log("DATA from backend: ", data);
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     dispatch(getSubjectsFailure(error));
   }
 }

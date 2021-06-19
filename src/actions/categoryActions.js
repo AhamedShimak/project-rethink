@@ -17,7 +17,7 @@ export async function listCategories(dispatch) {
   try {
     if (checkIfDataExistsLocalStorage(APP_DATA_CATEGORIES)) {
       const data = await getDataLocalStorage(APP_DATA_CATEGORIES);
-      console.log(data);
+      // console.log(data);
       dispatch(getCategoriesSuccess(data));
     } else {
       const { data } = await axios.get(`${laptonApi}/api/categories`);
@@ -25,7 +25,7 @@ export async function listCategories(dispatch) {
       setDataLocalStorage(APP_DATA_CATEGORIES, data);
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     dispatch(getCategoriesFailure(error));
   }
 }

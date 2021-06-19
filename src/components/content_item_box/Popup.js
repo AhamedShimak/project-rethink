@@ -12,7 +12,7 @@ import {
 import "./Popup.css";
 export default function Popup({ url }) {
   const shareURl = url;
-  console.log(url);
+  // console.log(url);
   const title = "share now 🔥";
   return (
     <div className="popup">

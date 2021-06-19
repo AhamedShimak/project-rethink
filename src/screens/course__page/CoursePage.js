@@ -113,7 +113,7 @@ function CoursePage(props) {
   const contentDisplay = (inputContent) => {
     switch (inputContent.type) {
       case "VIDEO":
-        console.log(inputContent.url);
+        // console.log(inputContent.url);
         return <YoutubePlayer url={inputContent.url} />;
       //   case "TEXT":
       //     return (

@@ -45,22 +45,22 @@ const Ad = ({ desktop }) => {
               onChangeIndex={handleChangeIndex}>
               <div style={Object.assign({}, styles.slide, styles.slide1)}>
                 <img
-                  src={ad}
-                  alt="slide1"
+                  src={process.env.PUBLIC_URL + "/assets/add-1.png"}
+                  alt="image_1"
                   style={{ display: "block !important", width: "100%" }}
                 />
               </div>
               <div style={Object.assign({}, styles.slide, styles.slide2)}>
                 <img
-                  src={ad2}
-                  alt="slide2"
+                  src={process.env.PUBLIC_URL + "/assets/add-2.png"}
+                  alt="image_2"
                   style={{ display: "block !important", width: "100%" }}
                 />
               </div>
               <div style={Object.assign({}, styles.slide, styles.slide3)}>
                 <img
-                  src={ad3}
-                  alt="slide3"
+                  src={process.env.PUBLIC_URL + "/assets/ad-3.png"}
+                  alt="image_3"
                   style={{ display: "block !important", width: "100%" }}
                 />
               </div>
@@ -75,22 +75,22 @@ const Ad = ({ desktop }) => {
           <>
             <div style={Object.assign({}, styles.slide, styles.slide1)}>
               <img
-                src={ad}
-                alt="slide1"
+                src={process.env.PUBLIC_URL + "/assets/add-1.png"}
+                alt="image_1"
                 style={{ display: "block !important", width: "100%" }}
               />
             </div>
             <div style={Object.assign({}, styles.slide, styles.slide2)}>
               <img
-                src={ad2}
-                alt="slide1"
+                ssrc={process.env.PUBLIC_URL + "/assets/ad-2.png"}
+                alt="image_2"
                 style={{ display: "block !important", width: "100%" }}
               />
             </div>
             <div style={Object.assign({}, styles.slide, styles.slide3)}>
               <img
-                src={ad3}
-                alt="slide1"
+                src={process.env.PUBLIC_URL + "/assets/ad-3.png"}
+                alt="image_3"
                 style={{ display: "block !important", width: "100%" }}
               />
             </div>

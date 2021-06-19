@@ -10,7 +10,10 @@ import { listLabs } from "../../actions/labsActions";
 import { listSubjects } from "../../actions/subjectActions";
 import LabWaiting from "../../components/lab__waiting/LabWaiting";
 import { Button } from "@material-ui/core";
-import BackButton from "../../components/buttons/back_button/BackButton";
+import BackButton from "../../components/buttons/Lab_back/LabBack";
+import { MdCamera, MdKeyboard } from "react-icons/md";
+import Laback from "../../components/buttons/Lab_back/LabBack";
+
 const Lab = () => {
   let history = useHistory();
   const dispatch = useDispatch();
@@ -24,6 +27,7 @@ const Lab = () => {
     loading: loadingSub,
     errors: errorSub,
   } = useSelector(subjectsSelector);
+
   useEffect(() => {
     const fetchData = async () => {
       // if (labs === [] || labs === null) {
@@ -67,50 +71,56 @@ const Lab = () => {
   return (
     <div>
       <div className="lab__iframe">
-        {lang ? console.log(currentLab) : console.log(currentLab)}
+        {/* {lang ? console.log(currentLab) : console.log(currentLab)} */}
         <iframe
           src={lang ? currentLab?.tamilUrl : currentLab?.englishUrl}
           title={currentLab?._id}
           scrolling="no"
           allowfullscreen></iframe>
       </div>
+
       <div className="lab__header">
-        <div onClick={() => history.goBack()} className="lab__back">
-          <BackButton />
-        </div>
+        <div className="lep_container">
+          <div className="logoAndBack">
+            <img
+              src={process.env.PUBLIC_URL + "/assets/logo.svg"}
+              alt="logo"
+              className="logo_lab"
+            />
 
-        <img
-          src={process.env.PUBLIC_URL + "/assets/logo.svg"}
-          alt="logo"
-          className="logo"
-          height="30px"
-          style={{ marginRight: "10px" }}
-        />
-        {currentLab?.tamilUrl && (
-          <div className="lang__btns">
-            <Button
-              onClick={() => {
-                history.push(`/labs/lab/${id}?lng=ta`);
-              }}
-              size="small"
-              variant="contained"
-              color={lang ? "primary" : "secondary"}>
-              {" "}
-              Tamil
-            </Button>
-
-            <Button
-              onClick={() => {
-                history.push(`/labs/lab/${id}`);
-              }}
-              size="small"
-              variant="contained"
-              color={lang ? "secondary" : "primary"}>
-              {" "}
-              English
-            </Button>
+            <div onClick={() => history.goBack()} className="lab__back">
+              <Laback />
+            </div>
           </div>
-        )}
+
+          {currentLab?.tamilUrl && (
+            <div className="lang__btns">
+              <Button
+                className="lang__btn"
+                onClick={() => {
+                  history.push(`/labs/lab/${id}?lng=ta`);
+                }}
+                variant="contained"
+                color={lang ? "primary" : "secondary"}>
+                {" "}
+                Tamil
+              </Button>
+
+              <Button
+                onClick={() => {
+                  history.push(`/labs/lab/${id}`);
+                }}
+                width="60px"
+                variant="contained"
+                color={lang ? "secondary" : "primary"}>
+                {" "}
+                English
+              </Button>
+            </div>
+          )}
+
+          <MdCamera className="camera__icon" />
+        </div>
       </div>
 
       <h5 className="toolbar">
@@ -118,6 +128,7 @@ const Lab = () => {
         <FcRotateToLandscape style={{ fontSize: "30px" }} /> Please rotate your
         device for better experience
       </h5>
+
       {/* <div className="draggable__glossary"></div> */}
     </div>
   );
