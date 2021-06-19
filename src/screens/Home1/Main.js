@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { MdKeyboardBackspace, MdSearch, MdSettings } from "react-icons/md";
+// import { MdKeyboardBackspace, MdSearch, MdSettings } from "react-icons/md";
 import { Link } from "react-router-dom";
 //import { ReactSVG } from "react-svg";
 import "./Home.css";

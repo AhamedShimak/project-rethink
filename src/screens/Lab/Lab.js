@@ -10,8 +10,8 @@ import { listLabs } from "../../actions/labsActions";
 import { listSubjects } from "../../actions/subjectActions";
 import LabWaiting from "../../components/lab__waiting/LabWaiting";
 import { Button } from "@material-ui/core";
-import BackButton from "../../components/buttons/Lab_back/LabBack";
-import { MdCamera, MdKeyboard } from "react-icons/md";
+// import BackButton from "../../components/buttons/Lab_back/LabBack";
+import { MdCamera } from "react-icons/md";
 import Laback from "../../components/buttons/Lab_back/LabBack";
 
 const Lab = () => {

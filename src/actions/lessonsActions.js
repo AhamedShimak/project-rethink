@@ -4,9 +4,9 @@ import {
   getLessons,
   getLessonsFailure,
   getLessonsSuccess,
-  getCurrentLesson,
-  getCurrentLessonFailure,
-  getCurrentLessonSuccess,
+  // getCurrentLesson,
+  // getCurrentLessonFailure,
+  // getCurrentLessonSuccess,
 } from "../features/lessons/lessonSlice";
 
 export async function listLessons(dispatch, id) {

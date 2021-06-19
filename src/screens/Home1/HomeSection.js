@@ -3,12 +3,11 @@ import React from "react";
 import "./Home.css";
 import labs from "../../assets/labs.svg";
 import lessons from "../../assets/lessons.svg";
-import games from "../../assets/games.svg";
+
 import papers from "../../assets/papers.svg";
-import SubjectElipse from "../../components/subject__elipse/SubjectElipse";
+
 import { useHistory } from "react-router";
-import { BsFillPeopleFill } from "react-icons/bs";
-import { GiCelebrationFire, GiNewspaper, GiTeacher } from "react-icons/gi";
+
 const HomeSection = () => {
   let history = useHistory();
   return (

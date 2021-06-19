@@ -4,9 +4,6 @@ import {
   getLabs,
   getLabsSuccess,
   getLabsFailure,
-  getCurrentLab,
-  getCurrentLabSuccess,
-  getCurrentLabFailure,
 } from "../features/labs/labsSlice";
 
 export async function listLabs(dispatch) {

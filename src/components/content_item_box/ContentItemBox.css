@@ -33,16 +33,19 @@
 
 .card__head{
     padding: 0 10px;
-     height: 60px;
+     height: 70px;
     display:flex ;
     align-items: center;
-
+  
     background-color: rgba(51, 51, 51, 0.582);
     
 }
 .content__item__box_p{
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: lighter;
+    
+    letter-spacing: 0.09em !important;
+    line-height:12.5px;
     color: #e6e6e6;
     
 }

@@ -6,13 +6,12 @@ import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";*/
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import { MdShare, MdBookmark } from "react-icons/md";
+import { MdShare } from "react-icons/md";
 import "./ContentItemBox.css";
 
 //for share button
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
@@ -59,7 +58,7 @@ const ContentItemBox = ({
         <div className="card__content__image">
           <img
             src={imageUrl}
-            alt="pH Scale"
+            alt="lab_image"
             style={{ border: "none", borderRadius: "20px", width: "100%" }}
             onClick={() => {
               history.push(`/labs/lab/${id}`);

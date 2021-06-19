@@ -4,9 +4,9 @@ import {
   getResults,
   getResultsSuccess,
   getResultsFailure,
-  getCurrentResult,
-  getCurrentResultSuccess,
-  getCurrentResultFailure,
+  // getCurrentResult,
+  // getCurrentResultSuccess,
+  // getCurrentResultFailure,
   setKeyword,
 } from "../features/search/searchSlice";
 export async function listResults(dispatch, keyword) {

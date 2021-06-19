@@ -3,9 +3,6 @@ import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 import Pagination from "./Pagination";
 import "./ad.css";
-import ad from "../../assets/ad.jpg";
-import ad2 from "../../assets/ad2.jpg";
-import ad3 from "../../assets/ad3.jpg";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 

@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import {
-  MdKeyboardBackspace,
-  MdSearch,
-  MdSubject,
-  MdVideogameAsset,
-  MdTimer,
-} from "react-icons/md";
+import { MdSubject, MdTimer } from "react-icons/md";
 import { ImLab } from "react-icons/im";
 
 import "./header.css";

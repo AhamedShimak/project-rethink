@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Lab.css";
-import gameImg from "../../assets/gameimg.png";
+// import gameImg from "../../assets/gameimg.png";
 //import { BsGridFill } from "react-icons/bs";
 import { BiAtom, BiDna } from "react-icons/bi";
 import { IoFlask } from "react-icons/io5";

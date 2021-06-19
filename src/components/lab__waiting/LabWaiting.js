@@ -89,11 +89,11 @@ const LabWaiting = ({ logoOff }) => {
 
           <path
             id="line"
-            stroke-linecap="round"
-            stroke-dasharray="1,4"
-            stroke-dashoffset="200.00"
+            strokeLinecap="round"
+            strokeDasharray="1,4"
+            strokeDashoffset="200.00"
             stroke="#2c3e50"
-            stroke-width="2"
+            strokeWidth="2"
             d="M150,150 L150,198">
             <animate
               attributeName="stroke-dashoffset"
