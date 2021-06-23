@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FcRotateToLandscape } from "react-icons/fc";
-
+// <DraggableCore>
+import Draggable, { DraggableCore } from "react-draggable";
 import "./Lab.css";
 import { useHistory, useParams } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
@@ -48,6 +49,20 @@ const Lab = () => {
     setCurrentLab(labs?.labs?.filter((lab) => lab._id === id)[0]);
   }, [labs]);
 
+  //dragging
+  const [position, setPosition] = useState({
+    x: 100,
+    y: 0,
+  });
+  const [isDragging, setIsDragging] = useState(false);
+  useEffect(() => {}, [isDragging]);
+  const handleDrag = (e) => {
+    setPosition({
+      x: e.x,
+      y: e.y,
+    });
+    console.log(e.x);
+  };
   if (loading) {
     return (
       <div
@@ -79,55 +94,56 @@ const Lab = () => {
           allowfullscreen></iframe>
       </div>
 
-      <div className="lab__header">
-        <div className="lep_container">
-          <div className="logoAndBack">
-            <img
-              src={process.env.PUBLIC_URL + "/assets/logo.svg"}
-              alt="logo"
-              className="logo_lab"
-              onClick={() => history.push("/")}
-            />
+      <Draggable bounds="body">
+        <div className="lab__header">
+          <div className="lep_container">
+            <div className="logoAndBack">
+              <img
+                src={process.env.PUBLIC_URL + "/assets/logo.svg"}
+                alt="logo"
+                className="logo_lab"
+                onClick={() => history.push("/")}
+              />
 
-            <div onClick={() => history.goBack()} className="lab__back">
-              <Laback />
+              <div onClick={() => history.goBack()} className="lab__back">
+                <Laback />
+              </div>
             </div>
+
+            {currentLab?.tamilUrl && (
+              <div className="lang__btns">
+                <Button
+                  className="lang__btn"
+                  onClick={() => {
+                    history.push(`/labs/lab/${id}?lng=ta`);
+                  }}
+                  variant="contained"
+                  color={lang ? "primary" : "secondary"}>
+                  {" "}
+                  Tamil
+                </Button>
+
+                <Button
+                  onClick={() => {
+                    history.push(`/labs/lab/${id}`);
+                  }}
+                  width="60px"
+                  variant="contained"
+                  color={lang ? "secondary" : "primary"}>
+                  {" "}
+                  English
+                </Button>
+              </div>
+            )}
+
+            <MdCamera className="camera__icon" />
           </div>
-
-          {currentLab?.tamilUrl && (
-            <div className="lang__btns">
-              <Button
-                className="lang__btn"
-                onClick={() => {
-                  history.push(`/labs/lab/${id}?lng=ta`);
-                }}
-                variant="contained"
-                color={lang ? "primary" : "secondary"}>
-                {" "}
-                Tamil
-              </Button>
-
-              <Button
-                onClick={() => {
-                  history.push(`/labs/lab/${id}`);
-                }}
-                width="60px"
-                variant="contained"
-                color={lang ? "secondary" : "primary"}>
-                {" "}
-                English
-              </Button>
-            </div>
-          )}
-
-          <MdCamera className="camera__icon" />
         </div>
-      </div>
-
+      </Draggable>
       <h5 className="toolbar">
         {" "}
         <FcRotateToLandscape style={{ fontSize: "30px" }} /> Please rotate your
-        device for better experience
+        device for better experience(சிறந்த பாவனைக்கு phone ஐ திருப்புங்கள்)
       </h5>
 
       {/* <div className="draggable__glossary"></div> */}
