@@ -81,7 +81,9 @@ const SearchResults = () => {
         {!loading &&
           showResult.labs &&
           results?.labs?.map((result) => (
-            <li key={result._id}>
+            <li
+              key={result._id}
+              onClick={() => history.push(`/labs/lab/${result._id}`)}>
               <IoCheckmarkDoneCircle style={{ height: "30px" }} />
               {result?.name}
               {result?.category.name && (

@@ -86,6 +86,7 @@ const Lab = () => {
               src={process.env.PUBLIC_URL + "/assets/logo.svg"}
               alt="logo"
               className="logo_lab"
+              onClick={() => history.push("/")}
             />
 
             <div onClick={() => history.goBack()} className="lab__back">
