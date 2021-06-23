@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { MdSubject, MdTimer } from "react-icons/md";
+import {
+  MdSubject,
+  MdTimer,
+  MdKeyboardBackspace,
+  MdSearch,
+} from "react-icons/md";
 import { ImLab } from "react-icons/im";
 
 import "./header.css";
@@ -47,7 +52,7 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* <div
+        <div
           className={`header__input  ${
             searchActive ? "header__search__diplay" : ""
           } `}>
@@ -66,7 +71,7 @@ const Header = () => {
             className=" header__icons header__input__icon"
             onClick={submitHandler}
           />
-        </div> */}
+        </div>
 
         <ul>
           <div className={`header__menu ${menuActive && "header__menu__open"}`}>
@@ -91,13 +96,13 @@ const Header = () => {
             </li>
           </div>
 
-          {/* <li className="header__ul__searchIcon">
+          <li className="header__ul__searchIcon">
             <MdSearch
               className="header__ul__searchIcon"
               style={{ margin: "auto" }}
               onClick={() => setSearchActive(!searchActive)}
             />
-          </li> */}
+          </li>
         </ul>
       </nav>
       {/* menu for mobile devices */}
