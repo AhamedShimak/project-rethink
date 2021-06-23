@@ -95,6 +95,7 @@
 .camera__icon{
     color: #AC3737;
     margin: 6px;
+    cursor: move;
 }
 
 
