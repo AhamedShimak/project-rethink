@@ -77,10 +77,11 @@ const Ad = ({ desktop }) => {
                 style={{ display: "block !important", width: "100%" }}
               />
             </div>
-            <div style={Object.assign({}, styles.slide, styles.slide2)}>
+
+            <div style={Object.assign({}, styles.slide, styles.slide3)}>
               <img
-                ssrc={process.env.PUBLIC_URL + "/assets/ad-2.png"}
-                alt="image_2"
+                src={process.env.PUBLIC_URL + "/assets/ad-2.png"}
+                alt="image_3"
                 style={{ display: "block !important", width: "100%" }}
               />
             </div>
