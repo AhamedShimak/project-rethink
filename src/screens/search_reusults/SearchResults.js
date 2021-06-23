@@ -104,7 +104,9 @@ const SearchResults = () => {
         {!loading &&
           showResult.videos &&
           results?.products?.map((result) => (
-            <li key={result._id}>
+            <li
+              key={result._id}
+              onClick={() => history.push(`/lessons/${result.heading._id}`)}>
               <IoCheckmarkDoneCircle style={{ height: "30px" }} />
               {result?.name}
               {result?.category.name && (
