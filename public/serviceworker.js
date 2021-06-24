@@ -1,5 +1,10 @@
-const CACHE_NAME = "version-0.0.3";
-const urlsToCache = ["index.html", "offline.html", "./assets/logo.svg"];
+const CACHE_NAME = "version-0.0.4";
+const urlsToCache = [
+  "index.html",
+  "offline.html",
+  "./assets/logo.svg",
+  "../src/assets/Back_drop.svg",
+];
 
 const self = this;
 
