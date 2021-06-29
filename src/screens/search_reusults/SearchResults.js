@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { listResults } from "../../actions/searchActions";
 import { IoCheckmarkDoneCircle } from "react-icons/io5";
-// import { searchSelector } from "../../app/store";
 import {ReactComponent as Pulse} from '../../assets/Pulse.svg';
 
 
