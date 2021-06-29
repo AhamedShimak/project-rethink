@@ -39,3 +39,9 @@ ul {
 .chip__author{
     border:var(--color-danger) 1px solid;
 }
+.search__no__result{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}

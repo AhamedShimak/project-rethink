@@ -2,6 +2,7 @@ import React from "react";
 
 import Main from "./Main";
 import HomeSection from "./HomeSection";
+import Footer from "../../layout/Footer";
 
 const Home = () => {
   return (
@@ -15,6 +16,9 @@ const Home = () => {
       </main>
       <section className="home__selection__container">
         <HomeSection />
+      </section>
+      <section>
+<Footer/>
       </section>
 
 
