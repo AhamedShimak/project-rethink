@@ -13,7 +13,7 @@ import LabWaiting from "../../components/lab__waiting/LabWaiting";
 import { Button } from "@material-ui/core";
 // import BackButton from "../../components/buttons/Lab_back/LabBack";
 // import { MdCamera } from "react-icons/md";
-import {RiDragMove2Line} from "react-icons/ri";
+import { RiDragMove2Line } from "react-icons/ri";
 
 import Laback from "../../components/buttons/Lab_back/LabBack";
 
