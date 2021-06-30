@@ -127,7 +127,7 @@ const ContentItemBox = ({
                 Share with others
               </DialogContentText>
 
-              <Popup url={`${clientApi}/labs/lab/${id}`} />
+              <Popup url={`${clientApi}/labs/lab/${id}`} name={name} />
             </DialogContent>
           </Dialog>
         </div>

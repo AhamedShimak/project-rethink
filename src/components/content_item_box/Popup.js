@@ -10,10 +10,10 @@ import {
   TelegramShareButton,
 } from "react-share";
 import "./Popup.css";
-export default function Popup({ url }) {
+export default function Popup({ url, name }) {
   const shareURl = url;
   // console.log(url);
-  const title = "share now 🔥";
+  const title = `Hey😎 Check this amazing lab \n ____________*******************________ \n ${name} \n -------------_________________-------------`;
   return (
     <div className="popup">
       <div className="popup_content">
