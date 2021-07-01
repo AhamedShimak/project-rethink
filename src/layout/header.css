@@ -125,13 +125,13 @@ li:first-child {
     justify-content: center;
     align-items: center;
     background-color: var( --color-teal);
-    clip-path: circle(0% at 100% 99%);
+    clip-path: circle(0% at 50% 100%);
     transition: all 1s ease-in-out;
   }
   .header__menu__open{
  
     background-color: var( --color-white);
-    clip-path: circle(200% at 100% 99%);
+    clip-path: circle(200% at 50% 100%);
    
   }
   li *{
@@ -174,7 +174,7 @@ li:first-child {
   .layout__menu{
     position: fixed;
     bottom: 3%;
-    right: 3%;
+    right: calc(50% - 20px);
     height: 40px;
     width: 40px;
     display: flex;
