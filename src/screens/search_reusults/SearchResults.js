@@ -3,9 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { listResults } from "../../actions/searchActions";
 import { IoCheckmarkDoneCircle } from "react-icons/io5";
-import {ReactComponent as Pulse} from '../../assets/Pulse.svg';
-
-
+import { ReactComponent as Pulse } from "../../assets/Pulse.svg";
 
 import "./searchResluts.css";
 const SearchResults = () => {
@@ -33,85 +31,81 @@ const SearchResults = () => {
     labs: true,
     videos: true,
   });
-  const [activeall, setActiveall]=useState('blue');
-  const [activelabs, setActivelabs]=useState('green');
-  const [activevideo, setActivevideo]=useState('green');
-
+  const [activeall, setActiveall] = useState("blue");
+  const [activelabs, setActivelabs] = useState("green");
+  const [activevideo, setActivevideo] = useState("green");
 
   useEffect(() => {}, [showResult]);
 
   return (
     <div className="search__results">
-       {loading && <Pulse/>}
-      {
-        (results?.products?.length + results?.labs?.length != 0 || Number.isNaN(results?.products?.length + results?.labs?.length))?<div>
-        <h3>
-        {results?.products?.length + results?.labs?.length} Results for:{" "}
-        {searchWord}
-      </h3>
-      <small>
-        {results?.products?.length} Videos {results?.labs?.length} Labs
-      </small>
-      <hr style={{ marginBottom: "2px" }}></hr>
+      {results?.products?.length + results?.labs?.length !== 0 ||
+      Number.isNaN(results?.products?.length + results?.labs?.length) ? (
+        <div>
+          <h3>
+            {results?.products?.length + results?.labs?.length} Results for:{" "}
+            {searchWord}
+          </h3>
+          <small>
+            {results?.products?.length} Videos {results?.labs?.length} Labs
+          </small>
+          <hr style={{ marginBottom: "2px" }}></hr>
 
-      <span style={{backgroundColor:activeall}}
-        className="chip chip__subject"
-        onClick={() =>(
-          setShowResult({
-            labs: true,
-            videos: true,
-          }),
-          setActiveall('blue'),
-          setActivelabs('green'),
-          setActivevideo('green')
-        )
-         
-         
-        }>
-        All
-      </span>
-      <span  style={{backgroundColor:activelabs}}
-        className="chip chip__subject"
-        onClick={() =>(
-          setShowResult({
-            labs: true,
-            videos: false,
-          }),
-          setActiveall('green'),
-          setActivelabs('blue'),
-          setActivevideo('green')
-        )
-        }>
-        Labs
-      </span>
-      <span style={{backgroundColor:activevideo}}
-        className="chip chip__subject"
-        onClick={() =>(
-          setShowResult({
-            labs: false,
-            videos: true,
-          }),
-          setActiveall('green'),
-          setActivelabs('green'),
-          setActivevideo('blue')
-        )
-        }>
-        Videos
-      </span>
+          <span
+            style={{ backgroundColor: activeall, padding: "5px 10px" }}
+            className="chip chip__subject"
+            onClick={() => (
+              setShowResult({
+                labs: true,
+                videos: true,
+              }),
+              setActiveall("blue"),
+              setActivelabs("green"),
+              setActivevideo("green")
+            )}>
+            All
+          </span>
+          <span
+            style={{ backgroundColor: activelabs, padding: "5px 10px" }}
+            className="chip chip__subject"
+            onClick={() => (
+              setShowResult({
+                labs: true,
+                videos: false,
+              }),
+              setActiveall("green"),
+              setActivelabs("blue"),
+              setActivevideo("green")
+            )}>
+            Labs
+          </span>
+          <span
+            style={{ backgroundColor: activevideo, padding: "5px 10px" }}
+            className="chip chip__subject"
+            onClick={() => (
+              setShowResult({
+                labs: false,
+                videos: true,
+              }),
+              setActiveall("green"),
+              setActivelabs("green"),
+              setActivevideo("blue")
+            )}>
+            Videos
+          </span>
 
-      <hr style={{ marginBottom: "10px", marginTop: "2px" }}></hr>
-        </div>:<div className="search__no__result">
-        <img
-                src={process.env.PUBLIC_URL + "/assets/no_result.png"}
-                alt="no result"
-                className="no__result"
-              />
-              
-          </div>
-      }
-     
-     
-     
+          <hr style={{ marginBottom: "10px", marginTop: "2px" }}></hr>
+        </div>
+      ) : (
+        <div className="search__no__result">
+          <img
+            src={process.env.PUBLIC_URL + "/assets/no_result.png"}
+            alt="no result"
+            className="no__result"
+          />
+        </div>
+      )}
+      {loading && <Pulse />}
       <ul>
         {!loading &&
           showResult.labs &&
