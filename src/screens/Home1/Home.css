@@ -69,7 +69,7 @@
   -webkit-box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0), 0px 4px 5px -1px rgba(0, 0, 0, 0), 0px 4px 5px 1px #0000000c;
           box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0), 0px 4px 5px -1px rgba(0, 0, 0, 0), 0px 4px 5px 1px #0000000c;
 }
-
+home__content__container__item
 .home__main__container .home__main .home__search__container .home__search input {
   display: block;
   height: 100%;
@@ -197,7 +197,7 @@
   box-shadow: 0px 10px 15px -1px #00000059;
   border-radius: 20px;
   height: 120px;
-  margin: 25px 10px;
+  margin: 15px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

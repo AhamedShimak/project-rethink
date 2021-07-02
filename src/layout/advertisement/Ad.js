@@ -9,6 +9,8 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const styles = {
   root: {
     position: "relative",
+    borderRadius: "20px",
+    padding: "5px 5px 0 5px",
   },
   slide: {
     // padding: 15,
@@ -19,10 +21,10 @@ const styles = {
     backgroundColor: "transparent",
   },
   slide2: {
-    backgroundColor: "#B3DC4A",
+    backgroundColor: "transparent",
   },
   slide3: {
-    backgroundColor: "#6AC0FF",
+    backgroundColor: "transparent",
   },
 };
 const Ad = ({ desktop }) => {
@@ -44,21 +46,33 @@ const Ad = ({ desktop }) => {
                 <img
                   src={process.env.PUBLIC_URL + "/assets/add-1.png"}
                   alt="image_1"
-                  style={{ display: "block !important", width: "100%" }}
+                  style={{
+                    display: "block !important",
+                    width: "100%",
+                    borderRadius: "20px",
+                  }}
                 />
               </div>
               <div style={Object.assign({}, styles.slide, styles.slide3)}>
                 <img
                   src={process.env.PUBLIC_URL + "/assets/ad-2.png"}
                   alt="image_3"
-                  style={{ display: "block !important", width: "100%" }}
+                  style={{
+                    display: "block !important",
+                    width: "100%",
+                    borderRadius: "20px",
+                  }}
                 />
               </div>
               <div style={Object.assign({}, styles.slide, styles.slide3)}>
                 <img
                   src={process.env.PUBLIC_URL + "/assets/ad-3.png"}
                   alt="image_3"
-                  style={{ display: "block !important", width: "100%" }}
+                  style={{
+                    display: "block !important",
+                    width: "100%",
+                    borderRadius: "20px",
+                  }}
                 />
               </div>
             </AutoPlaySwipeableViews>
