@@ -16,6 +16,7 @@ const SearchResults = () => {
 
   useEffect(() => {
     setShowResult({
+      noresult: false,
       labs: true,
       videos: true,
     });
@@ -28,6 +29,7 @@ const SearchResults = () => {
   }, [searchWord, dispatch]);
 
   const [showResult, setShowResult] = useState({
+    noresult: false,
     labs: true,
     videos: true,
   });
@@ -39,7 +41,8 @@ const SearchResults = () => {
 
   return (
     <div className="search__results">
-      {results?.products?.length + results?.labs?.length !== 0 ||
+      {loading && <Pulse />}
+      {results?.products?.length + results?.labs?.length != 0 ||
       Number.isNaN(results?.products?.length + results?.labs?.length) ? (
         <div>
           <h3>
@@ -52,10 +55,11 @@ const SearchResults = () => {
           <hr style={{ marginBottom: "2px" }}></hr>
 
           <span
-            style={{ backgroundColor: activeall, padding: "5px 10px" }}
+            style={{ backgroundColor: activeall }}
             className="chip chip__subject"
             onClick={() => (
               setShowResult({
+                noresult: false,
                 labs: true,
                 videos: true,
               }),
@@ -66,10 +70,11 @@ const SearchResults = () => {
             All
           </span>
           <span
-            style={{ backgroundColor: activelabs, padding: "5px 10px" }}
+            style={{ backgroundColor: activelabs }}
             className="chip chip__subject"
             onClick={() => (
               setShowResult({
+                noresult: true,
                 labs: true,
                 videos: false,
               }),
@@ -79,11 +84,13 @@ const SearchResults = () => {
             )}>
             Labs
           </span>
+
           <span
-            style={{ backgroundColor: activevideo, padding: "5px 10px" }}
+            style={{ backgroundColor: activevideo }}
             className="chip chip__subject"
             onClick={() => (
               setShowResult({
+                noresult: true,
                 labs: false,
                 videos: true,
               }),
@@ -105,7 +112,31 @@ const SearchResults = () => {
           />
         </div>
       )}
-      {loading && <Pulse />}
+
+      {!loading &&
+        showResult.labs &&
+        (results?.labs?.length != 0 || showResult.noresult) && (
+          <div className="search__no__result">
+            <img
+              src={process.env.PUBLIC_URL + "/assets/no_result.png"}
+              alt="no result"
+              className="no__result"
+            />
+          </div>
+        )}
+
+      {!loading &&
+        showResult.products &&
+        (results?.products?.length != 0 || showResult.noresult) && (
+          <div className="search__no__result">
+            <img
+              src={process.env.PUBLIC_URL + "/assets/no_result.png"}
+              alt="no result"
+              className="no__result"
+            />
+          </div>
+        )}
+
       <ul>
         {!loading &&
           showResult.labs &&
@@ -116,7 +147,7 @@ const SearchResults = () => {
               <IoCheckmarkDoneCircle style={{ height: "30px" }} />
               {result?.name}
               {result?.category.name && (
-                <span className="chip chip__category">Lab</span>
+                <span className="chip chip__category">Labs</span>
               )}
               {result?.subject?.name && (
                 <span className="chip chip__subject">
