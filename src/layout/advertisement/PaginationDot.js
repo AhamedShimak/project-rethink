@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const styles = {
   root: {
     height: 18,
-    width: 18,
+    width: 25,
     cursor: "pointer",
     border: 0,
     background: "none",
@@ -12,13 +12,14 @@ const styles = {
   },
   dot: {
     backgroundColor: "#e4e6e7",
-    height: 12,
-    width: 12,
+    height: 8,
+    width: 8,
     borderRadius: 6,
-    margin: 3,
+    margin: 0,
   },
   active: {
     backgroundColor: "#319fd6",
+    width: 20,
   },
 };
 
