@@ -96,7 +96,7 @@ const Lab = () => {
           allowfullscreen></iframe>
       </div>
 
-      <Draggable bounds="body">
+      <Draggable bounds="body" handle=".camera__icon">
         <div className="lab__header">
           <div className="lep_container">
             <div className="logoAndBack">
