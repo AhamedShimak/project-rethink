@@ -7,14 +7,14 @@
   
   .circular-menu .floating-btn {
 	display: block;
-	width: 3.5em;
-	height: 3.5em;
+	height: 40px;
+    width: 40px;
 	border-radius: 50%;
 	background-color: var(--color-danger);
 	box-shadow: 0 2px 5px 0 hsla(0, 0%, 0%, .26);  
 	color: hsl(0, 0%, 100%);
 	text-align: center;
-	line-height: 3.9;
+	line-height: 41px;
 	cursor: pointer;
 	outline: 0;
   }
@@ -39,8 +39,8 @@
   .circular-menu:after {
 	display: block;
 	content: ' ';
-	width: 3.5em;
-	height: 3.5em;
+	height: 40px;
+    width: 40px;
 	border-radius: 50%;
 	position: absolute;
 	top: 0;
@@ -71,8 +71,8 @@
 	color: var(--color-danger);
 	font-size: 1em;
 	font-weight: bolder;
-	width: 3em;
-	height: 3em;
+	height: 35px;
+    width: 35px;
 	border-radius: 50%;
 	text-align: center;
 	line-height: 3;
@@ -89,26 +89,26 @@
   }
   
   .circular-menu.active .menu-item:nth-child(1) {
-	transform: translate3d(1em,-7em,0);
+	transform: translate3d(0.2em,-5.3em,0);
   }
   
   .circular-menu.active .menu-item:nth-child(2) {
-	transform: translate3d(-3.5em,-6.3em,0);
+	transform: translate3d(-2.5em,-4.3em,0);
   }
   
   .circular-menu.active .menu-item:nth-child(3) {
-	transform: translate3d(-6.5em,-3.2em,0);
+	transform: translate3d(-4.2em,-2em,0);
   }
   
   .circular-menu.active .menu-item:nth-child(4) {
-	transform: translate3d(-7em,1em,0);
+	transform: translate3d(-4.33em,1em,0);
   }
   
   /**
    * The other theme for this menu
    */
   
-  .circular-menu.circular-menu-left {
+  /* .circular-menu.circular-menu-left {
 	right: auto; 
 	left: 1em;
   }
@@ -140,4 +140,4 @@
   .circular-menu.circular-menu-left.active .menu-item:nth-child(4) {
 	transform: translate3d(7em,1em,0);
   }
- 
+  */

@@ -12,12 +12,12 @@ const CircleMenu = () => {
   const [show, setShow] = useState(false);
   const handler = () => {
     setShow(!show);
-    autoOff();
+    return autoOff();
   };
   let autoOff = () => {
     setTimeout(() => {
       setShow(false);
-    }, 2000);
+    }, 3000);
   };
   return (
     <div
