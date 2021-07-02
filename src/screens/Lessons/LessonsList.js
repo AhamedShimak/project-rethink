@@ -79,10 +79,10 @@ const Lessons = () => {
             <ComingSoon />
           </div>
           <div className="lessons__slide">
-            <ComingSoon />
+            <Accordian accordianItems={subjects?.subjects[2]} />
           </div>
           <div className="lessons__slide">
-            <ComingSoon />
+            <Accordian accordianItems={subjects?.subjects[3]} />
           </div>
 
           {/* ))} */}

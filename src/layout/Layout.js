@@ -3,6 +3,7 @@ import Header from "./Header";
 import Ad from "./advertisement/Ad";
 import "./layout.css";
 import Footer from "./Footer";
+import CircleMenu from "../components/circle_menu/CircleMenu";
 const Layout = ({ children }) => {
   return (
     <div className="layout">
@@ -11,7 +12,6 @@ const Layout = ({ children }) => {
         <div className="layout__info__ad--mobile">
           <Ad />
         </div>
-      
       </div>
 
       <section className="layout__content">
@@ -21,7 +21,8 @@ const Layout = ({ children }) => {
         <div className="layout__content__content">{children}</div>
       </section>
       <div>
-      <Footer/>
+        <Footer />
+        <CircleMenu />
       </div>
     </div>
   );

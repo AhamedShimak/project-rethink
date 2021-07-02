@@ -185,10 +185,23 @@
           justify-content: center;
 }
 
+
+
 .home__selection__container .home__content__container {
   margin: 20px 0px;
-}
+    display: flex;
+  justify-content: space-between;
 
+
+}
+@media (max-width: 567px)  {
+  .home__content__container{
+    flex-direction: column;
+      
+      
+     
+  }
+}
 .home__selection__container .home__content__container .home__content__container__item {
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
@@ -197,7 +210,7 @@
   box-shadow: 0px 10px 15px -1px #00000059;
   border-radius: 20px;
   height: 120px;
-  margin: 25px 10px;
+  margin: 12px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

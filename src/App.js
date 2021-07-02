@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { useDispatch } from "react-redux";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 import Home from "./screens/Home1/Home";
 import LabList from "./screens/LabAndGame/LabsList";
 import LabView from "./screens/LabAndGame/LabView";
@@ -49,7 +49,7 @@ function App() {
         <Router>
           {/* A <Switch> looks through its children <Route>s and
         renders the first one that matches the current URL. */}
-        {/* <Helmet>
+          {/* <Helmet>
                 <meta charSet="utf-8" />
                 <title>Lepton-Empowring Education</title>
                 <link rel="canonical" href="http://mysite.com/example" />
