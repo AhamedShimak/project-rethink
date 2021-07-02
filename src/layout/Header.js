@@ -33,14 +33,14 @@ const Header = () => {
   return (
     <div className="header">
       <nav className="header__nav">
-        <div>
+       
           <div
             className="header__icons header__search__closeIcon"
             onClick={() => history.goBack()}>
             <BackButton />
           </div>
-        </div>
-        <div>
+     
+    
           <Link to="/">
             <div className="header__logo">
               <img
@@ -50,7 +50,7 @@ const Header = () => {
               />
             </div>
           </Link>
-        </div>
+        
 
         <div
           className={`header__input  ${

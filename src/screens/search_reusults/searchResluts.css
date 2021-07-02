@@ -45,3 +45,6 @@ ul {
     justify-content: space-around;
     
 }
+.no__result{
+    max-width: 280px;
+}
