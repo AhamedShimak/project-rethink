@@ -82,7 +82,7 @@ const HomeSection = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div style={{ padding: "0 10px" }}>
           <YoutubePlayer url="https://www.youtube.com/embed/1NSWr06usBo" />
         </div>
 
