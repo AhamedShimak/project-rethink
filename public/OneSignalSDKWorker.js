@@ -1,1 +1,2 @@
-importScripts('https://cdn.onesignal.com/sdks/OneSignalSDKWorker.js');
+importScripts("./serviceworker");
+importScripts("https://cdn.onesignal.com/sdks/OneSignalSDKWorker.js");
