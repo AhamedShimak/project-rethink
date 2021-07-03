@@ -42,7 +42,7 @@ const SearchResults = () => {
   return (
     <div className="search__results">
       {loading && <Pulse />}
-      {results?.products?.length + results?.labs?.length != 0 ||
+      {results?.products?.length + results?.labs?.length !== 0 ||
       Number.isNaN(results?.products?.length + results?.labs?.length) ? (
         <div>
           <h3>
@@ -115,7 +115,7 @@ const SearchResults = () => {
 
       {!loading &&
         showResult.labs &&
-        results?.labs?.length == 0 &&
+        results?.labs?.length === 0 &&
         showResult.noresult && (
           <div className="search__no__result">
             <img
@@ -128,7 +128,7 @@ const SearchResults = () => {
 
       {!loading &&
         showResult.products &&
-        (results?.products?.length == 0 || showResult.noresult) && (
+        (results?.products?.length === 0 || showResult.noresult) && (
           <div className="search__no__result">
             <img
               src={process.env.PUBLIC_URL + "/assets/no_result.png"}

@@ -4,7 +4,7 @@ import "./YoutubePlayer.css";
 const YoutubePlayer = ({ url }) => {
   return (
     <div className="youtubePlayer">
-      <ReactPlayer width="100%" controls url={url} />
+      <ReactPlayer width="100%" controls url={url} pip="true" />
     </div>
   );
 };

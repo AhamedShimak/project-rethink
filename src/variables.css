@@ -19,8 +19,8 @@
     --text-dark:rgb(49, 49, 49);
 
     /* Fonts */
-    --font-primary:'Nunito', sans-serif;
-    --font-secondary:'Kiwi Maru', serif;
+    --font-primary:'Roboto', sans-serif;
+    --font-secondary:'Roboto Condensed', sans-serif;
     /* --global--concept--size */
     --spacer--sm: .5rem;
     --spacer--md: 1rem;
