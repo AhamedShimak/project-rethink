@@ -11,11 +11,12 @@ const Home = () => {
       <main className="home__main__container">
         <Main />
       </main>
+      <div className="onesignal-customlink-container notifications_bar"></div>
       <Ad />
       <section className="home__selection__container">
         <HomeSection />
       </section>
-      <div className="onesignal-customlink-container"></div>
+      <div className="onesignal-customlink-container notifications_bar"></div>
       <section>
         <CircleMenu />
         <Footer />
