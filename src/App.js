@@ -34,6 +34,7 @@ function App() {
       });
     });
   }, []);
+  //
   const dispatch = useDispatch();
   useEffect(() => {
     const fetchStaticData = async () => {
