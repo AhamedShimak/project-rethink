@@ -33,24 +33,21 @@ const Header = () => {
   return (
     <div className="header">
       <nav className="header__nav">
-       
-          <div
-            className="header__icons header__search__closeIcon"
-            onClick={() => history.goBack()}>
-            <BackButton />
+        <div
+          className="header__icons header__search__closeIcon"
+          onClick={() => history.goBack()}>
+          <BackButton />
+        </div>
+
+        <Link to="/">
+          <div className="header__logo">
+            <img
+              src={process.env.PUBLIC_URL + "/assets/logo.svg"}
+              alt="logo"
+              className="logo"
+            />
           </div>
-     
-    
-          <Link to="/">
-            <div className="header__logo">
-              <img
-                src={process.env.PUBLIC_URL + "/assets/logo.svg"}
-                alt="logo"
-                className="logo"
-              />
-            </div>
-          </Link>
-        
+        </Link>
 
         <div
           className={`header__input  ${

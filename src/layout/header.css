@@ -173,7 +173,7 @@ li:first-child {
   }
   .layout__menu{
     position: fixed;
-    bottom: 3%;
+    bottom: 20px;
     right: calc(50% - 20px);
     height: 40px;
     width: 40px;
