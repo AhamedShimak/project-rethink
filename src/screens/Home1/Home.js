@@ -15,6 +15,7 @@ const Home = () => {
       <section className="home__selection__container">
         <HomeSection />
       </section>
+      <div className="onesignal-customlink-container"></div>
       <section>
         <CircleMenu />
         <Footer />
