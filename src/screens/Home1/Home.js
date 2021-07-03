@@ -15,7 +15,6 @@ const Home = () => {
       <section className="home__selection__container">
         <HomeSection />
       </section>
-
       <section>
         <CircleMenu />
         <Footer />

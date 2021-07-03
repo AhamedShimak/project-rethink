@@ -25,16 +25,6 @@ import { checkLocalStorageVersion } from "./localStorage/index";
 import CoursePage from "./screens/course__page/CoursePage";
 
 function App() {
-  window.OneSignal = window.OneSignal || [];
-  const OneSignal = window.OneSignal;
-  useEffect(() => {
-    OneSignal.push(() => {
-      OneSignal.init({
-        appId: "8df15187-8606-48cf-8175-e6356d9161e6",
-      });
-    });
-  }, []);
-  //
   const dispatch = useDispatch();
   useEffect(() => {
     const fetchStaticData = async () => {

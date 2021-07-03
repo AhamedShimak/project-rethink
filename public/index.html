@@ -74,9 +74,6 @@
     
       gtag('config', 'UA-198030832-1');
     </script>
-    <!-- One signal -->
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -118,11 +115,10 @@
 
   
     <div id="root"></div>
-    
      <script>
         if('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./OneSignalSDKWorker.js')
+                navigator.serviceWorker.register('./serviceworker.js')
                     .then((reg) => console.log('Success: ', reg.scope))
                     .catch((err) => console.log('Failure: ', err));
             })
