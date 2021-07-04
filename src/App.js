@@ -17,7 +17,7 @@ import MuiTheme from "./theme";
 import Layout from "./layout/Layout";
 // import { GlobalContext } from "./context/context";
 import Lab from "./screens/Lab/Lab";
-
+import QuizApp from "./apps/quiz__APP/main/QuizMain";
 // import Starter from "./starter/starter";
 import { listSubjects } from "./actions/subjectActions";
 import { listCategories } from "./actions/categoryActions";
@@ -57,6 +57,9 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route exact path="/quiz">
+              <QuizApp />
             </Route>
 
             {/* List items */}
