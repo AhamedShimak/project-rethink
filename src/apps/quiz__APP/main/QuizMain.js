@@ -3,13 +3,15 @@ import { useEffect, useMemo, useState } from "react";
 import Start from "../components/Start";
 import Timer from "../components/Timer";
 import Trivia from "../components/Trivia";
-
+import { useHistory } from "react-router-dom";
+import BackButton from "../../../components/buttons/back_button/BackButton";
 function QuizApp() {
   const [username, setUsername] = useState(null);
   const [timeOut, setTimeOut] = useState(false);
   const [questionNumber, setQuestionNumber] = useState(1);
   const [earned, setEarned] = useState("$ 0");
 
+  let history = useHistory();
   const data = [
     {
       id: 1,
@@ -199,13 +201,24 @@ function QuizApp() {
       {!username ? (
         <Start setUsername={setUsername} />
       ) : (
-        <>
+        <div className="quiz__container">
+          <div onClick={() => history.goBack()} className="back__btn">
+            <BackButton />
+          </div>
+          <img
+            src={process.env.PUBLIC_URL + "/assets/logo.svg"}
+            alt="logo"
+            className="logo__quiz__main"
+            onClick={() => history.push("/")}
+          />
+
           <div className="main">
             {timeOut ? (
               <h1 className="endText">You earned: {earned}</h1>
             ) : (
-              <>
+              <div className="travia_details">
                 <div className="top">
+                  <h3>{username} keep going</h3>
                   <div className="timer">
                     <Timer
                       setTimeOut={setTimeOut}
@@ -221,25 +234,28 @@ function QuizApp() {
                     setTimeOut={setTimeOut}
                   />
                 </div>
-              </>
+              </div>
             )}
           </div>
           <div className="pyramid">
+            <h6 className="moneyHead">Money Pyramid</h6>
             <ul className="moneyList">
               {moneyPyramid.map((m) => (
-                <li
-                  className={
-                    questionNumber === m.id
-                      ? "moneyListItem active"
-                      : "moneyListItem"
-                  }>
-                  <span className="moneyListItemNumber">{m.id}</span>
-                  <span className="moneyListItemAmount">{m.amount}</span>
-                </li>
+                <>
+                  <li
+                    className={
+                      questionNumber === m.id
+                        ? "moneyListItem active"
+                        : "moneyListItem"
+                    }>
+                    <span className="moneyListItemNumber">{m.id}</span>
+                    <span className="moneyListItemAmount">{m.amount}</span>
+                  </li>
+                </>
               ))}
             </ul>
           </div>
-        </>
+        </div>
       )}
     </div>
   );
