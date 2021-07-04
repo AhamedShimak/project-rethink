@@ -51,11 +51,24 @@ function QuizApp() {
 
           <div className="main">
             {timeOut ? (
-              <h1 className="endText">You earned: {earned}</h1>
+              <>
+                <div className="retry">
+                  <h1 className="endText">You earned: {earned}</h1>
+                  <button
+                    className="startButton"
+                    onClick={() => {
+                      setQuestionNumber(1);
+                      setEarned("$ 0");
+                      setTimeOut(false);
+                    }}>
+                    Try Again
+                  </button>
+                </div>
+              </>
             ) : (
               <div className="travia_details">
                 <div className="top">
-                  <h3>{username} keep going</h3>
+                  <h3>Question Number : {questionNumber}</h3>
                   <div className="timer">
                     <Timer
                       setTimeOut={setTimeOut}
