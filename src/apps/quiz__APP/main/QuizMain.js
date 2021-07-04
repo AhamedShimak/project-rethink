@@ -1,10 +1,13 @@
 import "./QuizMain.css";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useRef } from "react";
 import Start from "../components/Start";
 import Timer from "../components/Timer";
 import Trivia from "../components/Trivia";
 import { useHistory } from "react-router-dom";
 import BackButton from "../../../components/buttons/back_button/BackButton";
+import { data } from "../data/testQuestions";
+import { monyPyramid } from "../data/moneyPyramid";
+
 function QuizApp() {
   const [username, setUsername] = useState(null);
   const [timeOut, setTimeOut] = useState(false);
@@ -12,184 +15,18 @@ function QuizApp() {
   const [earned, setEarned] = useState("$ 0");
 
   let history = useHistory();
-  const data = [
-    {
-      id: 1,
-      question: "Rolex is a company that specializes in what type of product?",
-      answers: [
-        {
-          text: "Phone",
-          correct: false,
-        },
-        {
-          text: "Watches",
-          correct: true,
-        },
-        {
-          text: "Food",
-          correct: false,
-        },
-        {
-          text: "Cosmetic",
-          correct: false,
-        },
-      ],
-    },
-    {
-      id: 2,
-      question: "When did the website `Facebook` launch?",
-      answers: [
-        {
-          text: "2004",
-          correct: true,
-        },
-        {
-          text: "2005",
-          correct: false,
-        },
-        {
-          text: "2006",
-          correct: false,
-        },
-        {
-          text: "2007",
-          correct: false,
-        },
-      ],
-    },
-    {
-      id: 3,
-      question: "When did the website `Facebook` launch?3",
-      answers: [
-        {
-          text: "2004",
-          correct: true,
-        },
-        {
-          text: "2005",
-          correct: false,
-        },
-        {
-          text: "2006",
-          correct: false,
-        },
-        {
-          text: "2007",
-          correct: false,
-        },
-      ],
-    },
-    {
-      id: 4,
-      question: "When did the website `Facebook` launch?4",
-      answers: [
-        {
-          text: "2004",
-          correct: true,
-        },
-        {
-          text: "2005",
-          correct: false,
-        },
-        {
-          text: "2006",
-          correct: false,
-        },
-        {
-          text: "2007",
-          correct: false,
-        },
-      ],
-    },
-    {
-      id: 5,
-      question: "When did the website `Facebook` launch?5",
-      answers: [
-        {
-          text: "2004",
-          correct: true,
-        },
-        {
-          text: "2005",
-          correct: false,
-        },
-        {
-          text: "2006",
-          correct: false,
-        },
-        {
-          text: "2007",
-          correct: false,
-        },
-      ],
-    },
-    {
-      id: 6,
-      question: "When did the website `Facebook` launch?6",
-      answers: [
-        {
-          text: "2004",
-          correct: true,
-        },
-        {
-          text: "2005",
-          correct: false,
-        },
-        {
-          text: "2006",
-          correct: false,
-        },
-        {
-          text: "2007",
-          correct: false,
-        },
-      ],
-    },
-    {
-      id: 7,
-      question: "Who played the character of harry potter in movie?7",
-      answers: [
-        {
-          text: "Johnny Deep",
-          correct: false,
-        },
-        {
-          text: "Leonardo Di Caprio",
-          correct: false,
-        },
-        {
-          text: "Denzel Washington",
-          correct: false,
-        },
-        {
-          text: "Daniel Red Cliff",
-          correct: true,
-        },
-      ],
-    },
-  ];
+  const myRef = useRef(null);
 
-  const moneyPyramid = useMemo(
-    () =>
-      [
-        { id: 1, amount: "$ 100" },
-        { id: 2, amount: "$ 200" },
-        { id: 3, amount: "$ 300" },
-        { id: 4, amount: "$ 500" },
-        { id: 5, amount: "$ 1.000" },
-        { id: 6, amount: "$ 2.000" },
-        { id: 7, amount: "$ 4.000" },
-        { id: 8, amount: "$ 8.000" },
-        { id: 9, amount: "$ 16.000" },
-        { id: 10, amount: "$ 32.000" },
-        { id: 11, amount: "$ 64.000" },
-        { id: 12, amount: "$ 125.000" },
-        { id: 13, amount: "$ 250.000" },
-        { id: 14, amount: "$ 500.000" },
-        { id: 15, amount: "$ 1.000.000" },
-      ].reverse(),
-    []
-  );
+  useEffect(() => {
+    questionNumber > 1 &&
+      myRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+        inline: "nearest",
+      });
+  }, [questionNumber]);
+
+  const moneyPyramid = useMemo(() => monyPyramid, []);
 
   useEffect(() => {
     questionNumber > 1 &&
@@ -240,19 +77,25 @@ function QuizApp() {
           <div className="pyramid">
             <h6 className="moneyHead">Money Pyramid</h6>
             <ul className="moneyList">
-              {moneyPyramid.map((m) => (
-                <>
-                  <li
-                    className={
-                      questionNumber === m.id
-                        ? "moneyListItem active"
-                        : "moneyListItem"
-                    }>
-                    <span className="moneyListItemNumber">{m.id}</span>
-                    <span className="moneyListItemAmount">{m.amount}</span>
-                  </li>
-                </>
-              ))}
+              {moneyPyramid.map((m) => {
+                return (
+                  <>
+                    {questionNumber === m.id && (
+                      <div style={{ height: "0.001px", width: "100%" }}></div>
+                    )}
+                    <li
+                      ref={questionNumber === m.id ? myRef : null}
+                      className={
+                        questionNumber === m.id
+                          ? "moneyListItem active"
+                          : "moneyListItem"
+                      }>
+                      <span className="moneyListItemNumber">{m.id}</span>
+                      <span className="moneyListItemAmount">{m.amount}</span>
+                    </li>
+                  </>
+                );
+              })}
             </ul>
           </div>
         </div>
