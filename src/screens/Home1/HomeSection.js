@@ -3,6 +3,7 @@ import React from "react";
 import "./Home.css";
 import labs from "../../assets/labs.svg";
 import lessons from "../../assets/lessons.svg";
+import quiz from "../../assets/quiz.svg";
 
 import papers from "../../assets/papers.svg";
 
@@ -50,6 +51,23 @@ const HomeSection = () => {
             </div>
           </div>
           <div
+            className="home__content__container__item item-5"
+            onClick={() => history.push("/quiz")}>
+            <div className="home__content__container__item__column column-1">
+              <h2 className="column-1__heading">Quiz</h2>
+              <p className="column-1__content">
+                உங்களில் யார் மகா லட்சாதிபதி?🤭{" "}
+              </p>
+            </div>
+            <div className="home__content__container__item__column column-2">
+              <img
+                className="column-2__image column-2__image-4"
+                src={quiz}
+                alt="free courses"
+              />
+            </div>
+          </div>
+          <div
             className="home__content__container__item item-2"
             onClick={() => history.push("/lessons")}>
             <div className="home__content__container__item__column column-1">
@@ -72,23 +90,6 @@ const HomeSection = () => {
             <div className="home__content__container__item__column column-1">
               <h2 className="column-1__heading">FREE COURSES</h2>
               <p className="column-1__content">இலவச பாட விளக்கங்கள் </p>
-            </div>
-            <div className="home__content__container__item__column column-2">
-              <img
-                className="column-2__image column-2__image-4"
-                src={papers}
-                alt="free courses"
-              />
-            </div>
-          </div>
-          <div
-            className="home__content__container__item item-4"
-            onClick={() => history.push("/quiz")}>
-            <div className="home__content__container__item__column column-1">
-              <h2 className="column-1__heading">Quiz</h2>
-              <p className="column-1__content">
-                You want to be a millionire ?{" "}
-              </p>
             </div>
             <div className="home__content__container__item__column column-2">
               <img

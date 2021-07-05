@@ -288,6 +288,14 @@
           animation-delay: 0.2s;
 }
 
+.home__selection__container .home__content__container .item-5 {
+  background-color: #ffd70050;
+  -webkit-animation: first_start 1s ease-out;
+          animation: first_start 1s ease-out;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
 @-webkit-keyframes floating {
   0% {
     -webkit-transform: translateX(-5px);

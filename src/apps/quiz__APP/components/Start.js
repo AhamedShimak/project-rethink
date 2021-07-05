@@ -14,7 +14,7 @@ export default function Start({ setUsername }) {
       <img
         src={process.env.PUBLIC_URL + "/assets/logo.svg"}
         alt="logo"
-        className="logo"
+        className="logo__quiz"
         onClick={() => history.push("/")}
       />
 

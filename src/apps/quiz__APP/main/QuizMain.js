@@ -22,7 +22,7 @@ function QuizApp() {
       myRef.current.scrollIntoView({
         behavior: "smooth",
         block: "end",
-        inline: "nearest",
+        // inline: "nearest",
       });
   }, [questionNumber]);
 
@@ -93,9 +93,6 @@ function QuizApp() {
               {moneyPyramid.map((m) => {
                 return (
                   <>
-                    {questionNumber === m.id && (
-                      <div style={{ height: "0.001px", width: "100%" }}></div>
-                    )}
                     <li
                       ref={questionNumber === m.id ? myRef : null}
                       className={
@@ -106,6 +103,9 @@ function QuizApp() {
                       <span className="moneyListItemNumber">{m.id}</span>
                       <span className="moneyListItemAmount">{m.amount}</span>
                     </li>
+                    {questionNumber === m.id && (
+                      <div style={{ height: "0.001px", width: "100%" }}></div>
+                    )}
                   </>
                 );
               })}
