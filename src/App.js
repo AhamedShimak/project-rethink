@@ -50,9 +50,11 @@ function App() {
 
     //TODO: Need to remove data from local storage if versions are not equal
     //TODO: Need to fetch dynamic data
-    checkLocalStorageVersion();
-    fetchDynamicData();
-    fetchStaticData();
+    setTimeout(function () {
+      checkLocalStorageVersion();
+      fetchDynamicData();
+      fetchStaticData();
+    }, 1000);
   }, []);
   //
   return (
