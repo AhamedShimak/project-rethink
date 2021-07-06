@@ -251,8 +251,8 @@
 }
 
 .home__selection__container .home__content__container .home__content__container__item .column-2 .column-2__image {
-  -webkit-animation: floating 10s ease-in forwards infinite;
-          animation: floating 10s ease-in forwards infinite;
+  /* -webkit-animation: floating 10s ease-in forwards infinite;
+          animation: floating 10s ease-in forwards infinite; */
   max-width: 120px;
 }
 

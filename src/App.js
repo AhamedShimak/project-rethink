@@ -12,16 +12,18 @@ import Home from "./screens/Home1/Home";
 import MuiTheme from "./theme";
 import Layout from "./layout/Layout";
 // import { GlobalContext } from "./context/context";
-import Lab from "./screens/Lab/Lab";
+
 import LeptonWaiting from "./components/lapton_waiting_room/LeptonWaiting";
 // import Starter from "./starter/starter";
 import { listSubjects } from "./actions/subjectActions";
 import { listCategories } from "./actions/categoryActions";
 import { checkLocalStorageVersion } from "./localStorage/index";
-import CoursePage from "./screens/course__page/CoursePage";
-import { Suspense } from "react";
-import CourseList from "./screens/Course/CourseList";
 
+import { Suspense } from "react";
+
+const CoursePage = lazy(() => import("./screens/course__page/CoursePage"));
+const CourseList = lazy(() => import("./screens/Course/CourseList"));
+const Lab = lazy(() => import("./screens/Lab/Lab"));
 const LabView = lazy(() => import("./screens/LabAndGame/LabView"));
 const PaperView = lazy(() => import("./screens/Course/PaperView"));
 const LessonsListVideos = lazy(() =>
@@ -33,6 +35,7 @@ const SearchResluts = lazy(() =>
 const LabList = lazy(() => import("./screens/LabAndGame/LabsList"));
 const LessonsList = lazy(() => import("./screens/Lessons/LessonsList"));
 const QuizApp = lazy(() => import("./apps/quiz__APP/main/QuizMain"));
+
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
