@@ -11,14 +11,10 @@ import "./ContentItemBox.css";
 
 //for share button
 import Button from "@material-ui/core/Button";
-import Dialog from "@material-ui/core/Dialog";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogTitle from "@material-ui/core/DialogTitle";
 
 //import { Divider } from "@material-ui/core";
 import { useHistory } from "react-router";
-import Popup from "./Popup";
+import Popup from "../../utils/popup/Popup";
 import { clientApi } from "../../api/api";
 
 const ContentItemBox = ({
@@ -116,20 +112,14 @@ const ContentItemBox = ({
               </IconButton>
             </div>
           </Typography>
-          <Dialog
+          <Popup
+            name={name}
+            // handleClickOpen={handleClickOpen}
+            handleClose={handleClose}
             open={open}
-            onClose={handleClose}
-            aria-labelledby="alert-dialog-title"
-            aria-describedby="alert-dialog-description">
-            <DialogTitle id="alert-dialog-title">{`share: ${name}`}</DialogTitle>
-            <DialogContent>
-              <DialogContentText id="alert-dialog-description">
-                Share with others
-              </DialogContentText>
-
-              <Popup url={`${clientApi}/labs/lab/${id}`} name={name} />
-            </DialogContent>
-          </Dialog>
+            title={`Hey😎 Check this amazing lab \n ____________*******************________ \n ${name} \n -------------_________________-------------`}
+            url={`${clientApi}/labs/lab/${id}`}
+          />
         </div>
       </div>
     </div>
