@@ -20,6 +20,7 @@ import { listCategories } from "./actions/categoryActions";
 import { checkLocalStorageVersion } from "./localStorage/index";
 
 import { Suspense } from "react";
+import RegisterPage from "./screens/auth/register/Register";
 
 const CoursePage = lazy(() => import("./screens/course__page/CoursePage"));
 const CourseList = lazy(() => import("./screens/Course/CourseList"));
@@ -85,6 +86,9 @@ function App() {
               </Route>
               <Route exact path="/labs/lab/:id">
                 <Lab />
+              </Route>
+              <Route exact path="/register">
+                <RegisterPage />
               </Route>
               <Layout>
                 <Route exact path="/quiz">

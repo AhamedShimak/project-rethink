@@ -45,7 +45,9 @@ const QuizList = () => {
 
   return (
     <div className="quiz_list">
-      <AddNew />
+      <div onClick={() => history.push("/register")}>
+        <AddNew />
+      </div>
       <div onClick={() => history.push("/quiz/1")}>
         <Card />
       </div>
