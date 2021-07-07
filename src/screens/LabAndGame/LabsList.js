@@ -68,11 +68,11 @@ const Lab = () => {
   };
   return (
     <div className="lab">
-      <div className="lab__text">
-        <p style={{ color: "white" }}>
-          {/* உயர் தொழில்நுட்பத்தில் வடிவமைக்கப்பட்ட Labs🎉🎉✨ */}
-        </p>
-      </div>
+      {/* <div className="lab__text">
+        <p style={{ color: "white" }}> */}
+      {/* உயர் தொழில்நுட்பத்தில் வடிவமைக்கப்பட்ட Labs🎉🎉✨ */}
+      {/* </p>
+      </div> */}
       <div className="lab__container">
         <div className="lab__ellipses">
           <div onClick={() => setIndex(0)}>

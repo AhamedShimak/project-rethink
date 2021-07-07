@@ -35,6 +35,7 @@ const SearchResluts = lazy(() =>
 const LabList = lazy(() => import("./screens/LabAndGame/LabsList"));
 const LessonsList = lazy(() => import("./screens/Lessons/LessonsList"));
 const QuizApp = lazy(() => import("./apps/quiz__APP/main/QuizMain"));
+const QuizList = lazy(() => import("./screens/quiz_list/QuizList"));
 
 function App() {
   const dispatch = useDispatch();
@@ -51,9 +52,9 @@ function App() {
     //TODO: Need to remove data from local storage if versions are not equal
     //TODO: Need to fetch dynamic data
     // setTimeout(function () {
-      checkLocalStorageVersion();
-      fetchDynamicData();
-      fetchStaticData();
+    checkLocalStorageVersion();
+    fetchDynamicData();
+    fetchStaticData();
     // }, 1000);
   }, []);
   //
@@ -73,7 +74,8 @@ function App() {
               <Route exact path="/">
                 <Home />
               </Route>
-              <Route exact path="/quiz">
+
+              <Route exact path="/quiz/:id">
                 <QuizApp />
               </Route>
 
@@ -85,6 +87,9 @@ function App() {
                 <Lab />
               </Route>
               <Layout>
+                <Route exact path="/quiz">
+                  <QuizList />
+                </Route>
                 <Route exact path="/courses">
                   <CourseList />
                 </Route>
