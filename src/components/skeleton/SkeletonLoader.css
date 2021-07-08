@@ -1,0 +1,8 @@
+.loader__content__box{
+    padding: 0 !important;
+
+margin-bottom: 15px;
+
+cursor: pointer;
+flex-basis: 50%;
+}

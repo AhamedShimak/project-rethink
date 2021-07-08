@@ -86,7 +86,7 @@ const Lab = () => {
     );
   }
   return (
-    <div>
+    <div >
       <div className="lab__iframe">
         {/* {lang ? console.log(currentLab) : console.log(currentLab)} */}
         <iframe

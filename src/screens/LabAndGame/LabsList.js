@@ -15,6 +15,10 @@ import { listLabs } from "../../actions/labsActions";
 import { listSubjects } from "../../actions/subjectActions";
 import { subjectsSelector } from "../../features/subjects/subjectSlice";
 import LabWaiting from "../../components/lab__waiting/LabWaiting";
+
+import Skeletonloader from "../../components/skeleton/SkeletonLoader";
+
+
 const Lab = () => {
   const [index, setIndex] = useState(0);
   const dispatch = useDispatch();
@@ -66,6 +70,11 @@ const Lab = () => {
   const handleChangeIndex = (index) => {
     setIndex(index);
   };
+  const loader = [];
+  for (let i = 0; i < 10 ; i++){
+    loader.push(<Skeletonloader/>);
+  }
+  
   return (
     <div className="lab">
       {/* <div className="lab__text">
@@ -99,10 +108,14 @@ const Lab = () => {
         <SwipeableViews index={index} onChangeIndex={handleChangeIndex}>
           <div>
             <div className="lab__content">
-              {loading ? (
-                <div className="loading">
-                  <LabWaiting logoOff={true} />
+              {loading ? (<>
+                <div className="lab__content__loader">
+                 {loader}
                 </div>
+                
+               
+              
+              </>
               ) : (
                 <>
                   {physicsLabs?.map((lab) => (
@@ -123,9 +136,9 @@ const Lab = () => {
           <div>
             <div className="lab__content">
               {loading ? (
-                <div className="loading">
-                  <LabWaiting logoOff={true} />
-                </div>
+                <div className="lab__content__loader">
+                {loader}
+               </div>
               ) : (
                 <>
                   {chemLabs?.map((lab) => (
@@ -148,9 +161,9 @@ const Lab = () => {
           <div>
             <div className="lab__content">
               {loading ? (
-                <div className="loading">
-                  <LabWaiting logoOff={true} />
-                </div>
+                <div className="lab__content__loader">
+                {loader}
+               </div>
               ) : (
                 <>
                   {mathLab?.map((lab) => (
@@ -171,8 +184,8 @@ const Lab = () => {
           <div>
             <div className="lab__content">
               {loading ? (
-                <div className="loading">
-                  <LabWaiting logoOff={true} />
+                 <div className="lab__content__loader">
+                 {loader}
                 </div>
               ) : (
                 <>
