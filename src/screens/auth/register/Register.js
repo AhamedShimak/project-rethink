@@ -12,128 +12,139 @@ import {
   FaEnvelope,
   FaLock
 } from 'react-icons/fa';
-
+import BackButton from '../../../components/buttons/back_button/BackButton'
 const RegisterPage = () => {
   function onClicksign_up() {
-    const sign_up_btn = document.querySelector('#sign-up-btn');
-    const container = document.querySelector('.container');
+    const sign_up_btn = document.querySelector('#sign_up_btn');
+    const container = document.querySelector('.register_container');
 
     sign_up_btn.addEventListener('click', () => {
-      container.classList.add('sign-up-mode');
+      container.classList.add('sign_up_mode');
     });
   }
   function onClicksign_in() {
-    const sign_in_btn = document.querySelector('#sign-in-btn');
-    const container = document.querySelector('.container');
+    const sign_in_btn = document.querySelector('#sign_in_btn');
+    const container = document.querySelector('.register_container');
     sign_in_btn.addEventListener('click', () => {
-      container.classList.remove('sign-up-mode');
+      container.classList.remove('sign_up_mode');
     });
   }
 
   return (
     <div>
-      <div className="container">
-        <div className="forms-container">
-          <div className="signin-signup">
-            <form action="#" className="sign-in-form">
-              <h2 className="title">Sign in</h2>
-              <div className="input-field">
-              <FaUserAlt className="fas fa-user" />
-                <input type="text" placeholder="Username" />
+      <div className="register_container">
+        <div className="register_content_back_button">
+          <BackButton/>
+        </div>
+        <div className="register_content_logo">
+        <img
+              src={process.env.PUBLIC_URL + "/assets/logo.svg"}
+              className="register_content_logo_image"
+              alt=""
+            />
+        </div>
+        <div className="register_forms_container">
+          <div className="register_signin_signup">
+            <form action="#" className="register_sign_in_form">
+              <h2 className="register_title">Sign in</h2>
+              <div className="register_input_field">
+              <FaUserAlt className="fas fa_user" />
+                <input  type="text" placeholder="Username" />
               </div>
-              <div className="input-field">
+              <div className="register_input_field">
               <FaLock className="fas" />
                 <input type="password" placeholder="Password" />
               </div>
-              <input type="submit" value="Login" className="btn solid" />
-              <p className="social-text">Or Sign in with social platforms</p>
-              <div className="social-media">
-                <a href="#" className="social-icon">
-                  <FaFacebookF className="fab fa-facebook-f" />
+              <input type="submit" value="Login" className="register_btn solid" />
+              <p className="social_text">Or Sign in with social platforms</p>
+              <div className="social_media">
+                <a href="#" className="social_icon">
+                  <FaFacebookF className="fab fa_facebook_f" />
                 </a>
-                <a href="#" className="social-icon">
-                  <FaTwitter className="fab fa-twitter" />
+                <a href="#" className="social_icon">
+                  <FaTwitter className="fab fa_twitter" />
                 </a>
-                <a href="#" className="social-icon">
-                  <FaGoogle className="fab fa-google" />
+                <a href="#" className="social_icon">
+                  <FaGoogle className="fab fa_google" />
                 </a>
-                <a href="#" className="social-icon">
-                  <FaLinkedinIn className="fab fa-linkedin-in" />
+                <a href="#" className="social_icon">
+                  <FaLinkedinIn className="fab fa_linkedin_in" />
                 </a>
               </div>
             </form>
-            <form action="#" className="sign-up-form">
-              <h2 className="title">Sign up</h2>
-              <div className="form_container">
-                <div className="input-field">
-                  <FaUserAlt className="fas fa-user" />
+            <form action="#" className="register_sign_up_form">
+              <h2 className="register_title">Sign up</h2>
+              <div className="register_form_height_container">
+                <div className="register_input_field">
+                  <FaUserAlt className="fas fa_user" />
                   <input type="text" placeholder="Username" />
                 </div>
 
-                <div className="input-field">
+                <div className="register_input_field">
                   <FaSchool className="fas" />
                   <input type="text" placeholder="Institute" />
                 </div>
 
-                <div className="input-field">
+                <div className="register_input_field">
                   <FaPhone className="fas" />
                   <input type="text" placeholder="Phone No" />
                 </div>
 
-                <div className="input-field">
+                <div className="register_input_field">
                   <FaWhatsapp className="fas" />
                   <input type="text" placeholder="Whatsapp No" />
                 </div>
 
-                <div className="input-field">
+                <div className="register_input_field">
                   <FaEnvelope className="fas" />
                   <input type="email" placeholder="Email" />
                 </div>
-                <div className="input-field">
-                  <select className="input-field-select" name="plan" id="plan">
-                    <option selected disabled>Select a plan</option>
+                <div className="register_input_field">
+                  <select className="register_input_field_select" name="plan" id="plan">
+                    <option selected disabled>Select a Plan</option>
                     <option value="free">Free</option>
                     <option value="premium">Premium</option>
                   </select>
                 </div>
+                
 
-                <div className="input-field">
+                <div className="register_input_field">
                 <FaLock className="fas" />
                   <input type="password" placeholder="Password" />
                 </div>
-                <div className="input-field">
+                <div className="register_input_field">
                 <FaLock className="fas" />
                   <input type="password" placeholder="Confirm Password" />
                 </div>
               </div>
              
 
-              <p className="social-text">
+              <p className="social_text">
                 <input type="checkbox" /> Accept All Terms and Condition
               </p>
 
-              <input type="submit" className="btn" value="Sign up" />
-              <p className="social-text">Or Sign up with social platforms</p>
-              <div className="social-media">
-                <a href="#" className="social-icon">
-                  <FaFacebookF className="fab fa-facebook-f" />
+              <input type="submit" className="register_btn" value="Sign up" />
+              <p className="social_text">Or Sign up with social platforms</p>
+              <div className="social_media">
+                <a href="#" className="social_icon">
+                  <FaFacebookF className="fab fa_facebook_f" />
                 </a>
-                <a href="#" className="social-icon">
-                  <FaTwitter className="fab fa-twitter" />
+                <a href="#" className="social_icon">
+                  <FaTwitter className="fab fa_twitter" />
                 </a>
-                <a href="#" className="social-icon">
-                  <FaGoogle className="fab fa-google" />
+                <a href="#" className="social_icon">
+                  <FaGoogle className="fab fa_google" />
                 </a>
-                <a href="#" className="social-icon">
-                  <FaLinkedinIn className="fab fa-linkedin-in" />
+                <a href="#" className="social_icon">
+                  <FaLinkedinIn className="fab fa_linkedin_in" />
                 </a>
               </div>
             </form>
           </div>
         </div>
 
-        <div className="panels-container">
-          <div className="panel left-panel">
+        <div className="panels_container">
+          <div className="panel left_panel">
             <div className="content">
               <h3>New here ?</h3>
               <p>
@@ -141,8 +152,8 @@ const RegisterPage = () => {
                 Debitis, ex ratione. Aliquid!
               </p>
               <button
-                className="btn transparent"
-                id="sign-up-btn"
+                className="register_btn transparent"
+                id="sign_up_btn"
                 onClick={onClicksign_up}
               >
                 Sign up
@@ -151,10 +162,10 @@ const RegisterPage = () => {
             <img
               src={process.env.PUBLIC_URL + '/assets/rocket.svg'}
               className="image"
-              alt=""
+              alt="rocket"
             />
           </div>
-          <div className="panel right-panel">
+          <div className="panel right_panel">
             <div className="content">
               <h3>One of us ?</h3>
               <p>
@@ -162,8 +173,8 @@ const RegisterPage = () => {
                 laboriosam ad deleniti.
               </p>
               <button
-                className="btn transparent"
-                id="sign-in-btn"
+                className="register_btn transparent"
+                id="sign_in_btn"
                 onClick={onClicksign_in}
               >
                 Sign in
@@ -172,7 +183,7 @@ const RegisterPage = () => {
             <img
               src={process.env.PUBLIC_URL + '/assets/play.svg'}
               className="image"
-              alt=""
+              alt="play"
             />
           </div>
         </div>

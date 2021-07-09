@@ -27,6 +27,12 @@
   border-radius: 20px;
   max-width: calc( 950px * 0.6);
 }
+@media (max-width: 950px) {
+  .lab .lab__container {
+    margin-top: 60px;
+  }
+}
+
 
 .lab .lab__content {
   padding: 50px 10px;
