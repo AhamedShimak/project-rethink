@@ -7,10 +7,11 @@ function Skeletonloader(props) {
     return (
 <div className="loader__content__box">
 <ContentLoader 
-    speed={1}
+    animate={true}
+    speed={4}
     width={142}
     height={160}
-    viewBox="0 0 130 160"
+    viewBox="0 0 142 160"
     backgroundColor="#f3f3f3"
     foregroundColor="#ecebeb"
     {...props}
@@ -18,9 +19,9 @@ function Skeletonloader(props) {
     <rect x="0" y="5" rx="3" ry="3" width="140" height="7" /> 
     <rect x="0" y="34" rx="3" ry="3" width="140" height="100" /> 
     <rect x="0" y="19" rx="3" ry="3" width="140" height="7" /> 
-    <rect x="0" y="141" rx="3" ry="3" width="49" height="18" /> 
-    <rect x="57" y="141" rx="3" ry="3" width="49" height="18" /> 
-    <rect x="112" y="141" rx="3" ry="3" width="18" height="18" />
+    <rect x="0" y="141" rx="3" ry="3" width="50" height="18" /> 
+    <rect x="58" y="141" rx="3" ry="3" width="50" height="18" /> 
+    <rect x="115" y="141" rx="3" ry="3" width="26" height="18" />
   </ContentLoader>
 </div>
       

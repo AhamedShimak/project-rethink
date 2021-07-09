@@ -8,6 +8,8 @@ import { useDispatch } from "react-redux";
 import { Helmet } from "react-helmet";
 import Home from "./screens/Home1/Home";
 
+
+
 //import LessonView from "./screens/Lessons/LessonView";
 import MuiTheme from "./theme";
 import Layout from "./layout/Layout";
@@ -115,6 +117,7 @@ function App() {
                   <SearchResluts />
                 </Route>
               </Layout>
+           
               {/* view single items */}
               <Route path="/papers/:id">
                 <PaperView />
@@ -123,6 +126,7 @@ function App() {
               <Route path="/games/:id">
                 <LabView />
               </Route>
+
             </Switch>
           </Suspense>
         </Router>
