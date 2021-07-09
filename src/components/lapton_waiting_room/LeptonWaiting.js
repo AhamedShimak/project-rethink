@@ -1,6 +1,6 @@
 import React from "react";
 import "./LeptonWaiting.css";
-const LeptonWaiting = () => {
+const LeptonWaiting = ({ title }) => {
   return (
     <div className="lebwaiting__container">
       <img
@@ -12,9 +12,7 @@ const LeptonWaiting = () => {
         <div className="shadow"></div>
         <div className="box"></div>
       </div>
-      <h6 className="waiting__text">
-        Getting<br></br> Resources
-      </h6>
+      <h6 className="waiting__text">{title}</h6>
     </div>
   );
 };

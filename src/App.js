@@ -6,9 +6,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { useDispatch } from "react-redux";
 import { Helmet } from "react-helmet";
-import Home from "./screens/Home1/Home";
-
-
 
 //import LessonView from "./screens/Lessons/LessonView";
 import MuiTheme from "./theme";
@@ -22,8 +19,9 @@ import { listCategories } from "./actions/categoryActions";
 import { checkLocalStorageVersion } from "./localStorage/index";
 
 import { Suspense } from "react";
-import RegisterPage from "./screens/auth/register/Register";
 
+const Home = lazy(() => import("./screens/Home1/Home"));
+const RegisterPage = lazy(() => import("./screens/auth/register/Register"));
 const CoursePage = lazy(() => import("./screens/course__page/CoursePage"));
 const CourseList = lazy(() => import("./screens/Course/CourseList"));
 const Lab = lazy(() => import("./screens/Lab/Lab"));
@@ -117,7 +115,7 @@ function App() {
                   <SearchResluts />
                 </Route>
               </Layout>
-           
+
               {/* view single items */}
               <Route path="/papers/:id">
                 <PaperView />
@@ -126,7 +124,6 @@ function App() {
               <Route path="/games/:id">
                 <LabView />
               </Route>
-
             </Switch>
           </Suspense>
         </Router>
