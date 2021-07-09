@@ -9,5 +9,6 @@ export default createMuiTheme({
     secondary: {
       main: "hsl(60, 100%, 99%)",
     },
+    
   },
 });

@@ -1,0 +1,9 @@
+.ContactUsBtn{
+    background-color: hsl(340.2, 100%, 52.4%)!important;
+    color: white!important;
+}
+.ContactUsBtn a{
+    color: white;
+    font-weight: 600;
+    font-family: sans-serif;
+}
