@@ -291,89 +291,269 @@ export const data = [
     ],
   },
   {
-    id: 12,
-    question: "When did the website `Facebook` launch?",
+    id: 11,
+    question: "விசைத் திருப்பத்தின் அலகாக அமைவது,",
     answers: [
       {
-        text: "2004",
+        text: "J",
+        correct: false,
+      },
+      {
+        text: "KWh",
+        correct: false,
+      },
+      {
+        text: "ev",
+        correct: false,
+      },
+      {
+        text: "Cal",
+        correct: false,
+      },
+      {
+        text: "Nm",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: 12,
+    question: "ev எனும் அலகினை கொண்ட கணியத்தின் பரிமாணம்",
+    answers: [
+      {
+        text: "MLT<sup>-1</sup>",
+        correct: false,
+      },
+      {
+        text: "ML<sup>2</sup>T<sup>-1</sup>",
+        correct: false,
+      },
+      {
+        text: "ML<sup>2</sup>T<sup>-2</sup>",
         correct: true,
       },
       {
-        text: "2005",
+        text: "LT<sup>-1</sup>",
         correct: false,
       },
       {
-        text: "2006",
-        correct: false,
-      },
-      {
-        text: "2007",
+        text: "M<sup>-1</sup>L<sup>3</sup>T<sup>-2</sup>",
         correct: false,
       },
     ],
   },
   {
     id: 13,
-    question: "When did the website `Facebook` launch?3",
+    question:
+      "முறுக்கத்தினையும் நேரத்தினையும் பெருக்குவதன் மூலம் பின்வரும் கணியம் எதனைப் பெறலாம்?",
     answers: [
       {
-        text: "2004",
+        text: "கோண ஆர்முடுகல்",
+        correct: false,
+      },
+      {
+        text: "கோண உந்தம்",
         correct: true,
       },
       {
-        text: "2005",
+        text: "இயக்கப்பாட்டுச்சக்தி",
         correct: false,
       },
       {
-        text: "2006",
+        text: "கோணவேகம்",
         correct: false,
       },
       {
-        text: "2007",
+        text: "வலு",
         correct: false,
       },
     ],
   },
   {
     id: 14,
-    question: "When did the website `Facebook` launch?4",
+    question: "ஒரு உடலில் பின்வருவனவற்றில் எதனை ஒரு போதும் கொண்டிருக்காது?",
     answers: [
       {
-        text: "2004",
+        text: "பூச்சிய கதியுடன் பூச்சியமல்லாத அர்முடுகள்",
+        correct: false,
+      },
+      {
+        text: "பூச்சியமல்லாத கதியுடன்  பூச்சிய ஆர்முடுகள்",
+        correct: false,
+      },
+      {
+        text: "மாறா வேகத்துடன் மாறும் கதி",
         correct: true,
       },
       {
-        text: "2005",
+        text: "மாறா கதியுடன் மாறும் வேகம்",
         correct: false,
       },
       {
-        text: "2006",
-        correct: false,
-      },
-      {
-        text: "2007",
+        text: "பூச்சிய கதியுடன் பூச்சிய ஆர்முடுகல்",
         correct: false,
       },
     ],
   },
   {
     id: 15,
-    question: "When did the website `Facebook` launch?5",
+    question:
+      "கீழுள்ள வரைபுகளுள் இடப்பெயர்ச்சி நேர வளையியிற்கு பொருத்தமற்றது.<br/><img src='https://mail.google.com/mail/u/0?ui=2&ik=2f3c5da863&attid=0.2&permmsgid=msg-a:r4870052423574937839&view=att&disp=safe&realattid=f_kqxl6iso1' alt='answer images'/>",
     answers: [
       {
-        text: "2004",
+        text: "1",
+        correct: false,
+      },
+      {
+        text: "2",
         correct: true,
       },
       {
-        text: "2005",
+        text: "3",
         correct: false,
       },
       {
-        text: "2006",
+        text: "4",
         correct: false,
       },
       {
-        text: "2007",
+        text: "5",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: 16,
+    question:
+      "தரையில் இருந்து 5m உயரத்தில் உள்ள குழாய் வாலில் இருந்து நீர்த்துளிகள் குறித்த இடைவேளைகளில் விழுகின்றன. மூன்றாம் துளி விழ தோடங்கும்போது முதலாம் துளி தரையினை அடைகின்றது.இரண்டாம் துளிக்கும் தரைக்கும் இடைத்தூரம்.",
+    answers: [
+      {
+        text: "1.25 m",
+        correct: false,
+      },
+      {
+        text: "2.5 m",
+        correct: false,
+      },
+      {
+        text: "3.75 m",
+        correct: false,
+      },
+      {
+        text: "4.00 m",
+        correct: true,
+      },
+      {
+        text: "4.5 m",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: 17,
+    question:
+      "<img src='https://mail.google.com/mail/u/0?ui=2&ik=2f3c5da863&attid=0.1&permmsgid=msg-a:r4870052423574937839&view=att&disp=safe&realattid=f_kqxl10650' alt='question image'/><br/>படத்தில் காட்டிய சில்லானது  R ஆரை உடையது. இது அரைவாரி சுழற்சிக்கு முன் னோக்கி உருளும்போது தரையினை தொடும் சில்லின் புள்ளி யில் (0வின்) இடபெயர்ச்சியானது.",
+    image: "",
+    answers: [
+      {
+        text: "πR",
+        correct: false,
+      },
+      {
+        text: "2R",
+        correct: false,
+      },
+      {
+        text: "π(R+4)<sup>½</sup>",
+        correct: false,
+      },
+      {
+        text: "R(π²+4)<sup>½</sup>",
+        correct: true,
+      },
+      {
+        text: "R(π²+2)<sup>½</sup>",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: 18,
+    question:
+      "ஒரு உடவில் (V) நேரம் (t) வரைபானது கீழே தரப்படுகின்றது. இவ்வரைபின் படித்திறன் m ஆகும். நேரம் T இல் இவ்வுடல் நகர்ந்த தூரம்</br><img src='https://mail.google.com/mail/u/0?ui=2&ik=2f3c5da863&attid=0.3&permmsgid=msg-a:r4870052423574937839&view=att&disp=safe&realattid=f_kqxlab6z2' alt='question image'/>",
+    answers: [
+      {
+        text: "mVo²/2T",
+        correct: false,
+      },
+      {
+        text: "Vo²/2T",
+        correct: false,
+      },
+      {
+        text: "2mVo²",
+        correct: false,
+      },
+      {
+        text: "Vo²/2m",
+        correct: true,
+      },
+      {
+        text: "mV²/4T",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: 19,
+    question:
+      "m திணிவும் R ஆரையும் உடைய சீரான உலோக வளையம் கிடை மேசை மீது வைக்கப்பட்டு மையத்தினூடாக செல்லும் நிலைக்குத்து அசகப்பற்றி ஒவ்வொரு பகுதியும் கதியுடன் இருக்க அழற்றப்படுகின்றது. வளையத்தின் மீதுள்ள் இழுவிசையானது.",
+    answers: [
+      {
+        text: "mv²/πR",
+        correct: true,
+      },
+      {
+        text: "2mv²/πR",
+        correct: false,
+      },
+      {
+        text: "mv²/2πR",
+        correct: false,
+      },
+      {
+        text: "mv²/2R",
+        correct: false,
+      },
+      {
+        text: "2mv²/R",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: 20,
+    question:
+      "m திணிவுடைய பாரமான குற்றி கிடையாக V வேகத்தில் நகரும் நகர்த்தி வாரின் மீது வைக்கப்படுகின்றது.குற்றிக வாரிற்கு இடையீலான உராய்வு குணாகம் (μ) பற்றி வாரின் மீது என்ன தூரத்திற்கு நகரும்.",
+    answers: [
+      {
+        text: "V/μg",
+        correct: false,
+      },
+      {
+        text: "V²/μg",
+        correct: true,
+      },
+      {
+        text: "2V²/μg",
+        correct: false,
+      },
+      {
+        text: "V²/3μg",
+        correct: false,
+      },
+      {
+        text: "V²/3μg",
         correct: false,
       },
     ],
