@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import secConverter from "seconds-converter";
+import secConverter from "../../../functions/secondsConverter";
 
 export default function Timer({ setTimeOut, questionNumber }) {
   const [timer, setTimer] = useState(120);

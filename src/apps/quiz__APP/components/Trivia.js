@@ -76,9 +76,8 @@ export default function Trivia({
         {question?.answers.map((a) => (
           <div
             className={selectedAnswer === a ? className : "answer"}
-            onClick={() => !selectedAnswer && handleClick(a)}>
-            {ReactHtmlParser(a.text)}
-          </div>
+            onClick={() => !selectedAnswer && handleClick(a)}
+            dangerouslySetInnerHTML={{ __html: a.text }}></div>
         ))}
       </div>
     </div>
