@@ -7,13 +7,14 @@ import { useHistory } from "react-router-dom";
 import BackButton from "../../../components/buttons/back_button/BackButton";
 import { data } from "../data/testQuestions";
 import { monyPyramid } from "../data/moneyPyramid";
+import shuffle from "shuffle-array";
 
 function QuizApp() {
   const [username, setUsername] = useState(null);
   const [timeOut, setTimeOut] = useState(false);
   const [questionNumber, setQuestionNumber] = useState(1);
   const [earned, setEarned] = useState("$ 0");
-
+  const [questions, setQuestions] = useState(null);
   let history = useHistory();
   const myRef = useRef(null);
 
@@ -25,6 +26,9 @@ function QuizApp() {
         // inline: "nearest",
       });
   }, [questionNumber]);
+  useEffect(() => {
+    setQuestions(shuffle.pick(data, { picks: 15 }));
+  }, [timeOut]);
 
   const moneyPyramid = useMemo(() => monyPyramid, []);
 
@@ -68,7 +72,7 @@ function QuizApp() {
             ) : (
               <div className="travia_details">
                 <div className="top">
-                  <h3>Question Number : {questionNumber}</h3>
+                  <h3>Question Number : {questionNumber} of 15</h3>
                   <div className="timer">
                     <Timer
                       setTimeOut={setTimeOut}
@@ -78,7 +82,7 @@ function QuizApp() {
                 </div>
                 <div className="bottom">
                   <Trivia
-                    data={data}
+                    data={questions}
                     questionNumber={questionNumber}
                     setQuestionNumber={setQuestionNumber}
                     setTimeOut={setTimeOut}
