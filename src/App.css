@@ -36,3 +36,11 @@ body::-webkit-scrollbar {
   background: rgb(68, 68, 68);
   border-radius: 10px;
 }
+.app__install__div{
+  position:fixed;
+  right:0;
+  z-index: 9999;
+  top:50%;
+
+}
+
