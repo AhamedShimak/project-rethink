@@ -8,7 +8,7 @@ import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import { MdShare } from "react-icons/md";
 import "./ContentItemBox.css";
-
+import Img from "react-cool-img";
 //for share button
 import Button from "@material-ui/core/Button";
 
@@ -52,9 +52,9 @@ const ContentItemBox = ({
         </div>
 
         <div className="card__content__image">
-          <img
+          <Img
             src={imageUrl}
-            alt="Loading..."
+            alt={`${title}-image`}
             style={{ border: "none", borderRadius: "20px", width: "100%" }}
             onClick={() => {
               history.push(`/labs/lab/${id}`);
