@@ -41,18 +41,27 @@
   
   .retry{
     position: fixed;
-    width:400px;
+    max-width:500px;
+    width:98%;
+    border: solid 1px white;
     left:calc(50% - 200px);
-    height: 150px;
+    height: 200px;
     top:calc(50% - 75px);
     display: flex;
     flex-direction:column;
-    background-color: var(--color-danger);
-    padding:20px 10px;
+    /* background-color: var(--color-danger); */
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    /* padding:20px 10px; */
     justify-content:space-between;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     align-items:center;
+    position: relative;
+    padding:10px 20px;
+    
+    background:var(--text-dark)
   }
+  
+ 
   .moneyList {
     padding: 20px;
     list-style: none;
@@ -73,12 +82,26 @@
     display: flex;
     align-items: center;
     padding: 2px 5px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
+    position: relative;
   }
   
   .moneyListItem.active {
-    background-color: var(--color-light);
+    background-color: var(--color-info);
+    /* color:var(--color-) */
   }
+  .moneyListItem.active::after{
+    content: '';
+    position: absolute;
+    left: 42%;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--color-info);
+    clear: both;
+}
   
   .moneyListItemNumber {
     width: 25px;
@@ -298,6 +321,20 @@
     font-weight: 500;
     background-color: var(--color-secondary);
     color: var(--text-secondary)
+  }
+  .inviteButton {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: var(--color-warning);
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    padding:5px 0 ;
+    cursor: pointer;
   }
 /* small devices */
 @media (min-width: 850px) { 
