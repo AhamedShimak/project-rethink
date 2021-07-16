@@ -4,7 +4,7 @@
 :root {
     --color-primary:hsl(210, 32%, 12%);
     --color-secondary:rgb(5, 76, 92);
-    --color-teal:hsl(181, 100%, 24%);
+    --color-teal:rgb(0, 120, 122);
     --color-info:hsl(205, 98%, 64%);
     --color-warning:hsl(34, 100%, 59%);
     --color-success:hsl(106, 51%, 65%);
