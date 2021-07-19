@@ -1,13 +1,9 @@
 .navigation_button {
     margin-right: 10px;
-    height: 40px;
-    width: 40px;
-    border-radius: 20px;
-    background-color: #AE5151;
-    color: #ffffff;
-    -webkit-box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0), 0px 4px 5px -1px rgba(0, 0, 0, 0), 0px 4px 5px 1px #0000002a;
-            box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0), 0px 4px 5px -1px rgba(0, 0, 0, 0), 0px 4px 5px 1px #0000002a;
-    box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0), 0px 4px 5px -1px rgba(0, 0, 0, 0), 0px 4px 5px 1px #0000002a;
+   
+  color: #AE5151;
+    
+   
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -24,7 +20,7 @@
   }
   
   .navigation__icon {
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
   }
   

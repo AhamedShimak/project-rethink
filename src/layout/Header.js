@@ -33,14 +33,10 @@ const Header = () => {
   return (
     <div className="header">
       <nav className="header__nav">
-        <div
-          className="header__icons header__search__closeIcon"
-          onClick={() => history.goBack()}>
-          <BackButton />
-        </div>
+
 
         <Link to="/">
-          <div className="header__logo">
+          <div className="header__logo" >
             <img
               src={process.env.PUBLIC_URL + "/assets/logo.svg"}
               alt="logo"
@@ -51,9 +47,8 @@ const Header = () => {
         </Link>
 
         <div
-          className={`header__input  ${
-            searchActive ? "header__search__diplay" : ""
-          } `}>
+          className={`header__input  ${searchActive ? "header__search__diplay" : ""
+            } `}>
           <div className="header__icons header__search__closeIcon">
             <MdKeyboardBackspace
               onClick={() => setSearchActive(!searchActive)}
@@ -74,22 +69,28 @@ const Header = () => {
         <ul>
           <div className={`header__menu ${menuActive && "header__menu__open"}`}>
             <li onClick={() => setMenuActive(false)}>
-              <Link to="/labs">
-                <ImLab />
-                Labs
+              <Link to="/labs" >
+                <ImLab
+                  className="header__ul__Icons"
+                />
+                <div className="navi__menu" >Labs</div>
               </Link>
             </li>
 
             <li onClick={() => setMenuActive(false)}>
               <Link to="/lessons">
-                <MdSubject />
-                Lessons
+                <MdSubject
+                  className="header__ul__Icons"
+                />
+                <div className="navi__menu">Lessons</div>
               </Link>
             </li>
             <li onClick={() => setMenuActive(false)}>
               <Link to="/courses">
-                <MdTimer />
-                Free Courses
+                <MdTimer
+                  className="header__ul__Icons"
+                />
+                <div className="navi__menu">Free courses</div>
               </Link>
             </li>
           </div>
@@ -102,6 +103,12 @@ const Header = () => {
             />
           </li>
         </ul>
+        <div
+          className="header__icons"
+          className="header__icon__back"
+          onClick={() => history.goBack()}>
+          <BackButton />
+        </div>
       </nav>
       {/* menu for mobile devices */}
       <div className="layout__menu" onClick={() => setMenuActive(!menuActive)}>
