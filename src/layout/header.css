@@ -21,7 +21,7 @@
 .header__nav {
   display: flex;
   justify-content: space-between;
-  align-items:  baseline;
+  align-items:  center;
   padding:var(--spacer--sm) var(--spacer--lg);
 
   position: relative;
@@ -47,8 +47,7 @@
 
 }
 li *{
-  margin:0 0.4rem ;
-  font-size:var(--spacer--lg) !important;
+  margin:0 4px;
   display: flex;
  
   align-items: center;
@@ -65,9 +64,17 @@ li:first-child {
 .header a{
   color: var(--color-teal);
 }
+.header__ul__Icons{
+ height: 25px;
+ width: 25px;
+}
+.navi__menu{
+   font-size: 20px;
+}
+
 
 .header__ul__searchIcon,.header__search__closeIcon {
-  /* display: none; */
+  display: none; 
   color: var(--color-teal)
   
 }
@@ -105,8 +112,12 @@ li:first-child {
 
 }
 
+
 /* // Small devices (landscape phones, 576px and up) */
 @media (max-width: 950px) { 
+  .header__icon__back{
+    order: -1;
+  }
   nav {
     
       
