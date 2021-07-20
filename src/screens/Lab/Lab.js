@@ -21,11 +21,17 @@ import Switch from '@material-ui/core/Switch';
 import { FcWebcam } from "react-icons/fc";
 import Laback from "../../components/buttons/Lab_back/LabBack";
 import LeptonWaiting from "../../components/lapton_waiting_room/LeptonWaiting";
+import { render } from "@testing-library/react";
 
 const Lab = () => {
   const [state, setState] = useState({
     checkedB: false,
   });
+  //camera icon toggle
+  let className1 = "lab__camera__icon";
+  if (state.checkedB) {
+    className1 = "lab__camera__icon1"
+  }
 
   const handleChange = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
@@ -66,6 +72,9 @@ const Lab = () => {
     setCurrentLab(labs?.labs?.filter((lab) => lab._id === id)[0]);
   }, [labs]);
 
+
+
+
   //dragging
   const [position, setPosition] = useState({
     x: 100,
@@ -83,6 +92,11 @@ const Lab = () => {
   if (loading) {
     return <LeptonWaiting />;
   }
+
+
+
+
+
   return (
 
     <div>
@@ -111,7 +125,32 @@ const Lab = () => {
                 <Laback />
               </div>
             </div>
+            <div className="lab__camera_Switch">
+              <div className="lab_camera_container_Switch">
+                <MdCameraAlt
+                  className={className1}
+                />
+                <FormControlLabel
+                  className="lab__control__switch"
+                  control={
+                    <Switch
 
+                      size="small"
+                      checked={state.checkedB}
+                      onChange={handleChange}
+                      onClick={onCameraClick}
+                      name="checkedB"
+                      color="primary"
+                    />
+                  }
+
+                  labelPlacement="left"
+                />
+
+
+
+              </div>
+            </div>
             {currentLab?.tamilUrl && (
               <div className="lang__btns">
                 <Button
@@ -137,35 +176,7 @@ const Lab = () => {
                 </Button>
               </div>
             )}
-            <div className="lab__camera_Switch">
-              <div className="lab_camera_container_Switch">
-                <MdCameraAlt
-                  className="lab__camera__icon"
-                  checked={state.checkedB}
-                  onChange={handleChange}
-                  onClick={onCameraClick}
-                />
-                <FormControlLabel
-                  className="lab__control__switch"
-                  control={
-                    <Switch
 
-                      size="small"
-                      checked={state.checkedB}
-                      onChange={handleChange}
-                      onClick={onCameraClick}
-                      name="checkedB"
-                      color="primary"
-                    />
-                  }
-
-                  labelPlacement="left"
-                />
-
-
-
-              </div>
-            </div>
 
 
           </div>
