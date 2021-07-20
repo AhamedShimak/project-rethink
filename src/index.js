@@ -4,12 +4,16 @@ import "./index.css";
 import App from "./App";
 import store from "./app/store";
 import { Provider } from "react-redux";
+import ReactPWAInstallProvider, { useReactPWAInstall } from "react-pwa-install";
+
 // import reportWebVitals from './reportWebVitals';
 // import { Provider } from "./context/context";
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <ReactPWAInstallProvider enableLogging>
+        <App />
+      </ReactPWAInstallProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")

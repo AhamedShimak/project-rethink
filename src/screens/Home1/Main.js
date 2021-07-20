@@ -33,6 +33,7 @@ const Main = () => {
               src={process.env.PUBLIC_URL + "/assets/logo.svg"}
               alt="logo"
               className="logo"
+              width="80px"
             />
           </div>
         </Link>

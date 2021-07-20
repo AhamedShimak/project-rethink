@@ -58,8 +58,22 @@
     }
     .card__content__image img{
         height:100px;
+        background:rgba(58, 58, 56,0.5);
+        
     }
-
+    @media (min-width: 550px) { 
+        .card__content__image img{
+            height:140px;
+            
+        }
+    
+    }
+    @media (min-width: 850px) { 
+        .card__content__image img{
+            height:150px;
+        }
+    
+    }
 
 .card__content__desc{
         

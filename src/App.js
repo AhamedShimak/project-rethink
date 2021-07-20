@@ -1,29 +1,25 @@
 import "./App.css";
 
 import React, { lazy, useEffect } from "react";
-
+import { Suspense } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { useDispatch } from "react-redux";
 import { Helmet } from "react-helmet";
-import Home from "./screens/Home1/Home";
+import ReactPWAInstallProvider, { useReactPWAInstall } from "react-pwa-install";
 
-
-
-//import LessonView from "./screens/Lessons/LessonView";
 import MuiTheme from "./theme";
 import Layout from "./layout/Layout";
-// import { GlobalContext } from "./context/context";
 
-import LeptonWaiting from "./components/lapton_waiting_room/LeptonWaiting";
-// import Starter from "./starter/starter";
 import { listSubjects } from "./actions/subjectActions";
 import { listCategories } from "./actions/categoryActions";
 import { checkLocalStorageVersion } from "./localStorage/index";
+import Logo from "./assets/logo.svg";
 
-import { Suspense } from "react";
-import RegisterPage from "./screens/auth/register/Register";
-
+import LeptonWaiting from "./components/lapton_waiting_room/LeptonWaiting";
+import DownloadBtn from "./components/buttons/download_button/DownloadBtn";
+const Home = lazy(() => import("./screens/Home1/Home"));
+const RegisterPage = lazy(() => import("./screens/auth/register/Register"));
 const CoursePage = lazy(() => import("./screens/course__page/CoursePage"));
 const CourseList = lazy(() => import("./screens/Course/CourseList"));
 const Lab = lazy(() => import("./screens/Lab/Lab"));
@@ -41,6 +37,27 @@ const QuizApp = lazy(() => import("./apps/quiz__APP/main/QuizMain"));
 const QuizList = lazy(() => import("./screens/quiz_list/QuizList"));
 
 function App() {
+  //installation
+  const { pwaInstall, supported, isInstalled } = useReactPWAInstall();
+
+  const handleClick = () => {
+    pwaInstall({
+      title: "Install Lepton",
+      logo: Logo,
+      features: (
+        <ul>
+          <li>Install once</li>
+          <li>Works offline</li>
+          <li>High Quality Labs</li>
+          <li>Entertaining Quizzes</li>
+        </ul>
+      ),
+      description: "Download Lepton, Enjoy Learning",
+    })
+      .then(() => alert("App installed successfully"))
+      .catch(() => alert("App installation cancelled"));
+  };
+
   const dispatch = useDispatch();
   useEffect(() => {
     const fetchStaticData = async () => {
@@ -63,6 +80,16 @@ function App() {
   //
   return (
     <div className="App">
+      <div className="app__install__div">
+        {supported() && !isInstalled() && (
+          <div
+            type="button"
+            className="app__install__btn"
+            onClick={handleClick}>
+            <DownloadBtn />
+          </div>
+        )}
+      </div>
       <ThemeProvider theme={MuiTheme}>
         <Router>
           {/* A <Switch> looks through its children <Route>s and
@@ -117,7 +144,7 @@ function App() {
                   <SearchResluts />
                 </Route>
               </Layout>
-           
+
               {/* view single items */}
               <Route path="/papers/:id">
                 <PaperView />
@@ -126,7 +153,6 @@ function App() {
               <Route path="/games/:id">
                 <LabView />
               </Route>
-
             </Switch>
           </Suspense>
         </Router>

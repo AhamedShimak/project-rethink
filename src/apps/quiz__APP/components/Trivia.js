@@ -3,7 +3,11 @@ import useSound from "use-sound";
 import play from "../assets/src_sounds_play.mp3";
 import correct from "../assets/src_sounds_correct.mp3";
 import wrong from "../assets/src_sounds_wrong.mp3";
-
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2,
+} from "react-html-parser";
 export default function Trivia({
   data,
   questionNumber,
@@ -72,9 +76,8 @@ export default function Trivia({
         {question?.answers.map((a) => (
           <div
             className={selectedAnswer === a ? className : "answer"}
-            onClick={() => !selectedAnswer && handleClick(a)}>
-            {a.text}
-          </div>
+            onClick={() => !selectedAnswer && handleClick(a)}
+            dangerouslySetInnerHTML={{ __html: a.text }}></div>
         ))}
       </div>
     </div>

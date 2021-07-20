@@ -7,13 +7,16 @@ import { useHistory } from "react-router-dom";
 import BackButton from "../../../components/buttons/back_button/BackButton";
 import { data } from "../data/testQuestions";
 import { monyPyramid } from "../data/moneyPyramid";
+import shuffle from "shuffle-array";
+import Popup from "../../../utils/popup/Popup";
+import { clientApi } from "../../../api/api";
 
 function QuizApp() {
   const [username, setUsername] = useState(null);
   const [timeOut, setTimeOut] = useState(false);
   const [questionNumber, setQuestionNumber] = useState(1);
   const [earned, setEarned] = useState("$ 0");
-
+  const [questions, setQuestions] = useState(null);
   let history = useHistory();
   const myRef = useRef(null);
 
@@ -25,6 +28,9 @@ function QuizApp() {
         // inline: "nearest",
       });
   }, [questionNumber]);
+  useEffect(() => {
+    setQuestions(shuffle.pick(data, { picks: 15 }));
+  }, [timeOut]);
 
   const moneyPyramid = useMemo(() => monyPyramid, []);
 
@@ -32,6 +38,15 @@ function QuizApp() {
     questionNumber > 1 &&
       setEarned(moneyPyramid.find((m) => m.id === questionNumber - 1).amount);
   }, [questionNumber, moneyPyramid]);
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <div className="app">
@@ -53,7 +68,13 @@ function QuizApp() {
             {timeOut ? (
               <>
                 <div className="retry">
-                  <h1 className="endText">You earned: {earned}</h1>
+                  <h1 className="endText">
+                    {username}! You earned: {earned}💰
+                  </h1>
+
+                  <button className="inviteButton" onClick={handleClickOpen}>
+                    Invite your Friends
+                  </button>
                   <button
                     className="startButton"
                     onClick={() => {
@@ -63,12 +84,21 @@ function QuizApp() {
                     }}>
                     Try Again
                   </button>
+                  <Popup
+                    name={username}
+                    // handleClickOpen={handleClickOpen}
+                    handleClose={handleClose}
+                    open={open}
+                    title={`Hey😎 I earned ${earned}💰, playing lepton challenge, How much u can`}
+                    url={`${clientApi}/quiz/1`}
+                  />
                 </div>
               </>
             ) : (
               <div className="travia_details">
                 <div className="top">
-                  <h3>Question Number : {questionNumber}</h3>
+                  <h3>Question Number : {questionNumber} of 15</h3>
+
                   <div className="timer">
                     <Timer
                       setTimeOut={setTimeOut}
@@ -78,7 +108,7 @@ function QuizApp() {
                 </div>
                 <div className="bottom">
                   <Trivia
-                    data={data}
+                    data={questions}
                     questionNumber={questionNumber}
                     setQuestionNumber={setQuestionNumber}
                     setTimeOut={setTimeOut}

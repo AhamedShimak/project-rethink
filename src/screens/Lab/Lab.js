@@ -20,6 +20,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
 import { FcWebcam } from "react-icons/fc";
 import Laback from "../../components/buttons/Lab_back/LabBack";
+import LeptonWaiting from "../../components/lapton_waiting_room/LeptonWaiting";
 
 const Lab = () => {
   const [state, setState] = useState({
@@ -80,28 +81,11 @@ const Lab = () => {
     console.log(e.x);
   };
   if (loading) {
-    return (
-      <div
-        style={{
-          width: "100%",
-          height: "100vh",
-          backgroundColor: "white",
-          position: "fixed",
-          left: "0",
-          right: "0",
-          top: "0",
-          bottom: "0",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}>
-        <LabWaiting />
-      </div>
-    );
+    return <LeptonWaiting />;
   }
   return (
-    <div >
-     
+
+    <div>
       <div className="lab__iframe">
         {/* {lang ? console.log(currentLab) : console.log(currentLab)} */}
         <iframe
