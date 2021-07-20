@@ -1,0 +1,13 @@
+
+
+.camera_webcam{
+    height: 70px;
+    width: 100px;
+}
+
+@media (min-width: 768px)  {
+    .camera_webcam{
+        height: 200px;
+        width: 250px;
+    }
+  }
