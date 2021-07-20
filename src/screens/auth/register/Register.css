@@ -6,6 +6,7 @@
   left: 10px;
   top: 10px;
 }
+hidden
 .register_content_logo {
   position: absolute;
   z-index: 9;
@@ -23,9 +24,9 @@
   width: 55px;
 }
 .register_form_height_container {
-  max-height: 350px;
-  height: 270px;
-  overflow-y: auto;
+  /* max-height: 350px; */
+  /* height: 270px;
+  overflow-y: auto; */
   overflow-x: hidden;
   direction: ltr;
   scrollbar-color: var(--color-secondary) transparent;
@@ -81,7 +82,7 @@ input {
   width: 100%;
   background-color: #fff;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .register_forms_container {
@@ -350,6 +351,7 @@ input {
   .register_input_field_select {
     min-width: 335px;
   }
+
   .register_container {
     min-height: 800px;
     height: 100vh;
@@ -369,6 +371,7 @@ input {
   .panels_container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 1fr;
+    display:none;
   }
 
   .panel {
@@ -377,10 +380,12 @@ input {
     align-items: center;
     padding: 2.5rem 8%;
     grid-column: 1 / 2;
+
   }
 
   .right_panel {
     grid-row: 3 / 4;
+  
   }
 
   .left_panel {
@@ -429,6 +434,7 @@ input {
     transform: translate(-50%, 100%);
     bottom: 32%;
     right: initial;
+    display: none;
   }
 
   .register_container.sign_up_mode .left_panel .image,

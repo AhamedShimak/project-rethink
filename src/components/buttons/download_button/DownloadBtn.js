@@ -15,7 +15,7 @@ const DownloadBtn = () => {
       color="primary"
       className={classes.button}
       startIcon={<FaDownload />}>
-      Download App
+      Install
     </Button>
   );
 };
