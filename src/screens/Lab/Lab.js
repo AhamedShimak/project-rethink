@@ -12,13 +12,27 @@ import { listSubjects } from "../../actions/subjectActions";
 import LabWaiting from "../../components/lab__waiting/LabWaiting";
 import { Button } from "@material-ui/core";
 // import BackButton from "../../components/buttons/Lab_back/LabBack";
-// import { MdCamera } from "react-icons/md";
-import { RiDragMove2Line } from "react-icons/ri";
+ import { MdCamera } from "react-icons/md";
+//import { RiDragMove2Line } from "react-icons/ri";
+import Camera from "../../components/camera/Camera";
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 
+import Switch from '@material-ui/core/Switch';
+import { FcWebcam } from "react-icons/fc";
 import Laback from "../../components/buttons/Lab_back/LabBack";
 import LeptonWaiting from "../../components/lapton_waiting_room/LeptonWaiting";
 
 const Lab = () => {
+  const [state, setState] = useState({
+    checkedB: false,
+  });
+
+  const handleChange = (event) => {
+    setState({ ...state, [event.target.name]: event.target.checked });
+  };
+  const [showCamera, setShowCamera] = useState(false);
+  
+  const onCameraClick= ()=> setShowCamera(!showCamera);
   let history = useHistory();
   const dispatch = useDispatch();
   const [currentLab, setCurrentLab] = useState(null);
@@ -70,6 +84,7 @@ const Lab = () => {
     return <LeptonWaiting />;
   }
   return (
+
     <div>
       <div className="lab__iframe">
         {/* {lang ? console.log(currentLab) : console.log(currentLab)} */}
@@ -80,7 +95,7 @@ const Lab = () => {
           allowfullscreen></iframe>
       </div>
 
-      <Draggable bounds="body" handle=".camera__icon">
+      <Draggable bounds="body" handle=".lab__header">
         <div className="lab__header">
           <div className="lep_container">
             <div className="logoAndBack">
@@ -122,10 +137,45 @@ const Lab = () => {
               </div>
             )}
 
-            <RiDragMove2Line className="camera__icon" />
+           
           </div>
         </div>
       </Draggable>
+
+      <Draggable bounds="body" handle=".lab__camera">
+        <div className="lab__camera">
+          <div className="lab_camera_container">
+           
+           {showCamera ? <Camera/>:null}
+            
+           
+          </div>
+        </div>
+       
+      </Draggable>
+      <div className="lab__camera_Switch">
+          <div className="lab_camera_container_Switch">
+          <FormControlLabel
+        control={
+          <Switch
+          size="small"
+            checked={state.checkedB}
+            onChange={handleChange}
+            onClick={onCameraClick}
+            name="checkedB"
+            color="primary"
+          />
+        }
+        label={<FcWebcam />}
+          labelPlacement="left"
+      />
+
+            
+           
+          </div>
+        </div>
+
+
       <h5 className="toolbar">
         {" "}
         <FcRotateToLandscape style={{ fontSize: "30px" }} /> Please rotate your
