@@ -268,28 +268,28 @@ export const data = [
     ],
   },
 
-  {
-    id: 11,
-    question: "Rolex is a company that specializes in what type of product?",
-    answers: [
-      {
-        text: "Phone",
-        correct: false,
-      },
-      {
-        text: "Watches",
-        correct: true,
-      },
-      {
-        text: "Food",
-        correct: false,
-      },
-      {
-        text: "Cosmetic",
-        correct: false,
-      },
-    ],
-  },
+  // {
+  //   id: 11,
+  //   question: "Rolex is a company that specializes in what type of product?",
+  //   answers: [
+  //     {
+  //       text: "Phone",
+  //       correct: false,
+  //     },
+  //     {
+  //       text: "Watches",
+  //       correct: true,
+  //     },
+  //     {
+  //       text: "Food",
+  //       correct: false,
+  //     },
+  //     {
+  //       text: "Cosmetic",
+  //       correct: false,
+  //     },
+  //   ],
+  // },
   {
     id: 11,
     question: "விசைத் திருப்பத்தின் அலகாக அமைவது,",
@@ -395,33 +395,33 @@ export const data = [
       },
     ],
   },
-  {
-    id: 15,
-    question:
-      "கீழுள்ள வரைபுகளுள் இடப்பெயர்ச்சி நேர வளையியிற்கு பொருத்தமற்றது.<br/><img src='https://mail.google.com/mail/u/0?ui=2&ik=2f3c5da863&attid=0.2&permmsgid=msg-a:r4870052423574937839&view=att&disp=safe&realattid=f_kqxl6iso1' alt='answer images'/>",
-    answers: [
-      {
-        text: "1",
-        correct: false,
-      },
-      {
-        text: "2",
-        correct: true,
-      },
-      {
-        text: "3",
-        correct: false,
-      },
-      {
-        text: "4",
-        correct: false,
-      },
-      {
-        text: "5",
-        correct: false,
-      },
-    ],
-  },
+  // {
+  //   id: 15,
+  //   question:
+  //     "கீழுள்ள வரைபுகளுள் இடப்பெயர்ச்சி நேர வளையியிற்கு பொருத்தமற்றது.<br/><img src='https://mail.google.com/mail/u/0?ui=2&ik=2f3c5da863&attid=0.2&permmsgid=msg-a:r4870052423574937839&view=att&disp=safe&realattid=f_kqxl6iso1' alt='answer images'/>",
+  //   answers: [
+  //     {
+  //       text: "1",
+  //       correct: false,
+  //     },
+  //     {
+  //       text: "2",
+  //       correct: true,
+  //     },
+  //     {
+  //       text: "3",
+  //       correct: false,
+  //     },
+  //     {
+  //       text: "4",
+  //       correct: false,
+  //     },
+  //     {
+  //       text: "5",
+  //       correct: false,
+  //     },
+  //   ],
+  // },
   {
     id: 16,
     question:
@@ -449,61 +449,61 @@ export const data = [
       },
     ],
   },
-  {
-    id: 17,
-    question:
-      "<img src='https://mail.google.com/mail/u/0?ui=2&ik=2f3c5da863&attid=0.1&permmsgid=msg-a:r4870052423574937839&view=att&disp=safe&realattid=f_kqxl10650' alt='question image'/><br/>படத்தில் காட்டிய சில்லானது  R ஆரை உடையது. இது அரைவாரி சுழற்சிக்கு முன் னோக்கி உருளும்போது தரையினை தொடும் சில்லின் புள்ளி யில் (0வின்) இடபெயர்ச்சியானது.",
-    image: "",
-    answers: [
-      {
-        text: "πR",
-        correct: false,
-      },
-      {
-        text: "2R",
-        correct: false,
-      },
-      {
-        text: "π(R+4)<sup>½</sup>",
-        correct: false,
-      },
-      {
-        text: "R(π²+4)<sup>½</sup>",
-        correct: true,
-      },
-      {
-        text: "R(π²+2)<sup>½</sup>",
-        correct: false,
-      },
-    ],
-  },
-  {
-    id: 18,
-    question:
-      "ஒரு உடவில் (V) நேரம் (t) வரைபானது கீழே தரப்படுகின்றது. இவ்வரைபின் படித்திறன் m ஆகும். நேரம் T இல் இவ்வுடல் நகர்ந்த தூரம்</br><img src='https://mail.google.com/mail/u/0?ui=2&ik=2f3c5da863&attid=0.3&permmsgid=msg-a:r4870052423574937839&view=att&disp=safe&realattid=f_kqxlab6z2' alt='question image'/>",
-    answers: [
-      {
-        text: "mVo²/2T",
-        correct: false,
-      },
-      {
-        text: "Vo²/2T",
-        correct: false,
-      },
-      {
-        text: "2mVo²",
-        correct: false,
-      },
-      {
-        text: "Vo²/2m",
-        correct: true,
-      },
-      {
-        text: "mV²/4T",
-        correct: false,
-      },
-    ],
-  },
+  // {
+  //   id: 17,
+  //   question:
+  //     "<img src='https://mail.google.com/mail/u/0?ui=2&ik=2f3c5da863&attid=0.1&permmsgid=msg-a:r4870052423574937839&view=att&disp=safe&realattid=f_kqxl10650' alt='question image'/><br/>படத்தில் காட்டிய சில்லானது  R ஆரை உடையது. இது அரைவாரி சுழற்சிக்கு முன் னோக்கி உருளும்போது தரையினை தொடும் சில்லின் புள்ளி யில் (0வின்) இடபெயர்ச்சியானது.",
+  //   image: "",
+  //   answers: [
+  //     {
+  //       text: "πR",
+  //       correct: false,
+  //     },
+  //     {
+  //       text: "2R",
+  //       correct: false,
+  //     },
+  //     {
+  //       text: "π(R+4)<sup>½</sup>",
+  //       correct: false,
+  //     },
+  //     {
+  //       text: "R(π²+4)<sup>½</sup>",
+  //       correct: true,
+  //     },
+  //     {
+  //       text: "R(π²+2)<sup>½</sup>",
+  //       correct: false,
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 18,
+  //   question:
+  //     "ஒரு உடவில் (V) நேரம் (t) வரைபானது கீழே தரப்படுகின்றது. இவ்வரைபின் படித்திறன் m ஆகும். நேரம் T இல் இவ்வுடல் நகர்ந்த தூரம்</br><img src='https://mail.google.com/mail/u/0?ui=2&ik=2f3c5da863&attid=0.3&permmsgid=msg-a:r4870052423574937839&view=att&disp=safe&realattid=f_kqxlab6z2' alt='question image'/>",
+  //   answers: [
+  //     {
+  //       text: "mVo²/2T",
+  //       correct: false,
+  //     },
+  //     {
+  //       text: "Vo²/2T",
+  //       correct: false,
+  //     },
+  //     {
+  //       text: "2mVo²",
+  //       correct: false,
+  //     },
+  //     {
+  //       text: "Vo²/2m",
+  //       correct: true,
+  //     },
+  //     {
+  //       text: "mV²/4T",
+  //       correct: false,
+  //     },
+  //   ],
+  // },
   {
     id: 19,
     question:
