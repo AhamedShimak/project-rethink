@@ -14,6 +14,7 @@ const Card = () => {
         alignItems: "center",
         cursor: "pointer",
         flexDirection: "column",
+        background: "#ffa",
       }}>
       <img
         src="https://source.unsplash.com/random"
