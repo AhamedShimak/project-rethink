@@ -9,6 +9,7 @@
 
 }
 
+
 .card__content  {
     
     
@@ -143,4 +144,25 @@
     color:var(--color-white);
     
     
+}
+@media (max-width: 350px) { 
+    .content__item__box{
+       
+        flex-basis: 80%;
+       
+    
+    }
+    .card__content__image img{
+        height:120px;
+        background:rgba(58, 58, 56,0.5);
+        
+    }
+}
+@media (max-width: 550px) { 
+   
+    .card__content__image img{
+        height:140px;
+        
+        
+    }
 }

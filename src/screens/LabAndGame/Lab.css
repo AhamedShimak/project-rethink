@@ -1,6 +1,7 @@
 .lab {
   background: #fffffc00;
   height: 100%;
+  margin-top: 40px;
 }
 
 .lab .lab__text {
@@ -18,6 +19,7 @@
   letter-spacing: 0.03em;
   margin-bottom: 1em;
   font-size: .8rem;
+ 
 }
 
 .lab .lab__container {
@@ -26,6 +28,9 @@
   background-color: #7d99972d;
   border-radius: 20px;
   max-width: calc( 950px * 0.6);
+  width: 100%;
+  margin: 0 auto;
+
 }
 
 .lab .lab__content {
