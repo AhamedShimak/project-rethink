@@ -68,8 +68,8 @@ function QuizApp() {
             {timeOut ? (
               <>
                 <div className="retry">
-                  <h1 className="endText">
-                    {username}! You earned: {earned}💰
+                  <h1 className="endText" style={{ textAlign: "center" }}>
+                    {username}!<br /> You earned: {earned}💰
                   </h1>
 
                   <button className="inviteButton" onClick={handleClickOpen}>

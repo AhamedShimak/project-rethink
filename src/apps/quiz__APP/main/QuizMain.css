@@ -415,4 +415,24 @@
   
  
 }
+@media (max-width: 400px) { 
+  .retry{
+ 
+   
+    width:100%;
+  
+    left:0;
+    height: 250px;
+    top:calc(50% - 125px);
+
+
+    
+   
+  }
+}
+
+@media (max-width: 550px) { 
+ 
+  
+}
 
