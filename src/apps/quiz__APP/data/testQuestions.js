@@ -824,4 +824,160 @@ export const data = [
       },
     ],
   },
+  {
+    id: 31,
+    question: "பின்வரும் மூலகங்களில் எது சிறந்த ஒட்சியேற்றி",
+    answers: [
+      {
+        text: "F",
+        correct: true,
+      },
+      {
+        text: "Cl",
+        correct: false,
+      },
+      {
+        text: "O",
+        correct: false,
+      },
+      {
+        text: "Na",
+        correct: false,
+      },
+      {
+        text: "K",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: 32,
+    question: "பின்வரும் சேர்வைகளில் அறைவெப்பநிலையில் நீரில் கரைய கூடியவை",
+    answers: [
+      {
+        text: "MgC2O4,BaF2 ",
+        correct: false,
+      },
+      {
+        text: "BeF2, Na2O ",
+        correct: true,
+      },
+      {
+        text: "BaSO3,PbI2",
+        correct: false,
+      },
+      {
+        text: " BaSO4, Na2O",
+        correct: false,
+      },
+      {
+        text: "Mg(OH)2,MgF2",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: 33,
+    question: "பின்வருவனவற்றுள் லூயி மூலமாக செயற்படாதது எது?",
+    answers: [
+      {
+        text: "H⁺",
+        correct: true,
+      },
+      {
+        text: "NH₃",
+        correct: false,
+      },
+      {
+        text: "I⁻",
+        correct: false,
+      },
+      {
+        text: " H₂O",
+        correct: false,
+      },
+      {
+        text: "Cl⁻",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: 34,
+    question: "பின்வரும் சேர்வைகளில் எது அதிகூடிய அயன் தன்மையை கொண்டிருக்கும",
+    answers: [
+      {
+        text: "MgS",
+        correct: false,
+      },
+      {
+        text: "SrSe",
+        correct: false,
+      },
+      {
+        text: "Ca",
+        correct: false,
+      },
+      {
+        text: "MgSe",
+        correct: false,
+      },
+      {
+        text: "SrS",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: 34,
+    question: "பின்வரும் சேர்வைகளில் எது அதிகூடிய அயன் தன்மையை கொண்டிருக்கும",
+    answers: [
+      {
+        text: "MgS",
+        correct: false,
+      },
+      {
+        text: "SrSe",
+        correct: false,
+      },
+      {
+        text: "Ca",
+        correct: false,
+      },
+      {
+        text: "MgSe",
+        correct: false,
+      },
+      {
+        text: "SrS",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: 35,
+    question: "HBr இலிருந Br₂ ஐ விடுவிக்க முடியாதது எது?",
+    answers: [
+      {
+        text: "MnO₂",
+        correct: false,
+      },
+      {
+        text: "H₂O₂",
+        correct: false,
+      },
+      {
+        text: "con HNO₃",
+        correct: false,
+      },
+      {
+        text: "I₂",
+        correct: true,
+      },
+      {
+        text: "F₂",
+        correct: false,
+      },
+    ],
+  },
 ];
