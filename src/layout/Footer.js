@@ -38,7 +38,7 @@ function Footer() {
         </div>
 
         <div className="footer-left">
-          <p className="footer-links">
+          {/* <p className="footer-links">
             <a className="link-1" href="#">
               Home
             </a>
@@ -48,7 +48,7 @@ function Footer() {
             <a href="#">FAQ</a>
 
             <a href="#">Contact</a>
-          </p>
+          </p> */}
 
           <p>Lepton Inc. &copy; 2021</p>
         </div>

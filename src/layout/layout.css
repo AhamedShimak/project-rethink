@@ -1,6 +1,7 @@
 .layout{
     
-   position:relative;  
+   position:relative; 
+   padding-bottom: 30px; 
    
 }
 .layout__content{

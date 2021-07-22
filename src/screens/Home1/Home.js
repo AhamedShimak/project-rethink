@@ -7,7 +7,7 @@ import CircleMenu from "../../components/circle_menu/CircleMenu";
 import Ad from "../../layout/advertisement/Ad";
 const Home = () => {
   return (
-    <div className="home">
+    <div className="home" style={{ paddingBottom: "40px" }}>
       <main className="home__main__container">
         <Main />
       </main>
