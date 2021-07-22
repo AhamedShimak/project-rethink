@@ -4,5 +4,15 @@
 margin-bottom: 15px;
 
 cursor: pointer;
-flex-basis: 50%;
+flex-basis: 45%;
+}
+
+@media (max-width: 350px) { 
+    .loader__content__box{
+       
+        flex-basis: 80%;
+       
+    
+    }
+    
 }
