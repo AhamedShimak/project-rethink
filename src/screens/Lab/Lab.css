@@ -45,10 +45,10 @@
     justify-content: center;
   }
   .lab__camera_Switch {
-    position: fixed;
+    
     top: 0px;
     right: 4px;
-    cursor: move;
+    
     opacity: 1;
     z-index: 9996;
     padding: 0;
@@ -57,10 +57,26 @@
     align-items: center;
   }
   .lab_camera_container_Switch {
+    margin: 5px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+  }
+  .lab__camera__icon{
+    color: #ac3737;
+    margin: 1px;
+    height: 30px;
+    width: 30px;
+    cursor:pointer;
+  }
+  .lab__camera__icon1{
+    color: #1ec9cf;
+    margin: 0px;
+    cursor:pointer;
+  }
+  .lab__control__switch{
+    margin: 0px;
   }
   .lab_screen_record {
     position: fixed;
@@ -96,7 +112,7 @@
   height: 30px;
   display: flex;
   align-items: center;
-  width: 80px;
+  width: 100%;
   justify-content: space-between;
 }
 .lab__back {
@@ -105,13 +121,15 @@
 
 .logo_lab {
   height: 24px;
+  cursor: move;
 }
 
 .lang__btns {
   display: flex;
   flex-direction: column;
   width: fit-content;
-  margin-top: 10px;
+  margin-bottom: 5px ;
+  
 }
 .lang_container {
   height: 15px;
@@ -128,7 +146,7 @@
 .camera__icon {
   color: #ac3737;
   margin: 6px;
-  cursor: move;
+  
 
 }
 
@@ -152,7 +170,7 @@
   right: 0;
 }
 .draggable__glossary__hand {
-  cursor: grab;
+
   /* z-index:9999; */
   display: block;
 }

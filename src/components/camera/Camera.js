@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Webcam from 'react-webcam';
-import { RiStopCircleLine,RiRecordCircleLine,RiVideoDownloadLine} from "react-icons/ri";
+import { RiStopCircleLine, RiRecordCircleLine, RiVideoDownloadLine } from "react-icons/ri";
 import './Camera.css';
 
 const HEIGHT = 300;
@@ -65,20 +65,21 @@ const Camera = () => {
   return (
     <>
       <Webcam className="camera_webcam"
+        mirrored="true"
         ref={webcamRef}
         audio={true}
-        
+
         ref={webcamRef}
         screenshotFormat="image/jpeg"
         videoConstraints={videoConstraints}
       />
       {capturing ? (
-        <button onClick={handleStopCaptureClick}><RiStopCircleLine/></button>
+        <button onClick={handleStopCaptureClick}><RiStopCircleLine /></button>
       ) : (
-        <button onClick={handleStartCaptureClick}><RiRecordCircleLine/></button>
+        <button onClick={handleStartCaptureClick}><RiRecordCircleLine /></button>
       )}
       {recordedChunks.length > 0 && (
-        <button onClick={handleDownload}><RiVideoDownloadLine/></button>
+        <button onClick={handleDownload}><RiVideoDownloadLine /></button>
       )}
     </>
   );
