@@ -2,6 +2,7 @@
   background: #fffffc00;
   height: 100%;
   margin-top: 40px;
+  width: 100%;
 }
 
 .lab .lab__text {
@@ -27,7 +28,7 @@
   height: 80%;
   background-color: #fffffa;
   border-radius: 20px;
-  max-width: calc( 950px * 0.6);
+  /* max-width: calc( 950px * 0.6); */
   width: 100%;
   margin: 0 auto;
 

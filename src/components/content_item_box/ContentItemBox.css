@@ -150,6 +150,24 @@
     
     
 }
+@media (min-width: 840px) { 
+   
+    .content__item__box{
+       
+        flex-basis: 33%;
+       
+    
+    }
+}
+@media (min-width: 1140px) { 
+   
+    .content__item__box{
+       
+        flex-basis: 24%;
+       
+    
+    }
+}
 @media (max-width: 350px) { 
     .content__item__box{
        
@@ -161,15 +179,6 @@
         /* height:120px; */
         aspect-ratio: 4 / 3;
         /* background:rgba(58, 58, 56,0.5); */
-        
-    }
-}
-@media (max-width: 550px) { 
-   
-    .card__content__image img{
-        /* height:140px; */
-        aspect-ratio: 4 / 3
-        
         
     }
 }
