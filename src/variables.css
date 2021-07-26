@@ -2,15 +2,16 @@
 
 
 :root {
-    --color-primary:hsl(210, 32%, 12%);
-    --color-secondary:rgb(5, 76, 92);
-    --color-teal:rgb(0, 120, 122);
+    --color-primary:#A65F5D;
+    --color-secondary:#56A6A2;
+    --color-primary-light:#B59D9C;
+    --color-light:#F3F3F3;
     --color-info:hsl(205, 98%, 64%);
     --color-warning:hsl(34, 100%, 59%);
     --color-success:hsl(106, 51%, 65%);
     --color-danger:hsl(339, 100%, 48%);
 
-    --color-light:hsl(60, 92%, 71%);
+   
     --color-white:hsl(60, 100%, 99%);
 
   
