@@ -20,7 +20,7 @@ function Footer() {
     <>
       <footer className="footer-distributed">
         <div className="footer-right">
-          <a href={PHONE_URL}>
+          {/* <a href={PHONE_URL}>
             <FaPhone />
           </a>
           <a href={FB_URL}>
@@ -34,7 +34,7 @@ function Footer() {
           </a>
           <a href={INSTA_URL}>
             <FaInstagram />
-          </a>
+          </a> */}
         </div>
 
         <div className="footer-left">

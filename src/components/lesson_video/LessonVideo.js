@@ -13,7 +13,7 @@ import "./LessonVideo.css";
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
-    backgroundColor: "#15204a",
+    backgroundColor: "#fffffa",
   },
   details: {
     display: "flex",
@@ -79,7 +79,7 @@ export default function LessonListVideo({
             component="h6"
             variant="h6"
             style={{
-              color: "#fffffa",
+              color: "#6b3e3c",
               fontSize: ".9rem",
               lineHeight: "0.95rem",
               marginBottom: "5px",
@@ -90,7 +90,7 @@ export default function LessonListVideo({
             <Typography
               variant="caption"
               style={{
-                color: "#d4d4d388",
+                color: "#B59D9C",
                 fontSize: ".8rem",
                 lineHeight: "0.85rem",
                 marginBottom: "5px",
@@ -101,7 +101,7 @@ export default function LessonListVideo({
             <Typography
               variant="caption"
               style={{
-                color: "#d4d4d388",
+                color: "#B59D9C",
                 fontSize: ".8rem",
                 lineHeight: "0.85rem",
                 marginBottom: "5px",
@@ -122,13 +122,13 @@ export default function LessonListVideo({
             </Avatar>
           </IconButton>
           <div>
-            <IconButton aria-label="previous" style={{ color: "#fffffa" }}>
+            <IconButton aria-label="previous" style={{ color: "#56A6A2" }}>
               {theme.direction === "rtl" ? <MdBookmark /> : <MdShare />}
             </IconButton>
 
-            <IconButton aria-label="next" style={{ color: "#fffffa" }}>
+            {/* <IconButton aria-label="next" style={{ color: "#fffffa" }}>
               {theme.direction === "rtl" ? <MdShare /> : <MdBookmark />}
-            </IconButton>
+            </IconButton> */}
           </div>
         </div>
       </div>

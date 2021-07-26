@@ -14,7 +14,8 @@ import ComingSoon from "../../components/coming_soon/ComingSoon";
 import ContactUsBtn from "../../components/buttons/contact_us_btn/ContactUsBtn";
 const styles = {
   tabs: {
-    background: "hsl(191, 89%, 19%)",
+    background: "#fff",
+    color: "#56A6A2",
   },
   slide: {
     padding: 3,

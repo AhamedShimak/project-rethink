@@ -11,18 +11,28 @@
   width: 80px;
 }
 
+.home__main__container{
+  margin-top:  60px;
+}
+
 .home__main__container .home__main {
   height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
+  position:fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
   display: flex;
+  border-bottom: 1px solid var(  --color-primary-light);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #f3f5f5;
+  background-color: var( --color-white);
   will-change: transform;
 }
 
@@ -61,7 +71,7 @@
   -webkit-transition: 0.2s;
   transition: 0.2s;
   position: relative;
-  background-color: #ffffff;
+  background-color: var(--color-light);
   left: 100%;
   opacity: 0;
   border-radius: 20px;
@@ -109,7 +119,7 @@
   display: block;
   height: 100%;
   width: 100%;
-  background-color: #ffffff;
+  background-color: var(--color-light);
   color: #AE5151;
   font-size: 13px;
   border-radius: 15px;
@@ -137,7 +147,7 @@
   height: 40px;
   border-radius: 20px;
   width: 40px;
-  color: #ffffff;
+  color: var(--color-light);
   background-color: #51AEAA;
   cursor: pointer;
 }
@@ -153,7 +163,7 @@
   width: 40px;
   border-radius: 20px;
   background-color: #AE5151;
-  color: #ffffff;
+  color: var(--color-light);
   /* -webkit-box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0), 0px 4px 5px -1px rgba(0, 0, 0, 0), 0px 4px 5px 1px #0000002a;
           box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0), 0px 4px 5px -1px rgba(0, 0, 0, 0), 0px 4px 5px 1px #0000002a;
   box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0), 0px 4px 5px -1px rgba(0, 0, 0, 0), 0px 4px 5px 1px #0000002a; */
@@ -195,11 +205,12 @@
 
 
 }
+
 @media (max-width: 567px)  {
   .home__content__container{
     flex-direction: column;
       
-      
+      margin-top:  60px;
      
   }
 }
@@ -229,22 +240,24 @@
 
 .home__selection__container .home__content__container .home__content__container__item .column-1 .column-1__heading {
   font-size: 20px;
-  font-weight: 550;
+
+  font-weight: bolder;
   padding: 4px;
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 .home__selection__container .home__content__container .home__content__container__item .column-1 .column-1__content {
   padding: 4px;
-  font-size: 15px;
-  color: #f3f5f5;
+  font-size: 12px;
+  font-weight: lighter;
+  color: var(--text-secondary);
 }
 
 .home__selection__container .home__content__container .home__content__container__item .column-2 {
   height: 100%;
   min-width: 120px;
-  border-radius: 20px;
-  background-color: #ffffff;
+  border-radius: 12%;
+  background-color: var(--color-secondary);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -257,43 +270,49 @@
 }
 
 .home__selection__container .home__content__container .item-1 {
-  background-color: #51ae515e;
+  background-color: var( --color-white);
   -webkit-animation: first_start 1s ease-out;
           animation: first_start 1s ease-out;
+
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .home__selection__container .home__content__container .item-2 {
-  background-color: #5751ae5e;
+  background-color: #3d3979;
   -webkit-animation: first_start 1s ease-out;
           animation: first_start 1s ease-out;
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
+          box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .home__selection__container .home__content__container .item-3 {
-  background-color: #aea55159;
+  background-color: #746d35;
   -webkit-animation: first_start 1s ease-out;
           animation: first_start 1s ease-out;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
+          box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .home__selection__container .home__content__container .item-4 {
-  background-color: #ae518a50;
+  background-color: #642e4f;
   -webkit-animation: first_start 1s ease-out;
           animation: first_start 1s ease-out;
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
+          box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .home__selection__container .home__content__container .item-5 {
-  background-color: #ffd70050;
+  background-color: #81491b;
   -webkit-animation: first_start 1s ease-out;
           animation: first_start 1s ease-out;
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
+          box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 @-webkit-keyframes floating {

@@ -72,7 +72,7 @@
 .subject__ellipse > span{
     font-size: 1.5rem;
     
-    color: var(--color-teal) !important;
+    color: var(--color-secondary) !important;
 
 }
 .subject__ellipse > h5{
@@ -80,7 +80,7 @@
     margin:0;
   
     line-height: .7rem;
-    color: var(--color-teal) !important;
+    color: var(--color-secondary) !important;
 
 }
 .subject__ellipse > .heading__bottom{
@@ -96,7 +96,7 @@
 
 .elipse__active{
    
-    background: var(--color-teal);
+    background: var(--color-secondary);
    /* border: 3px solid var(--color-white);
    
     animation: borderAnim 3s ease-in-out infinite alternate;*/

@@ -107,7 +107,7 @@
   overflow: hidden;
 }
 .logoAndBack {
-  background-color: #eeeeee;
+  background-color: var(--color-white);
   padding: 0px 5px;
   height: 30px;
   display: flex;
@@ -186,7 +186,8 @@
   border-radius: 20px;
   display: none;
   line-height: 20px;
-  background: var(--color-teal);
+  background: var(--color-secondary);
+  color: var(--color-white);
 }
 @media screen and (orientation: portrait) {
   .toolbar {

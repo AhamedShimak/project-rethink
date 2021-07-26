@@ -5,7 +5,7 @@
  
     flex-direction: column;
     color: white;
-    background-color: var(--color-primary);
+    background-color: var(--color-light);
   }
   .quiz__container{
     display: flex;
@@ -320,7 +320,7 @@
     font-size: 18px;
     font-weight: 500;
     background-color: var(--color-secondary);
-    color: var(--text-secondary)
+    color: var(--color-white);
   }
   .inviteButton {
     width: 100%;

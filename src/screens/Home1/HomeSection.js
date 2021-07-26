@@ -51,7 +51,7 @@ const HomeSection = () => {
             </div>
           </div>
           <div
-            className="home__content__container__item item-5"
+            className="home__content__container__item item-1"
             onClick={() => history.push("/quiz")}>
             <div className="home__content__container__item__column column-1">
               <h2 className="column-1__heading">Quiz</h2>
@@ -68,7 +68,7 @@ const HomeSection = () => {
             </div>
           </div>
           <div
-            className="home__content__container__item item-2"
+            className="home__content__container__item item-1"
             onClick={() => history.push("/lessons")}>
             <div className="home__content__container__item__column column-1">
               <h2 className="column-1__heading">LESSONS</h2>
@@ -85,7 +85,7 @@ const HomeSection = () => {
             </div>
           </div>
           <div
-            className="home__content__container__item item-4"
+            className="home__content__container__item item-1"
             onClick={() => history.push("/courses")}>
             <div className="home__content__container__item__column column-1">
               <h2 className="column-1__heading">FREE COURSES</h2>

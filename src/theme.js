@@ -4,11 +4,10 @@ import { createMuiTheme } from "@material-ui/core/styles";
 export default createMuiTheme({
   palette: {
     primary: {
-      main: "hsl(191, 89%, 19%)",
+      main: "#A65F5D",
     },
     secondary: {
-      main: "hsl(60, 100%, 99%)",
+      main: "#56A6A2",
     },
-    
   },
 });

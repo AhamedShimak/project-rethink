@@ -25,7 +25,7 @@
 .lab .lab__container {
   position: relative;
   height: 80%;
-  background-color: #7d99972d;
+  background-color: #fffffa;
   border-radius: 20px;
   max-width: calc( 950px * 0.6);
   width: 100%;
@@ -99,7 +99,7 @@
 .lab .lab__ellipses .lab__ellipses__ellipse {
   width: 3.5em;
   height: 3.5em;
-  background-color: #FFFFFC;
+  background-color: var(--color-light);
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -110,7 +110,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 3px solid var(--color-teal);
+  border: 3px solid var(--color-light);
   -webkit-animation: borderAnim 3s ease-in-out infinite alternate;
           animation: borderAnim 3s ease-in-out infinite alternate;
 }

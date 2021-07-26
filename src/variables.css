@@ -4,20 +4,24 @@
 :root {
     --color-primary:#A65F5D;
     --color-secondary:#56A6A2;
+    --text-primary:#6b3e3c;
+    --text-secondary:#A65F5D;
     --color-primary-light:#B59D9C;
-    --color-light:#F3F3F3;
+    --color-light:#e0e0e0;
+    --color-white:#fffffa;
+
+
+    
     --color-info:hsl(205, 98%, 64%);
     --color-warning:hsl(34, 100%, 59%);
     --color-success:hsl(106, 51%, 65%);
     --color-danger:hsl(339, 100%, 48%);
 
    
-    --color-white:hsl(60, 100%, 99%);
+    
+
 
   
-    --text-primary:hsl(60, 100%, 99%);
-    --text-secondary:hsl(60, 1%, 83%);
-    --text-dark:rgb(49, 49, 49);
 
     /* Fonts */
     --font-primary:'Roboto', sans-serif;

@@ -1,6 +1,6 @@
 .circular-menu {
 	position: fixed;
-	bottom: 20px;
+	bottom: 18px;
 	right: 20px;
 	z-index: 999;
   }
@@ -12,7 +12,7 @@
 	border-radius: 50%;
 	background-color: var(--color-danger);
 	box-shadow: 0 2px 5px 0 hsla(0, 0%, 0%, .26);  
-	color: hsl(0, 0%, 100%);
+	color: var(--color-white);
 	text-align: center;
 	line-height: 41px;
 	cursor: pointer;
