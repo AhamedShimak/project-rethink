@@ -58,20 +58,24 @@
         min-height:100px;
     }
     .card__content__image img{
-        height:100px;
-        background:rgba(58, 58, 56,0.5);
+        /* height:100px; */
+        /* background:rgba(58, 58, 56,0.5); */
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
         
     }
     @media (min-width: 550px) { 
         .card__content__image img{
-            height:140px;
+            /* height:140px; */
+            aspect-ratio: 4 / 3
             
         }
     
     }
     @media (min-width: 850px) { 
         .card__content__image img{
-            height:150px;
+            /* height:150px; */
+            aspect-ratio: 4 / 3
         }
     
     }
@@ -153,15 +157,17 @@
     
     }
     .card__content__image img{
-        height:120px;
-        background:rgba(58, 58, 56,0.5);
+        /* height:120px; */
+        aspect-ratio: 4 / 3;
+        /* background:rgba(58, 58, 56,0.5); */
         
     }
 }
 @media (max-width: 550px) { 
    
     .card__content__image img{
-        height:140px;
+        /* height:140px; */
+        aspect-ratio: 4 / 3
         
         
     }
