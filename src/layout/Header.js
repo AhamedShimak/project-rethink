@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { MdSubject, MdTimer, MdQuestionAnswer } from "react-icons/md";
+import {
+  MdSubject,
+  MdTimer,
+  MdQuestionAnswer,
+  MdMenu,
+  MdClear,
+} from "react-icons/md";
 import { ImLab } from "react-icons/im";
 
 import "./header.css";
@@ -82,12 +88,11 @@ const Header = () => {
             <div
               className="layout__menu"
               onClick={() => setMenuActive(!menuActive)}>
-              <span
-                className={`menu__line ${menuActive && "menu_line-1"}`}></span>
-              <span
-                className={`menu__line ${menuActive && "menu_line-2"}`}></span>
-              <span
-                className={`menu__line ${menuActive && "menu_line-3"}`}></span>
+              {!menuActive ? (
+                <MdMenu style={{ color: "white" }} />
+              ) : (
+                <MdClear style={{ color: "white" }} />
+              )}
             </div>
           </ul>
         </div>
