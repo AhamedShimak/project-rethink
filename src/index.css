@@ -18,6 +18,10 @@ input {
 user-select: text !important;
 
 }
+input:focus
+{
+   outline: none;
+}
 
 html {
   scroll-behavior: smooth;

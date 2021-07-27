@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 //import { ReactSVG } from "react-svg";
 import "./Home.css";
-import { MdSearch, MdKeyboardBackspace } from "react-icons/md";
+import { MdSearch, MdClose, MdFiberManualRecord } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { setSearch } from "../../actions/searchActions";
 const Main = () => {
@@ -46,9 +46,7 @@ const Main = () => {
               searchActive ? "home__search__display" : ""
             } `}>
             <div className="home__icons home__search__back">
-              <MdKeyboardBackspace
-                onClick={() => setSearchActive(!searchActive)}
-              />
+              <MdFiberManualRecord />
             </div>
 
             <input
@@ -63,10 +61,17 @@ const Main = () => {
           </div>
 
           <div className="home__search__button">
-            <MdSearch
-              className="home__search__button_icon "
-              onClick={() => setSearchActive(!searchActive)}
-            />
+            {searchActive ? (
+              <MdClose
+                className="home__search__button_icon "
+                onClick={() => setSearchActive(!searchActive)}
+              />
+            ) : (
+              <MdSearch
+                className="home__search__button_icon "
+                onClick={() => setSearchActive(!searchActive)}
+              />
+            )}
           </div>
         </div>
         {/* <div className="navigation_button">
