@@ -32,7 +32,7 @@ const HomeSection = () => {
           </div>
         </div> */}
 
-        <div>
+        <div className="home__content__container__items">
           <div
             className="home__content__container__item item-1"
             onClick={() => history.push("/labs")}>
