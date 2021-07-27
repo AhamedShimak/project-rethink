@@ -55,7 +55,7 @@ const ContentItemBox = ({
           <Img
             src={imageUrl}
             alt={`${title}-image`}
-            style={{ border: "none", borderRadius: "20px", width: "100%" }}
+            style={{ border: "none", width: "100%" }}
             onClick={() => {
               history.push(`/labs/lab/${id}`);
             }}
