@@ -27,14 +27,20 @@ $fnt_reqular: 13px
      padding: 0px
      width: 80px
 .home__main__container
-
+     z-index: 10000
+     position: fixed
+     top: 0
+     left: 0
+     right: 0
+     width: 100%
      .home__main
+
           height: 60px
           display: flex
           justify-content: space-between
           align-items: center
 
-          background-color: $light
+          background-color: var( --color-navigation)
 
           .home__logo
                margin-left: 10px
@@ -94,14 +100,14 @@ $fnt_reqular: 13px
 
                     .home__searchin__icon
                          color: $blue
-                         display: block
-                         width: 30px
+                         flex-shrink: 0
+                         width: 20px
                          height: 30px
                          margin: 0px 10px 0px 10px
                          cursor: pointer
 
                     input
-
+                         margin-left: 20px
                          display: block
                          height: 100%
                          width: 100%
@@ -168,79 +174,63 @@ $fnt_reqular: 13px
                     height: 25px
                     width: 25px
 
-.home__selection__container
-     display: flex
-     justify-content: center
-     .home__content__container
+.home_content_container
+     padding-top: 80px
+     .home__selection__container
 
-          margin: 20px 0px
-          .home__content__container__item
+          display: flex
+          justify-content: center
+          .home__content__container
 
-               backdrop-filter: blur(2px)
-               background-color: $blue_opacity
-               -webkit-box-shadow: 0px 10px 15px -1px #0000006c
-               box-shadow: 0px 10px 15px -1px #00000059
+               .home__content__container__item
 
-               border-radius: 20px
-               height: 120px
-               margin: 25px 10px
-               display: flex
-               padding: 0px
+                    backdrop-filter: blur(2px)
+                    background-color: var(--color-home-icons)
+                    -webkit-box-shadow: 0px 10px 15px -1px #0000006c
+                    box-shadow: 0px 10px 15px -1px #00000059
 
-               cursor: pointer
-
-               .column-1
-                    padding: 10px
-                    max-width: 300px
-                    flex-grow: 1
-
-                    .column-1__heading
-                         font-size: $fnt_superhead
-                         font-weight: 550
-                         padding: 4px
-                         color: $light_2
-
-                    .column-1__content
-                         padding: 4px
-                         font-size: $fnt_sub_head
-                         color: $light
-
-               .column-2
-                    height: 100%
-                    min-width: 120px
                     border-radius: 20px
-                    background-color: $light_2
+                    height: 120px
+                    margin: 25px 10px
                     display: flex
+                    padding: 0px
+
+                    cursor: pointer
+
+                    .column-1
+                         padding: 10px
+                         max-width: 300px
+                         flex-grow: 1
+
+                         .column-1__heading
+                              font-size: var(--body--FontSize-2)
+                              font-weight: bolder
+
+                              padding: 4px
+                              color: var(--color-text-primary)
+
+                         .column-1__content
+                              padding: 4px
+                              font-size: var( --span-title--FontSize)
+                              color: var(--color-text-secondary)
+
+                    .column-2
+                         height: 100%
+                         min-width: 120px
+                         border-radius: 20px
+                         justify-content: center
+                         display: flex
 
                     .column-2__image
-                         animation: floating 10s ease-in forwards infinite
 
-                         max-width: 120px
-          $t: 1s
+                         max-width: 80px
+                    .column-2__image-1
+                         max-width: 95px
 
-          .item-1
-               background-color: $clr_1
-               animation: first_start $t ease-out
-               animation-delay: 0.1s
-          .item-2
-               background-color: $clr_2
-               animation: first_start $t ease-out
-               animation-delay: 0s
+               .item-1
 
-          .item-3
-               background-color: $clr_3
-               animation: first_start $t ease-out
-               animation-delay: 0.3s
-          .item-4
-               background-color: $clr_4
-               animation: first_start $t ease-out
-               animation-delay: 0.2s
-@keyframes floating
-     0%
-          transform: translateX(-5px)
+               .item-2
 
-     50%
-          transform: translateX(15px)
+               .item-3
 
-     100%
-          transform: translateX(-5px)
+               .item-4

@@ -2,7 +2,7 @@
 
 
 :root {
-    --color-primary:#A65F5D;
+    --color-primary:#AE5151;
     --color-secondary:#56A6A2;
     --text-primary:#160f0f;
     --text-secondary:#9b9191;
@@ -18,7 +18,12 @@
     --color-danger:#030f69;
 
    
+
+    --color-text-primary:#1c2427;
+    --color-text-secondary:#505455;
     
+    --color-home-icons:#f0f0f0;
+    --color-navigation:#f7f7f7;
 
 
   
@@ -40,6 +45,8 @@
     --secondary-title--FontSize: 1.8rem;
     --span-title--FontSize: 0.8rem;
     --body--FontSize: 1rem;
+
+    --body--FontSize-2: 1.2rem;
 
     /* Special */
     --header-height:62px;

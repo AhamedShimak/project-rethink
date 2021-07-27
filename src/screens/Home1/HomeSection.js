@@ -1,11 +1,11 @@
 import React from "react";
 
 import "./Home.css";
-import labs from "../../assets/labs.svg";
-import lessons from "../../assets/lessons.svg";
-import quiz from "../../assets/quiz.svg";
+import labs from "../../assets/logo_lab.svg";
+import lessons from "../../assets/logo_lessons.svg";
+import quiz from "../../assets/logo_quiz.svg";
 
-import papers from "../../assets/papers.svg";
+import papers from "../../assets/logo_course.svg";
 
 import { useHistory } from "react-router";
 import YoutubePlayer from "../../components/youtube__player/YoutubePlayer";
@@ -56,7 +56,7 @@ const HomeSection = () => {
             <div className="home__content__container__item__column column-1">
               <h2 className="column-1__heading">Quiz</h2>
               <p className="column-1__content">
-                உங்களில் யார் மகா லட்சாதிபதி?🤭{" "}
+                உங்களில் யார் மகா லட்சாதிபதி?{" "}
               </p>
             </div>
             <div className="home__content__container__item__column column-2">
@@ -73,7 +73,7 @@ const HomeSection = () => {
             <div className="home__content__container__item__column column-1">
               <h2 className="column-1__heading">LESSONS</h2>
               <p className="column-1__content">
-                ஒழுங்கு படுத்தப்பட்ட free YouTube video🐱‍🚀 கள்{" "}
+                ஒழுங்கு படுத்தப்பட்ட free YouTube videos{" "}
               </p>
             </div>
             <div className="home__content__container__item__column column-2">
