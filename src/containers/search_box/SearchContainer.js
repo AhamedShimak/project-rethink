@@ -26,12 +26,9 @@ const HomeSearchContainer = () => {
   return (
     <div className="home__search__container">
       <div
-        className={`home__search  ${
-          searchActive ? "home__search__display" : ""
-        } `}>
-        <div className="home__icons home__search__back">
-          <MdFiberManualRecord />
-        </div>
+        className={`home__search  ${searchActive ? "home__search__display" : ""
+          } `}>
+
 
         <input
           placeholder="Search"
@@ -39,7 +36,7 @@ const HomeSearchContainer = () => {
           onChange={(e) => setKeyword(e.target.value)}
           onKeyPress={(e) => e.key === "Enter" && submitHandler(e)}></input>
         <MdSearch
-          className=" home__icons home__searchin__icon"
+          className="home__searchin__icon"
           onClick={submitHandler}
         />
       </div>

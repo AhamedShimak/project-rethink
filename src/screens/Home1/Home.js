@@ -11,17 +11,14 @@ const Home = () => {
       <main className="home__main__container">
         <Main />
       </main>
-      <div className="home__content__div">
-        <div className="layout__info__ad--desktop">
-          <Ad desktop={true} />
-        </div>
-        <div className="layout__info__ad--mobile">
-          <Ad />
-        </div>
+      <div className="home_content_container">
+        <Ad className="ad" />
         <section className="home__selection__container">
           <HomeSection />
         </section>
       </div>
+
+
 
       <section>
         <CircleMenu />
