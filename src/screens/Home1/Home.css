@@ -191,7 +191,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width:80%;
+  width:100%;
+ 
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: space-between;
@@ -209,9 +210,10 @@
 
 }
 .home__content__div{
-  max-width: 95%;
-  margin: 0 auto;
+  max-width:95%;
+  margin: auto;
   display: flex;
+ 
 }
 .layout__info__ad--mobile{
   margin-top:0

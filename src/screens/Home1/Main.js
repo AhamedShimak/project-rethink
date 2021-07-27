@@ -7,6 +7,7 @@ import "./Home.css";
 import { MdSearch, MdClose, MdFiberManualRecord } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { setSearch } from "../../actions/searchActions";
+import HomeSearchContainer from "../../containers/search_box/SearchContainer";
 const Main = () => {
   const [searchActive, setSearchActive] = useState(false);
   const [keyword, setKeyword] = useState("");
@@ -40,40 +41,7 @@ const Main = () => {
       </div>
 
       <div className="navigation_items">
-        <div className="home__search__container">
-          <div
-            className={`home__search  ${
-              searchActive ? "home__search__display" : ""
-            } `}>
-            <div className="home__icons home__search__back">
-              <MdFiberManualRecord />
-            </div>
-
-            <input
-              placeholder="Search"
-              value={keyword}
-              onChange={(e) => setKeyword(e.target.value)}
-              onKeyPress={(e) => e.key === "Enter" && submitHandler(e)}></input>
-            <MdSearch
-              className=" home__icons home__searchin__icon"
-              onClick={submitHandler}
-            />
-          </div>
-
-          <div className="home__search__button">
-            {searchActive ? (
-              <MdClose
-                className="home__search__button_icon "
-                onClick={() => setSearchActive(!searchActive)}
-              />
-            ) : (
-              <MdSearch
-                className="home__search__button_icon "
-                onClick={() => setSearchActive(!searchActive)}
-              />
-            )}
-          </div>
-        </div>
+        <HomeSearchContainer />
         {/* <div className="navigation_button">
           <MdSettings className="navigation__icon " />
         </div> */}
