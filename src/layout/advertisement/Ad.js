@@ -44,7 +44,7 @@ const Ad = ({ desktop }) => {
               onChangeIndex={handleChangeIndex}>
               <div style={Object.assign({}, styles.slide, styles.slide1)}>
                 <img
-                  src={process.env.PUBLIC_URL + "/assets/add-1.png"}
+                  src={process.env.PUBLIC_URL + "/assets/add-1.jpg"}
                   alt="image_1"
                   style={{
                     display: "block !important",
@@ -55,7 +55,7 @@ const Ad = ({ desktop }) => {
               </div>
               <div style={Object.assign({}, styles.slide, styles.slide3)}>
                 <img
-                  src={process.env.PUBLIC_URL + "/assets/ad-2.png"}
+                  src={process.env.PUBLIC_URL + "/assets/add-1.png"}
                   alt="image_3"
                   style={{
                     display: "block !important",
