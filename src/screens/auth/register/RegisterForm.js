@@ -15,7 +15,7 @@ const RegisterForm = ({ registerHandler, formState }) => {
       <h2 className="register_title">Register</h2>
       <small
         style={{
-          color: "red",
+          color: "#acacac",
           textAlign: "right",
 
           width: "70%",
@@ -23,7 +23,7 @@ const RegisterForm = ({ registerHandler, formState }) => {
         * Required
       </small>
       <div className="register_form_height_container">
-        <small
+       {/*<small
           style={{
             color: "red",
             textAlign: "right",
@@ -31,13 +31,13 @@ const RegisterForm = ({ registerHandler, formState }) => {
             width: "70%",
           }}>
           *
-        </small>
+        </small>*/}
         <div className="register_input_field">
           <FaUserAlt className="fas fa_user" />
 
-          <input type="text" required placeholder="Username" name="name" />
+          <input type="text" required placeholder="Username*" name="name" />
         </div>
-        <small
+        {/*<small
           style={{
             color: "red",
             textAlign: "right",
@@ -45,11 +45,11 @@ const RegisterForm = ({ registerHandler, formState }) => {
             width: "70%",
           }}>
           *
-        </small>
+        </small>*/}
         <div className="register_input_field">
           <FaPhone className="fas" />
 
-          <input type="text" required placeholder="Phone No" name="contact" />
+          <input type="text" required placeholder="Phone No*" name="contact" />
         </div>
 
         <div className="register_input_field">

@@ -1,18 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
+
+
+.register_sign_up_form_image_success{
+  width: 100%;
+}
+.register_sign_up_form_title{
+  font-size: 2.2rem;
+  color: #1c3581;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+}
+.register_sign_up_form_text{
+  font-size: 1.1rem;
+  color: #a6a7a9;
+  margin-bottom: 10px;
+  font-weight: 400;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+.register_sign_up_form_button{
+  margin: 2em auto;
+  display: block;
+  -webkit-appearance: none;
+  border: 6px solid rgba(255,255,255,0.45);
+  border-radius: 50px;
+  padding: 1em 3em;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-clip: padding-box;
+  position: relative;
+  color: #FFF;
+  letter-spacing: 1px;
+font-weight: 100;
+font-size: 14px;
+
+}
+.register_sign_up_form_button:before {
+  content: "";
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-radius: 50px;
+  z-index: -1;
+  filter: blur(14px);
+}
+.register_sign_up_form_button:after {
+  content: "";
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border-radius: 50px;
+  z-index: -1;
+  filter: blur(14px);
+}
+.register_sign_up_form_button {
+  background-image: linear-gradient(90deg,#678A73, #56A6A2);
+
+}
+.register_sign_up_form_button:before {
+  background-image: linear-gradient(90deg, #678A73, transparent);
+}
+.register_sign_up_form_button:after {
+  background-image: linear-gradient(90deg, transparent, #56A6A2);
+}
+
+
 .register_content_back_button {
   position: absolute;
   z-index: 9;
   left: 10px;
   top: 10px;
 }
-hidden
 .register_content_logo {
   position: absolute;
   z-index: 9;
   right: 10px;
   top: 10px;
-  padding: 5px 10px;
+  padding: 7px 10px 3px 10px;
   box-shadow: 0px 0px 12px 6px rgba(116, 116, 116, 0.53);
   -webkit-box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0),
     0px 4px 5px -1px rgba(0, 0, 0, 0), 0px 4px 5px 1px #0000002a;
@@ -207,7 +278,7 @@ input {
 
 .register_btn {
   width: 150px;
-  background-color: var(--color-teal);
+  background-color:  #449692;
   border: none;
   outline: none;
   height: 49px;
@@ -221,7 +292,7 @@ input {
 }
 
 .register_btn:hover {
-  background-color: var(--color-secondary);
+  background-color: #56A6A2;
 }
 .panels_container {
   position: absolute;
@@ -468,7 +539,9 @@ input {
   }
   .register_sign_up_form,
   .register_sign_in_form {
-    padding: 0 1.5rem;
+    padding: 1rem 1.5rem;
+background: #f0f8ff40;
+margin-top: 0.6rem;
   }
 
   .image {
